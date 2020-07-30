@@ -10,34 +10,34 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Researcher
+role: Investigadora Asistente
 
 # Organizations/Affiliations
 organizations:
-- name: CONICET (National Research Council)
+- name: CONICET
   url: "https://www.conicet.gov.ar/"
 - name: Instituto de Investigación e Ingeniería Ambiental, Universidad Nacional de San Martín
   url: "https://www.unsam.edu.ar/institutos/3ia/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I'm a biologist, specialized in Landscape Ecology & Plant Ecology. I'm also a fiction writer.
+bio: Soy bióloga, especializada en ecología de paisajes, vegetación y teledetección. Investigadora y escritora de ficción.
 
 interests:
-- Wetlands
-- Remote Sensing
-- Landscape Ecology
-- Plant Ecology
+- Humedales
+- Teledetección
+- Ecología de paisajes
+- Ecología de comunidades
 - RStats
-- GIS
-- Creative writing
+- SIG
+- Escritura creativa
 
 education:
   courses:
-  - course: Dr in Biological Sciences
+  - course: Dra. en Ciencias Biológicas
     institution: Universidad de Buenos Aires
     year: 2014
-  - course: Licenciate in Biological Sciences
-    institution: Universidad de Buenos Aires
+  - course: Licenciada en Ciencias Biológicas
+    institution: Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires
     year: 2009
  
 # Social/Academic Networking
@@ -76,8 +76,8 @@ social:
 #- Visitors
 ---
 
-I'm a Doctor in Biological Sciences from the University of Buenos Aires (UBA), Argentina. My current position is as Assistant Researcher from the National Scientific and Technical Research Council (CONICET), working at the University of San Martín (Institute of Research and Environmental Engineering, abbreviated 3iA-UNSAM). I'm currently teaching Ecology as an Associate Professor at 3iA-UNSAM, and Landscape Ecology as a Teacher Assistant in charge of Lab Assignments. 
+Soy Doctora en Ciencias Biológicas de la Universidad de Buenos Aires (UBA), Argentina. Actualmente soy Investigadora Asistente del Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) y trabajo en el Instituto de Investigación e Ingeniería Ambiental de la Universidad Nacional de San Martín (3iA-UNSAM). También soy docente de Ecología en 3iA-UNSAM --como Profesora Asociada--, y de Ecología Regional y de Paisajes en la Facultad de Ciencias y Naturales de la UBA. 
 
-My research focuses on landscape ecology and wetland plant ecology, aided by remote sensing and Geographic Information Systems tools. I prefer open source software: Ubuntu OS, QGIS and R, among others. I use R for conducting ecological analyses, from data exploration and visualization to statistics. Most of my research activity is related to the Paraná River floodplain and the use of active microwave and optical remote sensing data; but I also conduct research in other wetlands and in urban areas. 
+Mi investigación se enmarca en los enfoques de la ecología de paisajes y la ecología de comunidades, particularmente en relación a vegetación de humedales. Para estas temáticas, utilizo teledetección cuantitativa (análisis de imágenes satelitales) y Sistemas de Información Geográfica. Siempre que es posible, elijo usar software libre: SO Ubuntu, QGIS y R, entre otros. En particular, uso R para realizar análisis ecológicos, desde exploración y visualización de datos hasta estadística. La mayoría de mi actividad de investigación está relacionada con la planicie de inundación del Río Paraná y con el uso de datos satelitales de microondas activas (SAR) y ópticos; pero también realizo y colaboro con estudios en otros humedales y en áreas urbanas.
 
-Besides my academic activities, I'm a fiction writer! I write short stories, and love reading and discussing about literature.
+Además de mis actividades académicas, soy escritora de ficción. Escribo narrativa, sobre todo cuentos, y disfruto leer y discutir sobre literatura.

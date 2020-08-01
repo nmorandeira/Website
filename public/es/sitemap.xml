@@ -3,62 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/es/courses/example/example1/</loc>
+    <loc>/es/z_archive/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/courses/example/example1/"
+                href="/z_archive/courses/example/example1/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/courses/example/example1/"
+                href="/es/z_archive/courses/example/example1/"
                 />
   </url>
   
   <url>
-    <loc>/es/courses/example/</loc>
+    <loc>/es/z_archive/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/courses/example/"
+                href="/z_archive/courses/example/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/courses/example/"
+                href="/es/z_archive/courses/example/"
                 />
   </url>
   
   <url>
-    <loc>/es/courses/example/example2/</loc>
+    <loc>/es/z_archive/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/courses/example/example2/"
+                href="/z_archive/courses/example/example2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/courses/example/example2/"
+                href="/es/z_archive/courses/example/example2/"
                 />
   </url>
   
   <url>
-    <loc>/es/talk/example/</loc>
+    <loc>/es/z_archive/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/talk/example/"
+                href="/z_archive/talk/example/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/talk/example/"
+                href="/es/z_archive/talk/example/"
                 />
   </url>
   
@@ -78,62 +78,77 @@
   </url>
   
   <url>
-    <loc>/es/talk/</loc>
+    <loc>/es/z_archive/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/talk/"
+                href="/z_archive/talk/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/talk/"
+                href="/es/z_archive/talk/"
                 />
   </url>
   
   <url>
-    <loc>/es/post/</loc>
+    <loc>/es/z_archive/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/z_archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/z_archive/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/z_archive/post/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/post/"
+                href="/z_archive/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/post/"
+                href="/es/z_archive/post/"
                 />
   </url>
   
   <url>
-    <loc>/es/post/writing-technical-content/</loc>
+    <loc>/es/z_archive/post/writing-technical-content/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/post/writing-technical-content/"
+                href="/z_archive/post/writing-technical-content/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/post/writing-technical-content/"
+                href="/es/z_archive/post/writing-technical-content/"
                 />
   </url>
   
   <url>
-    <loc>/es/courses/</loc>
+    <loc>/es/z_archive/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/courses/"
+                href="/z_archive/courses/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/courses/"
+                href="/es/z_archive/courses/"
                 />
   </url>
   
@@ -153,17 +168,17 @@
   </url>
   
   <url>
-    <loc>/es/publication/preprint/</loc>
+    <loc>/es/z_archive/publication/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/publication/preprint/"
+                href="/z_archive/publication/preprint/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/publication/preprint/"
+                href="/es/z_archive/publication/preprint/"
                 />
   </url>
   
@@ -213,17 +228,17 @@
   </url>
   
   <url>
-    <loc>/es/publication/</loc>
+    <loc>/es/z_archive/publication/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/publication/"
+                href="/z_archive/publication/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/publication/"
+                href="/es/z_archive/publication/"
                 />
   </url>
   
@@ -258,47 +273,32 @@
   </url>
   
   <url>
-    <loc>/es/post/jupyter/</loc>
+    <loc>/es/z_archive/post/jupyter/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/post/jupyter/"
+                href="/z_archive/post/jupyter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/post/jupyter/"
+                href="/es/z_archive/post/jupyter/"
                 />
   </url>
   
   <url>
-    <loc>/es/slides/</loc>
+    <loc>/es/z_archive/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/slides/"
+                href="/z_archive/slides/example/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/slides/"
-                />
-  </url>
-  
-  <url>
-    <loc>/es/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/slides/example/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/slides/example/"
+                href="/es/z_archive/slides/example/"
                 />
   </url>
   
@@ -333,47 +333,32 @@
   </url>
   
   <url>
-    <loc>/es/project/external-project/</loc>
+    <loc>/es/z_archive/project/external-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/project/external-project/"
+                href="/z_archive/project/external-project/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/project/external-project/"
+                href="/es/z_archive/project/external-project/"
                 />
   </url>
   
   <url>
-    <loc>/es/project/internal-project/</loc>
+    <loc>/es/z_archive/project/internal-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/project/internal-project/"
+                href="/z_archive/project/internal-project/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/project/internal-project/"
-                />
-  </url>
-  
-  <url>
-    <loc>/es/project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/project/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/project/"
+                href="/es/z_archive/project/internal-project/"
                 />
   </url>
   
@@ -393,17 +378,17 @@
   </url>
   
   <url>
-    <loc>/es/post/getting-started/</loc>
+    <loc>/es/z_archive/post/getting-started/</loc>
     <lastmod>2019-04-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/post/getting-started/"
+                href="/z_archive/post/getting-started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/post/getting-started/"
+                href="/es/z_archive/post/getting-started/"
                 />
   </url>
   
@@ -498,17 +483,17 @@
   </url>
   
   <url>
-    <loc>/es/publication/journal-article/</loc>
+    <loc>/es/z_archive/publication/journal-article/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/publication/journal-article/"
+                href="/z_archive/publication/journal-article/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/publication/journal-article/"
+                href="/es/z_archive/publication/journal-article/"
                 />
   </url>
   
@@ -543,17 +528,45 @@
   </url>
   
   <url>
-    <loc>/es/publication/conference-paper/</loc>
+    <loc>/es/z_archive/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/publication/conference-paper/"
+                href="/z_archive/publication/conference-paper/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="/es/publication/conference-paper/"
+                href="/es/z_archive/publication/conference-paper/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/post/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>/es/publication/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/publication/"
                 />
   </url>
   

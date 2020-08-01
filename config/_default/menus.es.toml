@@ -6,22 +6,22 @@
 [[main]]
   name = "Notas"
   url = "#posts"
-  weight = 20
+  weight = 40
 
 [[main]]
-  name = "Artículos"
-  url = "#articles"
-  weight = 40
+  name = "Publicaciones"
+  url = "#publication"
+  weight = 60
   
 [[main]]
   name = "Ficción"
   url = "#fiction"
-  weight = 60
+  weight = 80
 
 [[main]]
   name = "Contacto"
   url = "#contact"
-  weight = 80
+  weight = 100
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.

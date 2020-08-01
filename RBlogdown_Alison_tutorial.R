@@ -25,3 +25,11 @@ install_theme("gcushen/hugo-academic", theme_example = TRUE, update_config = TRU
 blogdown::serve_site()
 blogdown::stop_server()
 
+#Al estar como multi-lenguaje, se cargan dos carpetas en content
+#algunos archivos relevantes
+#_index.md dentro de authors es todo lo de la bio
+
+#config.toml
+#config/default/param.toml es muy importante
+#content / en / home. tiene adentro todo lo relevante
+

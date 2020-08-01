@@ -108,26 +108,6 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-07-31T23:17:15-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-07-31T23:17:15-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/post/"
-                />
-  </url>
-  
-  <url>
     <loc>/z_archive/post/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -559,6 +539,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="/z_archive/publication/conference-paper/"
+                />
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/post/"
                 />
   </url>
   

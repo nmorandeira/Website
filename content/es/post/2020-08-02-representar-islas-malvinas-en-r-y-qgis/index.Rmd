@@ -1,6 +1,6 @@
 ---
 title: "Cómo representar a las Islas Malvinas en R y en QGIS"
-summary: Una discusión sobre las Islas Malvinas en el mapa base de OpenStreetMap y protocolos de visualización con datos del Instituto Geográfico Nacional.
+subtitle: "Una discusión sobre las Islas Malvinas en el mapa base de OpenStreetMap y protocolo para uso de datos del Instituto Geográfico Nacional"
 author: "Natalia Morandeira"
 aliases: [representar-Islas-Malvinas-R-QGIS]
 date: '2020-08-02'
@@ -121,7 +121,7 @@ Para practicar la visualización de datos geográficos con R y QGIS, planteo un 
 ### Uso de un mapa base de Argenmap v2 (IGN) con Leaflet
 El primer paso es obtener las capas de datos (áreas protegidas y límites de la zona económica exclusiva) del sitio oficial de IGN y descomprimirlas:
 
-```{r descarga_datos}
+```{r descarga_datos, eval=F, echo=T}
 areasprotegidas <- tempfile()
 download.file("http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjphcmVhX3Byb3RlZ2lkYS56aXA%3D",areasprotegidas, mode="w") 
 unzip(areasprotegidas, exdir = "data/") 
@@ -133,7 +133,7 @@ unzip(limite_ZEE, exdir = "data/")
 
 Se trata de dos capas con representación de tipo vectorial _shapefile_, una con polígonos y la otra con líneas. Ahora las cargaremos en R, como objeto espacial de tipo vectorial. Si no tienen instaladas las librerías a usar en este y otros códigos, recuerden instalarlas antes de cargarlas.
 
-```{r lectura_datos_espaciales, cache=TRUE}
+```{r lectura_datos_espaciales}
 library(sf)
 areasprotegidas <- st_read("data/area_protegida.shp", quiet=TRUE) 
 limite_ZEE <- st_read("data/linea_de_limite_070107.shp", quiet=TRUE)
@@ -166,7 +166,7 @@ library(htmltools)
 
 Ejemplo con el mapa base de OpenStreetMap, que muchas veces sale por defecto al usar _tmap_ y que es muy adecuado en otras zonas del país:
 
-```{r mapabase_OSM, echo = FALSE}
+```{r mapabase_OSM}
 mapa_base1 <-leaflet() %>% 
   addProviderTiles("OpenStreetMap.Mapnik")  %>%
   setView(-60,-50, zoom = 5) 

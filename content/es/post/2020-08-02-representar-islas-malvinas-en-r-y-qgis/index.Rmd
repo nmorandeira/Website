@@ -146,7 +146,7 @@ library(tmap)
 tmap_mode("view") 
 ```
 
-Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura).
+Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura, los siguientes mapas son más rápidos).
 
 ```{r mapa_tmap, eval=F, echo=T}
 mapa <- tm_shape(areasprotegidas) + 
@@ -204,7 +204,7 @@ mapa_base_IGN
 
 Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2 de IGN resuelve el problema de representación de las Islas Malvinas. Y no sólo eso, también resuelve el nombre de la Provincia que las incluye y todas las toponimias oficiales de Argentina (ciudades, nombres de lagunas y ríos, montes, etc).
 
-Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector _%>%_ para agregar al objeto _mapa_base_IGN_ las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro _label_ permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor. Este mapa tarda en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. ¡Pero vale la pena ver el producto final!
+Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector _%>%_ para agregar al objeto _mapa_base_IGN_ las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro _label_ permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor. Este mapa puede tardar en cargar, porque es muy pesada la capa de Áreas protegidas. ¡Pero vale la pena ver el producto final!
 
 ```{r mapafinal, eval=FALSE, echo=TRUE}
 mapa_final <-mapa_base_IGN %>%

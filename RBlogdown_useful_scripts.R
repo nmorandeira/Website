@@ -12,6 +12,17 @@
 # Using Leaflet Maps in Hugo themes
 # https://waterdata.usgs.gov/blog/leaflet/
 
+#para exportar Leafletwidget a html
+library(htmlwidgets)
+library(htmltools)
+
+mapa_guardar <- mapa
+saveWidget(mapa_guardar, "public/es/leaflet_Malvinas/mapa_tmap.html")
+
+#para tmap
+tmap_save(mapa_guardar, "public/es/leaflet_Malvinas/mapa_tmap.html")
+
+
 ########
 install.packages("devtools")
 install.packages("blogdown")

@@ -796,7 +796,7 @@ limite_ZEE &lt;- st_read(&quot;data/linea_de_limite_070107.shp&quot;, quiet=TRUE
 <p>Vamos ahora a visualizar estas capas en un mapa, usando la librería <em>tmap</em> y el modo interactivo <em>view</em>. Primero configuramos la salida del mapa.</p>
 <pre class="r"><code>library(tmap)
 tmap_mode(&quot;view&quot;) </code></pre>
-<p>Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura).</p>
+<p>Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura, los siguientes mapas son más rápidos).</p>
 <pre class="r"><code>mapa &lt;- tm_shape(areasprotegidas) + 
   tm_polygons(col=&quot;green&quot;) +
   tm_shape(limite_ZEE) +
@@ -832,7 +832,7 @@ mapa_base_IGN</code></pre>
 <iframe seamless src="/es/leaflet_Malvinas/mapa_base_IGN.html" width="100%" height="500">
 </iframe>
 <p>Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2 de IGN resuelve el problema de representación de las Islas Malvinas. Y no sólo eso, también resuelve el nombre de la Provincia que las incluye y todas las toponimias oficiales de Argentina (ciudades, nombres de lagunas y ríos, montes, etc).</p>
-<p>Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector <em>%&gt;%</em> para agregar al objeto <em>mapa_base_IGN</em> las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro <em>label</em> permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor. Este mapa tarda en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. ¡Pero vale la pena ver el producto final!</p>
+<p>Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector <em>%&gt;%</em> para agregar al objeto <em>mapa_base_IGN</em> las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro <em>label</em> permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor. Este mapa puede tardar en cargar, porque es muy pesada la capa de Áreas protegidas. ¡Pero vale la pena ver el producto final!</p>
 <pre class="r"><code>mapa_final &lt;-mapa_base_IGN %&gt;%
   addPolygons(data=areasprotegidas,
               col = &quot;darkgreen&quot;,

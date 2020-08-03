@@ -5,7 +5,7 @@
   publish = "public"
 
 [build.environment]
-  HUGO_THEME = "repo"
+  HUGO_THEME = "hugo-academic" #to solve error "module repo not found"
   HUGO_VERSION = "0.74.3"
   HUGO_ENABLEGITINFO = "true"
 

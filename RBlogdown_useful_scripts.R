@@ -54,3 +54,6 @@ blogdown:::new_post_addin() #ojo, siempre crea un md
 #Deploy
 #buscar netlify.toml y chequear Hugo version. en mi caso es 0.74.3 
 # en Netlify toma el archivo netlify.toml, en caso de no estar hay que configurar la HUGO_VERSION
+
+#al hacer Deploy, me da un error de módulos. Probar instalar go
+#https://golang.org/dl/

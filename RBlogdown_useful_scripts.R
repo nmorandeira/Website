@@ -34,7 +34,7 @@ blogdown::serve_site()
 blogdown::stop_server()
 
 #build site
-blogdown::build_site()
+#blogdown::build_site()
 
 #para generar un nuevo post (primero parar el sitio)
 blogdown:::new_post_addin() #ojo, siempre crea un md
@@ -55,6 +55,5 @@ blogdown:::new_post_addin() #ojo, siempre crea un md
 #buscar netlify.toml y chequear Hugo version. en mi caso es 0.74.3 
 # en Netlify toma el archivo netlify.toml, en caso de no estar hay que configurar la HUGO_VERSION
 
-#al hacer Deploy, me da un error de módulos. Hice dos cosas, se solucionó con la 2da pero dejo la 1era por si era necesaria también:
-#1. Instalar Go https://golang.org/dl/
-#2. En netlify.toml, HUGO_THEME = "hugo-academic" #to solve error "module repo not found" (antes decía HUGO_THEME = "repo")
+#al hacer Deploy, me da un error de módulos. Probar instalar go
+#https://golang.org/dl/

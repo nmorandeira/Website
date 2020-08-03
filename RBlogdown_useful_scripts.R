@@ -53,4 +53,4 @@ blogdown:::new_post_addin() #ojo, siempre crea un md
 
 #Deploy
 #buscar netlify.toml y chequear Hugo version. en mi caso es 0.74.3 
-# en Netlify hay que poner hugo_0.74.3 (en build command)
+# en Netlify toma el archivo netlify.toml, en caso de no estar hay que configurar la HUGO_VERSION

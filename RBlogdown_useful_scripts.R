@@ -44,3 +44,6 @@ blogdown:::new_post_addin() #ojo, siempre crea un md
 #config/default/param.toml es muy importante
 #content / en / home. tiene adentro todo lo relevante
 
+#Deploy
+#buscar netlify.toml y chequear Hugo version. en mi caso es 0.74.3 
+# en Netlify hay que poner hugo_0.74.3 (en build command)

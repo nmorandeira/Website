@@ -166,12 +166,14 @@ library(htmltools)
 
 Ejemplo con el mapa base de OpenStreetMap, que muchas veces sale por defecto al usar _tmap_ y que es muy adecuado en otras zonas del país:
 
-```{r mapabase_OSM}
+```{r mapabase_OSM, echo = FALSE}
 mapa_base1 <-leaflet() %>% 
   addProviderTiles("OpenStreetMap.Mapnik")  %>%
   setView(-60,-50, zoom = 5) 
 mapa_base1
 ```
+
+<iframe seamless src="/static/leaflet_Malvinas/mapa_base1.html" width="100%" height="500"></iframe>
 
 Otro ejemplo, con el proveedor "Stamen Toner" (que al no tener mucho detalle puede ser apropiado para usar como mapa base en otras áreas del país):
 ```{r mapabase_StamenToner}

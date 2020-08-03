@@ -56,12 +56,12 @@ Este documento provee una discusión sobre los orígenes del problema de represe
 ### Agradecimientos
 El documento fue redactado en julio de 2020, con colaboración de *Malena Libman* (Geochicas OSM) que señaló por dónde iba la solución: usar como mapa base a Argenmap v2, un gran trabajo elaborado por el Instituto Geográfico Nacional (IGN) de la República Argentina.
 
-Agradezco también a *Priscilla Minotti* por los comentarios que mejoraron el script de R y por sugerirme escribirlo en RMarkdown y publicarlo online, a *Yanina Bellini* por la ayuda para publicarlo en un sitio web y en general a *R-Ladies* (Buenos Aires, Santa Rosa y General Pico) por varios talleres y por la ayuda con Rmd y Git. Finalmente, agradezco a *Santiago Mouradian*, *Facundo Daelli* y *José Hernández* por los debates que mejoraron este documento.
-
-<iframe seamless src="/static/es/leaflet_Malvinas/mapa_base1.html" width="100%" height="500"></iframe>
-
+Agradezco también a *Priscilla Minotti* por los comentarios que mejoraron el script de R y por sugerirme escribirlo en RMarkdown, a *Yanina Bellini* por la ayuda para publicarlo en un sitio web y en general a *R-Ladies* (Buenos Aires, Santa Rosa y General Pico) por varios talleres y por la ayuda con Rmd y Git. Finalmente, agradezco a *Santiago Mouradian*, *Facundo Daelli* y *José Hernández* por los debates que mejoraron este documento.
 
 ---------------------
+
+<iframe seamless src="/public/es/leaflet_Malvinas/mapa_base1.html" width="100%" height="500"></iframe>
+
 
 # Los orígenes del problema
 Hay dos tipos de problemas en la representación de las Islas Malvinas y ambos se relacionan con el origen de los datos geográficos utilizados. Las soluciones indicadas tienen que ver con usar los datos oficiales de Argentina, elaborados y publicados por el Instituto Geográfico Nacional.
@@ -148,15 +148,14 @@ library(tmap)
 tmap_mode("view") 
 ```
 
-Ahora elaboramos el mapa.
-```{r mapa_tmap, warning=FALSE}
+Ahora elaboramos el mapa con tmap (una de las formas más usuales en R).
+```{r mapa_tmap, eval=T, warning=FALSE}
 mapa <- tm_shape(areasprotegidas) + 
   tm_polygons(col="green") +
   tm_shape(limite_ZEE) +
   tm_lines(col="violet")
 mapa
 ```
-
 En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, durante julio de 2020 pude observar dos representaciones: una con OSM (y el nombre "Falkland Islands") y otra con ESRI (sin nombre ni en las islas ni en ningún otro territorio; ojo: no podemos usar este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia).
 
 Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando _"addProviderTiles"_. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <https://leaflet-extras.github.io/leaflet-providers/preview/>.
@@ -175,8 +174,6 @@ mapa_base1 <-leaflet() %>%
   setView(-60,-50, zoom = 5) 
 mapa_base1
 ```
-
-<iframe seamless src="/static/leaflet_Malvinas/mapa_base1.html" width="100%" height="500"></iframe>
 
 Otro ejemplo, con el proveedor "Stamen Toner" (que al no tener mucho detalle puede ser apropiado para usar como mapa base en otras áreas del país):
 ```{r mapabase_StamenToner}
@@ -200,7 +197,7 @@ Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2
 
 Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector _%>%_ para agregar al objeto _mapa_base_IGN_ las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro _label_ permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor.
 
-```{r mapafinal}
+```{r mapafinal, eval=TRUE, warning=FALSE}
 mapa_final <-mapa_base_IGN %>%
   addPolygons(data=areasprotegidas,
               col = "darkgreen",
@@ -210,6 +207,8 @@ mapa_final <-mapa_base_IGN %>%
             col = "violet")
 mapa_final
 ```
+
+¡Listo!
 
 -------------
 
@@ -251,7 +250,7 @@ Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos 
 Ahora sí obtenemos el mapa deseado:
 
 ![Representación con Argenmap v2 de IGN en QGIS](data/QGIS_4.png){width=100%}
-
+¡Listo!
 
 Dejo a disposición [el proyecto de este ejercicio tipo](https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true).
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:

@@ -9,4 +9,4 @@ exampleSite/public/
 .ipynb_checkpoints/
 
 # Node
-node_modules/
+#node_modules/

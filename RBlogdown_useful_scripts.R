@@ -9,6 +9,9 @@
 # Danielle Navarro 2018
 # https://djnavarro.net/post/starting-blogdown/
 
+# Using Leaflet Maps in Hugo themes
+# https://waterdata.usgs.gov/blog/leaflet/
+
 ########
 install.packages("devtools")
 install.packages("blogdown")
@@ -31,7 +34,7 @@ blogdown::serve_site()
 blogdown::stop_server()
 
 #para generar un nuevo post (primero parar el sitio)
-blogdown:::new_post_addin()
+blogdown:::new_post_addin() #ojo, siempre crea un md
 
 #Al estar como multi-lenguaje, se cargan dos carpetas en content
 #algunos archivos relevantes

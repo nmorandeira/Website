@@ -39,6 +39,10 @@ blogdown::build_site()
 #para generar un nuevo post (primero parar el sitio)
 blogdown:::new_post_addin() #ojo, siempre crea un md
 
+#Deploy on Netlify
+#https://alison.rbind.io/post/2019-02-19-hugo-netlify-toml/
+
+
 #Al estar como multi-lenguaje, se cargan dos carpetas en content
 #algunos archivos relevantes
 #_index.md dentro de authors es todo lo de la bio

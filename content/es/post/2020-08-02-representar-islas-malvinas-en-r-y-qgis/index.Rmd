@@ -58,6 +58,9 @@ El documento fue redactado en julio de 2020, con colaboración de *Malena Libman
 
 Agradezco también a *Priscilla Minotti* por los comentarios que mejoraron el script de R y por sugerirme escribirlo en RMarkdown y publicarlo online, a *Yanina Bellini* por la ayuda para publicarlo en un sitio web y en general a *R-Ladies* (Buenos Aires, Santa Rosa y General Pico) por varios talleres y por la ayuda con Rmd y Git. Finalmente, agradezco a *Santiago Mouradian*, *Facundo Daelli* y *José Hernández* por los debates que mejoraron este documento.
 
+<iframe seamless src="/static/leaflet_Malvinas/mapa_base1.html" width="100%" height="500"></iframe>
+
+
 ---------------------
 
 # Los orígenes del problema
@@ -104,7 +107,7 @@ Una solución parcial sería cargar en nuestros mapas la etiqueta _name:es_ por 
 
 Una ventaja de que OSM sea libre es que los datos pueden ser descargados y vueltos a subir en otros servidores, como por ejemplo se ha hecho en [*OSM-Argentina*](https://openstreetmap.org.ar/#6.11/-53.41/-63.924), que pudo solucionar algunos problemas (el nombre de las islas) pero no otros (el nombre de ciudades y accidentes geográficos).
 
-Por otro lado, el *Instituto Geográfico Nacional* (IGN) sí lo resuelve: en su *Argenmap v2* representa correctamente la toponimia oficial de las jurisdicciones y accidentes geográficos de Argentina. [Acá hay documentación de qué información representa Argenmap](<https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion>), básicamente _"utiliza los datos oficiales publicados por el Instituto Geográfico Nacional a través de su servicio WMS hasta la escala 1:250.000 (es decir, a partir del nivel de zoom 12)"_. Aquí pueden ver [cómo quedan representadas las Islas Malvinas] (https://mapa.ign.gob.ar/). Podemos notar que no sólo es correcto el nombre de las islas, sino también el de la _"Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur"_. Y también el nombre de ríos, lagunas, cerros, montañas, etc (zoom en las islas o, por qué no, en un área que cada una/o conozca, por ejemplo en los humedales del Paraná están cargados los nombres oficiales de las lagunas). Se puede leer en detalle sobre la [toponimia oficial de las Islas Malvinas](https://www.ign.gob.ar/NuestrasActividades/Geografia/DatosArgentina/ToponimiaMalvinas).
+Por otro lado, el *Instituto Geográfico Nacional* (IGN) sí lo resuelve: en su *Argenmap v2* representa correctamente la toponimia oficial de las jurisdicciones y accidentes geográficos de Argentina. [Acá hay documentación de qué información representa Argenmap](<https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion>), básicamente _"utiliza los datos oficiales publicados por el Instituto Geográfico Nacional a través de su servicio WMS hasta la escala 1:250.000 (es decir, a partir del nivel de zoom 12)"_. Aquí pueden ver [cómo quedan representadas las Islas Malvinas](https://mapa.ign.gob.ar/). Podemos notar que no sólo es correcto el nombre de las islas, sino también el de la _"Provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur"_. Y también el nombre de ríos, lagunas, cerros, montañas, etc (zoom en las islas o, por qué no, en un área que cada una/o conozca, por ejemplo en los humedales del Paraná están cargados los nombres oficiales de las lagunas). Se puede leer en detalle sobre la [toponimia oficial de las Islas Malvinas](https://www.ign.gob.ar/NuestrasActividades/Geografia/DatosArgentina/ToponimiaMalvinas).
 
 ### Conclusión
 La mejor solución para nuestro problema de representación de las Islas Malvinas originado por un proveedor de mapas base es usar Argenmap v2 de IGN.
@@ -235,11 +238,11 @@ En el panel "Navegador" (si no se ve, agregarlo: _Ver > Paneles > Navegador_), b
 
 El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <https://tile.openstreetmap.org/{z}/{x}/{y}.png>. El resto lo podemos dejar por defecto.
 
-![](data/QGIS_1.png){width=100%}
+![Conexión XYZ en QGIS](data/QGIS_1.png){width=100%}
 
 Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:
 
-![](data/QGIS_2.png){width=100%}
+![Representación con OSM en QGIS](data/QGIS_2.png){width=100%}
 
 Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png>.
 
@@ -247,11 +250,11 @@ Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos 
 
 Ahora sí obtenemos el mapa deseado:
 
-![](data/QGIS_4.png){width=100%}
+![Representación con Argenmap v2 de IGN en QGIS](data/QGIS_4.png){width=100%}
 
 
 Dejo a disposición [el proyecto de este ejercicio tipo](https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true).
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:
 
-![](data/QGIS_5.png){width=100%}
+![Vista general del proyecto de QGIS](data/QGIS_5.png){width=100%}
 

@@ -29,9 +29,12 @@ install_theme("gcushen/hugo-academic", theme_example = TRUE, update_config = TRU
 # see this chapter https://bookdown.org/yihui/blogdown/configuration.html
 # or emulate the toml file of other user 
 
-#para ver y dejar de ver la web
+#para ver y dejar de ver la web localmente
 blogdown::serve_site()
 blogdown::stop_server()
+
+#build site
+blogdown::build_site()
 
 #para generar un nuevo post (primero parar el sitio)
 blogdown:::new_post_addin() #ojo, siempre crea un md

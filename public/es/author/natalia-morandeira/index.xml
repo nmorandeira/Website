@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Natalia Morandeira</title>
-    <link>/es/author/natalia-morandeira/</link>
-      <atom:link href="/es/author/natalia-morandeira/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://nmorandeira.netlify.com/es/author/natalia-morandeira/</link>
+      <atom:link href="https://nmorandeira.netlify.com/es/author/natalia-morandeira/index.xml" rel="self" type="application/rss+xml" />
     <description>Natalia Morandeira</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://nmorandeira.netlify.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Natalia Morandeira</title>
-      <link>/es/author/natalia-morandeira/</link>
+      <link>https://nmorandeira.netlify.com/es/author/natalia-morandeira/</link>
     </image>
     
     <item>
       <title>An example preprint / working paper</title>
-      <link>/es/z_archive/publication/preprint/</link>
+      <link>https://nmorandeira.netlify.com/es/z_archive/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/es/z_archive/publication/preprint/</guid>
+      <guid>https://nmorandeira.netlify.com/es/z_archive/publication/preprint/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Supplementary notes can be added here, including 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
@@ -25,9 +25,9 @@
     
     <item>
       <title>Display Jupyter Notebooks with Academic</title>
-      <link>/es/z_archive/post/jupyter/</link>
+      <link>https://nmorandeira.netlify.com/es/z_archive/post/jupyter/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/es/z_archive/post/jupyter/</guid>
+      <guid>https://nmorandeira.netlify.com/es/z_archive/post/jupyter/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; IPython.core.display &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; Image
 Image(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&amp;#39;&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
@@ -69,9 +69,9 @@ date: 2019-09-01
     
     <item>
       <title>Academic: the website builder for Hugo</title>
-      <link>/es/z_archive/post/getting-started/</link>
+      <link>https://nmorandeira.netlify.com/es/z_archive/post/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/es/z_archive/post/getting-started/</guid>
+      <guid>https://nmorandeira.netlify.com/es/z_archive/post/getting-started/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
@@ -109,6 +109,8 @@ date: 2019-09-01
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+
+
 
 
 
@@ -214,9 +216,9 @@ date: 2019-09-01
     
     <item>
       <title>An example journal article</title>
-      <link>/es/z_archive/publication/journal-article/</link>
+      <link>https://nmorandeira.netlify.com/es/z_archive/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/es/z_archive/publication/journal-article/</guid>
+      <guid>https://nmorandeira.netlify.com/es/z_archive/publication/journal-article/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Supplementary notes can be added here, including 
@@ -226,9 +228,9 @@ date: 2019-09-01
     
     <item>
       <title>An example conference paper</title>
-      <link>/es/z_archive/publication/conference-paper/</link>
+      <link>https://nmorandeira.netlify.com/es/z_archive/publication/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>/es/z_archive/publication/conference-paper/</guid>
+      <guid>https://nmorandeira.netlify.com/es/z_archive/publication/conference-paper/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Supplementary notes can be added here, including 

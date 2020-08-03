@@ -30,7 +30,8 @@
   
     
   
-  <meta name="description" content="Motivación Las Malvinas son argentinas. En los mapas elaborados con herramientas digitales, las Islas Malvinas son muchas veces etiquetadas con un nombre incorrecto, no consistente con nuestro reclamo histórico y vigente de soberanía sobre las islas. ¿Por qué los argentinos y argentinas generan mapas con un nombre distinto a “Islas Malvinas”? Al discutirlo con colegas, me he encontrado con personas que:">
+  <meta name="description" content="Motivación Las Malvinas son argentinas. En los mapas elaborados con herramientas digitales, las Islas Malvinas son muchas veces etiquetadas con un nombre incorrecto, no consistente con nuestro reclamo histórico y vigente de soberanía sobre las islas. ¿Por qué los argentinos y argentinas generan mapas con un nombre distinto a “Islas Malvinas”? Al discutirlo con colegas, me he encontrado con personas que:
+ No se habían dado cuenta del error, pero quieren y pueden solucionarlo cuando se les señala.">
 
   
   <link rel="alternate" hreflang="es" href="/es/post/2020-08-02-representar-islas-malvinas-en-r-y-qgis/">
@@ -251,7 +252,8 @@
   <meta property="og:site_name" content="Natalia Morandeira">
   <meta property="og:url" content="/es/post/2020-08-02-representar-islas-malvinas-en-r-y-qgis/">
   <meta property="og:title" content="Cómo representar a las Islas Malvinas en R y en QGIS | Natalia Morandeira">
-  <meta property="og:description" content="Motivación Las Malvinas son argentinas. En los mapas elaborados con herramientas digitales, las Islas Malvinas son muchas veces etiquetadas con un nombre incorrecto, no consistente con nuestro reclamo histórico y vigente de soberanía sobre las islas. ¿Por qué los argentinos y argentinas generan mapas con un nombre distinto a “Islas Malvinas”? Al discutirlo con colegas, me he encontrado con personas que:"><meta property="og:image" content="/es/post/2020-08-02-representar-islas-malvinas-en-r-y-qgis/featured.jpg">
+  <meta property="og:description" content="Motivación Las Malvinas son argentinas. En los mapas elaborados con herramientas digitales, las Islas Malvinas son muchas veces etiquetadas con un nombre incorrecto, no consistente con nuestro reclamo histórico y vigente de soberanía sobre las islas. ¿Por qué los argentinos y argentinas generan mapas con un nombre distinto a “Islas Malvinas”? Al discutirlo con colegas, me he encontrado con personas que:
+ No se habían dado cuenta del error, pero quieren y pueden solucionarlo cuando se les señala."><meta property="og:image" content="/es/post/2020-08-02-representar-islas-malvinas-en-r-y-qgis/featured.jpg">
   <meta property="twitter:image" content="/es/post/2020-08-02-representar-islas-malvinas-en-r-y-qgis/featured.jpg"><meta property="og:locale" content="es">
   
     
@@ -305,7 +307,7 @@
       "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Motivación Las Malvinas son argentinas. En los mapas elaborados con herramientas digitales, las Islas Malvinas son muchas veces etiquetadas con un nombre incorrecto, no consistente con nuestro reclamo histórico y vigente de soberanía sobre las islas. ¿Por qué los argentinos y argentinas generan mapas con un nombre distinto a “Islas Malvinas”? Al discutirlo con colegas, me he encontrado con personas que:"
+  "description": "Motivación Las Malvinas son argentinas. En los mapas elaborados con herramientas digitales, las Islas Malvinas son muchas veces etiquetadas con un nombre incorrecto, no consistente con nuestro reclamo histórico y vigente de soberanía sobre las islas. ¿Por qué los argentinos y argentinas generan mapas con un nombre distinto a “Islas Malvinas”? Al discutirlo con colegas, me he encontrado con personas que:\n No se habían dado cuenta del error, pero quieren y pueden solucionarlo cuando se les señala."
 }
 </script>
 
@@ -658,17 +660,6 @@
 
     <div class="article-style">
       
-<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
-<link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
-<link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
-<script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
-<link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
-<script src="/rmarkdown-libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
-<script src="/rmarkdown-libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
 
 
 <hr />
@@ -808,7 +799,7 @@ tmap_mode(&quot;view&quot;) </code></pre>
   tm_shape(limite_ZEE) +
   tm_lines(col=&quot;violet&quot;)
 mapa</code></pre>
-<iframe seamless src="/es/leaflet_Malvinas/mapa_base1.html" width="100%" height="500">
+<iframe seamless src="/es/leaflet_Malvinas/mapa_tmap.html" width="100%" height="500">
 </iframe>
 <p>En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, durante julio de 2020 pude observar dos representaciones: una con OSM (y el nombre “Falkland Islands”) y otra con ESRI (sin nombre ni en las islas ni en ningún otro territorio; ojo: no podemos usar este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia).</p>
 <p>Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando <em>“addProviderTiles”</em>. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>.
@@ -820,23 +811,23 @@ library(htmltools)</code></pre>
   addProviderTiles(&quot;OpenStreetMap.Mapnik&quot;)  %&gt;%
   setView(-60,-50, zoom = 5) 
 mapa_base1</code></pre>
-<div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap.Mapnik",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}],"setView":[[-50,-60],5,[]]},"evals":[],"jsHooks":[]}</script>
+<iframe seamless src="/es/leaflet_Malvinas/mapa_base1.html" width="100%" height="500">
+</iframe>
 <p>Otro ejemplo, con el proveedor “Stamen Toner” (que al no tener mucho detalle puede ser apropiado para usar como mapa base en otras áreas del país):</p>
 <pre class="r"><code>mapa_base2 &lt;-leaflet() %&gt;% 
   addProviderTiles(&quot;Stamen.Toner&quot;)  %&gt;%
   setView(-60,-50, zoom = 5) 
 mapa_base2</code></pre>
-<div id="htmlwidget-2" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Stamen.Toner",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}],"setView":[[-50,-60],5,[]]},"evals":[],"jsHooks":[]}</script>
+<iframe seamless src="/es/leaflet_Malvinas/mapa_base2.html" width="100%" height="500">
+</iframe>
 <p>El problema es que NINGÚN proveedor del extenso listado de proveedores que compartí antes dice “Islas Malvinas”. Entonces hay que buscar cómo incluir el Argenmap v2 del IGN, que tan bien soluciona nuestro problema de representación. Para cargar las teselas de IGN hay que usar el comando <em>addTiles</em> (en vez de <em>addProviderTiles</em>), así como conocer el link que nos da acceso a esas teselas. Este primer código crea un objeto que llamé <em>mapa_base_IGN</em>, es decir, el “Mapa base de IGN” en Leaflet.</p>
 <pre class="r"><code>mapa_base_IGN &lt;-leaflet() %&gt;% 
   addTiles(&#39;http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png&#39;, 
            attribution = &quot;Argenmap v2 - Instituto Geográfico Nacional&quot;) %&gt;%
   setView(-60,-50, zoom = 5)
 mapa_base_IGN</code></pre>
-<div id="htmlwidget-3" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"Argenmap v2 - Instituto Geográfico Nacional"}]}],"setView":[[-50,-60],5,[]]},"evals":[],"jsHooks":[]}</script>
+<iframe seamless src="/es/leaflet_Malvinas/mapa_base_2_IGN.html" width="100%" height="500">
+</iframe>
 <p>Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2 de IGN resuelve el problema de representación de las Islas Malvinas. Y no sólo eso, también resuelve el nombre de la Provincia que las incluye y todas las toponimias oficiales de Argentina (ciudades, nombres de lagunas y ríos, montes, etc).</p>
 <p>Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector <em>%&gt;%</em> para agregar al objeto <em>mapa_base_IGN</em> las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro <em>label</em> permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor.</p>
 <pre class="r"><code>mapa_final &lt;-mapa_base_IGN %&gt;%
@@ -847,6 +838,8 @@ mapa_base_IGN</code></pre>
   addPolylines(data=limite_ZEE,
             col = &quot;violet&quot;)
 mapa_final</code></pre>
+<iframe seamless src="/es/leaflet_Malvinas/mapa_final.html" width="100%" height="500">
+</iframe>
 <p>¡Listo!</p>
 <hr />
 </div>
@@ -873,26 +866,17 @@ Los links de descarga de las <a href="https://www.ign.gob.ar/NuestrasActividades
 <p>Para cargar mapas bases en QGIS 3.xx, se utilizan <em>XYZ Tiles</em>. Para comparar, vamos a cargar dos mapas bases, el de OpenStreepMap y el de Argenmap v2 de IGN. Hay muchos mapas bases en formato XYZ, <a href="https://mappinggis.com/2018/03/como-anadir-mapas-base-en-qgis-3-0-openstreetmap-google-carto-stamen/">aquí</a> hay una guía muy útil.</p>
 <p>En el panel “Navegador” (si no se ve, agregarlo: <em>Ver &gt; Paneles &gt; Navegador</em>), buscar <em>XYZ Tiles</em>. Hacer clic derecho y luego clic en <em>“Conexión nueva”</em>.</p>
 <p>El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <a href="https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://tile.openstreetmap.org/{z}/{x}/{y}.png</a>. El resto lo podemos dejar por defecto.</p>
-<div class="figure">
-<img src="data/QGIS_1.png" style="width:100.0%" alt="" />
-<p class="caption">Conexión XYZ en QGIS</p>
-</div>
+<p><img src="data/QGIS_1.png" style="width:100.0%" /></p>
 <p>Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:</p>
-<div class="figure">
-<img src="data/QGIS_2.png" style="width:100.0%" alt="" />
-<p class="caption">Representación con OSM en QGIS</p>
-</div>
+<p><img src="data/QGIS_2.png" style="width:100.0%" /></p>
 <p>Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <a href="http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/%7Bz%7D/%7Bx%7D/%7B-y%7D.png" class="uri">http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png</a>.</p>
 <p><img src="data/QGIS_3.png" style="width:100.0%" /></p>
 <p>Ahora sí obtenemos el mapa deseado:</p>
-<p><img src="data/QGIS_4.png" style="width:100.0%" alt="Representación con Argenmap v2 de IGN en QGIS" />
+<p><img src="data/QGIS_4.png" style="width:100.0%" />
 ¡Listo!</p>
 <p>Dejo a disposición <a href="https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true">el proyecto de este ejercicio tipo</a>.
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:</p>
-<div class="figure">
-<img src="data/QGIS_5.png" style="width:100.0%" alt="" />
-<p class="caption">Vista general del proyecto de QGIS</p>
-</div>
+<p><img src="data/QGIS_5.png" style="width:100.0%" /></p>
 </div>
 </div>
 </div>

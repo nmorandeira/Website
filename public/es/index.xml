@@ -78,17 +78,6 @@
       <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
       <guid>/es/post/2020-08-02-representar-islas-malvinas-en-r-y-qgis/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/leaflet/leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/leaflet/leaflet.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/leafletfix/leafletfix.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/leaflet-binding/leaflet.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/leaflet-providers/leaflet-providers_1.9.0.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/leaflet-providers-plugin/leaflet-providers-plugin.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;hr /&gt;
@@ -228,7 +217,7 @@ tmap_mode(&amp;quot;view&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
   tm_shape(limite_ZEE) +
   tm_lines(col=&amp;quot;violet&amp;quot;)
 mapa&lt;/code&gt;&lt;/pre&gt;
-&lt;iframe seamless src=&#34;/es/leaflet_Malvinas/mapa_base1.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;
+&lt;iframe seamless src=&#34;/es/leaflet_Malvinas/mapa_tmap.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;
 &lt;/iframe&gt;
 &lt;p&gt;En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, durante julio de 2020 pude observar dos representaciones: una con OSM (y el nombre “Falkland Islands”) y otra con ESRI (sin nombre ni en las islas ni en ningún otro territorio; ojo: no podemos usar este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia).&lt;/p&gt;
 &lt;p&gt;Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando &lt;em&gt;“addProviderTiles”&lt;/em&gt;. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: &lt;a href=&#34;https://leaflet-extras.github.io/leaflet-providers/preview/&#34; class=&#34;uri&#34;&gt;https://leaflet-extras.github.io/leaflet-providers/preview/&lt;/a&gt;.
@@ -240,23 +229,23 @@ library(htmltools)&lt;/code&gt;&lt;/pre&gt;
   addProviderTiles(&amp;quot;OpenStreetMap.Mapnik&amp;quot;)  %&amp;gt;%
   setView(-60,-50, zoom = 5) 
 mapa_base1&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;leaflet html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;options&#34;:{&#34;crs&#34;:{&#34;crsClass&#34;:&#34;L.CRS.EPSG3857&#34;,&#34;code&#34;:null,&#34;proj4def&#34;:null,&#34;projectedBounds&#34;:null,&#34;options&#34;:{}}},&#34;calls&#34;:[{&#34;method&#34;:&#34;addProviderTiles&#34;,&#34;args&#34;:[&#34;OpenStreetMap.Mapnik&#34;,null,null,{&#34;errorTileUrl&#34;:&#34;&#34;,&#34;noWrap&#34;:false,&#34;detectRetina&#34;:false}]}],&#34;setView&#34;:[[-50,-60],5,[]]},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;iframe seamless src=&#34;/es/leaflet_Malvinas/mapa_base1.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;
+&lt;/iframe&gt;
 &lt;p&gt;Otro ejemplo, con el proveedor “Stamen Toner” (que al no tener mucho detalle puede ser apropiado para usar como mapa base en otras áreas del país):&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mapa_base2 &amp;lt;-leaflet() %&amp;gt;% 
   addProviderTiles(&amp;quot;Stamen.Toner&amp;quot;)  %&amp;gt;%
   setView(-60,-50, zoom = 5) 
 mapa_base2&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;leaflet html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;options&#34;:{&#34;crs&#34;:{&#34;crsClass&#34;:&#34;L.CRS.EPSG3857&#34;,&#34;code&#34;:null,&#34;proj4def&#34;:null,&#34;projectedBounds&#34;:null,&#34;options&#34;:{}}},&#34;calls&#34;:[{&#34;method&#34;:&#34;addProviderTiles&#34;,&#34;args&#34;:[&#34;Stamen.Toner&#34;,null,null,{&#34;errorTileUrl&#34;:&#34;&#34;,&#34;noWrap&#34;:false,&#34;detectRetina&#34;:false}]}],&#34;setView&#34;:[[-50,-60],5,[]]},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;iframe seamless src=&#34;/es/leaflet_Malvinas/mapa_base2.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;
+&lt;/iframe&gt;
 &lt;p&gt;El problema es que NINGÚN proveedor del extenso listado de proveedores que compartí antes dice “Islas Malvinas”. Entonces hay que buscar cómo incluir el Argenmap v2 del IGN, que tan bien soluciona nuestro problema de representación. Para cargar las teselas de IGN hay que usar el comando &lt;em&gt;addTiles&lt;/em&gt; (en vez de &lt;em&gt;addProviderTiles&lt;/em&gt;), así como conocer el link que nos da acceso a esas teselas. Este primer código crea un objeto que llamé &lt;em&gt;mapa_base_IGN&lt;/em&gt;, es decir, el “Mapa base de IGN” en Leaflet.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mapa_base_IGN &amp;lt;-leaflet() %&amp;gt;% 
   addTiles(&amp;#39;http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png&amp;#39;, 
            attribution = &amp;quot;Argenmap v2 - Instituto Geográfico Nacional&amp;quot;) %&amp;gt;%
   setView(-60,-50, zoom = 5)
 mapa_base_IGN&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;leaflet html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;options&#34;:{&#34;crs&#34;:{&#34;crsClass&#34;:&#34;L.CRS.EPSG3857&#34;,&#34;code&#34;:null,&#34;proj4def&#34;:null,&#34;projectedBounds&#34;:null,&#34;options&#34;:{}}},&#34;calls&#34;:[{&#34;method&#34;:&#34;addTiles&#34;,&#34;args&#34;:[&#34;http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png&#34;,null,null,{&#34;minZoom&#34;:0,&#34;maxZoom&#34;:18,&#34;tileSize&#34;:256,&#34;subdomains&#34;:&#34;abc&#34;,&#34;errorTileUrl&#34;:&#34;&#34;,&#34;tms&#34;:false,&#34;noWrap&#34;:false,&#34;zoomOffset&#34;:0,&#34;zoomReverse&#34;:false,&#34;opacity&#34;:1,&#34;zIndex&#34;:1,&#34;detectRetina&#34;:false,&#34;attribution&#34;:&#34;Argenmap v2 - Instituto Geográfico Nacional&#34;}]}],&#34;setView&#34;:[[-50,-60],5,[]]},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;iframe seamless src=&#34;/es/leaflet_Malvinas/mapa_base_2_IGN.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;
+&lt;/iframe&gt;
 &lt;p&gt;Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2 de IGN resuelve el problema de representación de las Islas Malvinas. Y no sólo eso, también resuelve el nombre de la Provincia que las incluye y todas las toponimias oficiales de Argentina (ciudades, nombres de lagunas y ríos, montes, etc).&lt;/p&gt;
 &lt;p&gt;Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector &lt;em&gt;%&amp;gt;%&lt;/em&gt; para agregar al objeto &lt;em&gt;mapa_base_IGN&lt;/em&gt; las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro &lt;em&gt;label&lt;/em&gt; permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mapa_final &amp;lt;-mapa_base_IGN %&amp;gt;%
@@ -267,6 +256,8 @@ mapa_base_IGN&lt;/code&gt;&lt;/pre&gt;
   addPolylines(data=limite_ZEE,
             col = &amp;quot;violet&amp;quot;)
 mapa_final&lt;/code&gt;&lt;/pre&gt;
+&lt;iframe seamless src=&#34;/es/leaflet_Malvinas/mapa_final.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;
+&lt;/iframe&gt;
 &lt;p&gt;¡Listo!&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
@@ -293,26 +284,17 @@ Los links de descarga de las &lt;a href=&#34;https://www.ign.gob.ar/NuestrasActi
 &lt;p&gt;Para cargar mapas bases en QGIS 3.xx, se utilizan &lt;em&gt;XYZ Tiles&lt;/em&gt;. Para comparar, vamos a cargar dos mapas bases, el de OpenStreepMap y el de Argenmap v2 de IGN. Hay muchos mapas bases en formato XYZ, &lt;a href=&#34;https://mappinggis.com/2018/03/como-anadir-mapas-base-en-qgis-3-0-openstreetmap-google-carto-stamen/&#34;&gt;aquí&lt;/a&gt; hay una guía muy útil.&lt;/p&gt;
 &lt;p&gt;En el panel “Navegador” (si no se ve, agregarlo: &lt;em&gt;Ver &amp;gt; Paneles &amp;gt; Navegador&lt;/em&gt;), buscar &lt;em&gt;XYZ Tiles&lt;/em&gt;. Hacer clic derecho y luego clic en &lt;em&gt;“Conexión nueva”&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: &lt;a href=&#34;https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&#34; class=&#34;uri&#34;&gt;https://tile.openstreetmap.org/{z}/{x}/{y}.png&lt;/a&gt;. El resto lo podemos dejar por defecto.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;data/QGIS_1.png&#34; style=&#34;width:100.0%&#34; alt=&#34;&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Conexión XYZ en QGIS&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;data/QGIS_1.png&#34; style=&#34;width:100.0%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;data/QGIS_2.png&#34; style=&#34;width:100.0%&#34; alt=&#34;&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Representación con OSM en QGIS&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;data/QGIS_2.png&#34; style=&#34;width:100.0%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es &lt;a href=&#34;http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/%7Bz%7D/%7Bx%7D/%7B-y%7D.png&#34; class=&#34;uri&#34;&gt;http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;data/QGIS_3.png&#34; style=&#34;width:100.0%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Ahora sí obtenemos el mapa deseado:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;data/QGIS_4.png&#34; style=&#34;width:100.0%&#34; alt=&#34;Representación con Argenmap v2 de IGN en QGIS&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;data/QGIS_4.png&#34; style=&#34;width:100.0%&#34; /&gt;
 ¡Listo!&lt;/p&gt;
 &lt;p&gt;Dejo a disposición &lt;a href=&#34;https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true&#34;&gt;el proyecto de este ejercicio tipo&lt;/a&gt;.
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;data/QGIS_5.png&#34; style=&#34;width:100.0%&#34; alt=&#34;&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Vista general del proyecto de QGIS&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;data/QGIS_5.png&#34; style=&#34;width:100.0%&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

@@ -130,6 +130,7 @@ limite_ZEE <- tempfile()
 download.file("http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjpsaW5lYV9kZV9saW1pdGVfMDcwMTA3LnppcA%3D%3D",limite_ZEE, mode="w") 
 unzip(limite_ZEE, exdir = "data/")
 ```
+
 Se trata de dos capas con representación de tipo vectorial _shapefile_, una con polígonos y la otra con líneas. Ahora las cargaremos en R, como objeto espacial de tipo vectorial. Si no tienen instaladas las librerías a usar en este y otros códigos, recuerden instalarlas antes de cargarlas.
 
 ```{r lectura_datos_espaciales, cache=TRUE}
@@ -205,7 +206,6 @@ mapa_final <-mapa_base_IGN %>%
 mapa_final
 ```
 
-<iframe seamless src="/static/leaflet_Malvinas/mapa_final.html" width="100%" height="500"></iframe>
 -------------
 
 ## Protocolo para QGIS 3.xx

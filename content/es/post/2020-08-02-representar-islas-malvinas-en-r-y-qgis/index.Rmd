@@ -40,7 +40,7 @@ Las Malvinas son argentinas. En los mapas elaborados con herramientas digitales,
 
 * No se habían dado cuenta del error, pero quieren y pueden solucionarlo cuando se les señala.
 * No se habían dado cuenta del error, quieren solucionarlo pero no tienen suficientes conocimientos técnicos para ello.
-* Justifican el error porque, dicen, sus mapas están en inglés. Pero ojo: **la única traducción de "Islas Malvinas" al inglés es "Malvinas Islands"**. Así lo considera Cancillería Argentina (ver por ejemplo [este documento en inglés](https://www.cancilleria.gob.ar/en/news/newsletter/question-malvinas-islands-support-argentinas-claim)). Usar el nombre inglés o usar un binomio (Nombre argentino / Nombre inglés) implica un retroceso en nuestra reivindicación de soberanía sobre las islas.
+* Justifican el error porque, dicen, sus mapas están en inglés. Pero ojo: *la única traducción de "Islas Malvinas" al inglés es "Malvinas Islands"*. Así lo considera Cancillería Argentina (ver por ejemplo [este documento en inglés](https://www.cancilleria.gob.ar/en/news/newsletter/question-malvinas-islands-support-argentinas-claim)). Usar el nombre inglés o usar un binomio (Nombre argentino / Nombre inglés) implica un retroceso en nuestra reivindicación de soberanía sobre las islas.
 
 Los mapas son una herramienta poderosa de comunicación política: nos permiten plasmar nuestra visión sobre el territorio. Considero inadmisible que las Islas Malvinas tengan un nombre incorrecto en los mapas que producimos argentinos y argentinas, así como en las publicaciones editadas en el país. Nuestro reclamo patriótico de soberanía sobre las islas no puede ser menoscabado por errores en las representaciones del territorio. Usar los nombres que intentan imponer quienes ilegalmente usurpan el territorio insular de la provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur es también una ofensa a nuestros caídos en los intentos por recuperar las Islas. Por estos motivos, me interesa aportar a difundir la problemática y a que más personas puedan resolver sus problemas de representación de las Islas Malvinas en la cartografía generada con herramientas digitales.
 
@@ -51,7 +51,7 @@ A su vez, el documento está dirigido a quienes ya conozcan el mapa base Argenma
 
 Si bien no proveo una solución explícita para Python ni para otros softwares/lenguajes libres, invito a contribuir a quienes lo deseen: posiblemente algo de lo aquí documentado pueda ser de utilidad. Para páginas web en las que se use Leaflet, la solución documentada para R es válida. Por otro lado, en los softwares privativos de Sistemas de Información Geográfica muy probablemente podrá utilizarse la solución provista para QGIS, basada en XYZ tiles. El repositorio del proyecto en *Github* está en: <https://github.com/nmorandeira/IGN_Malvinas>.
 
-Este documento provee una discusión sobre los orígenes del problema de representación de las Islas Malvinas y algunas herramientas para resolverlo. Quienes sólo tengan interés en la solución práctica, pueden saltearse el próximo apartado sobre el origen del problema e ir a la sección **Protocolo para R** ó **Protocolo para QGIS**.
+Este documento provee una discusión sobre los orígenes del problema de representación de las Islas Malvinas y algunas herramientas para resolverlo. Quienes sólo tengan interés en la solución práctica, pueden saltearse el próximo apartado sobre el origen del problema e ir a la sección *Protocolo para R* ó *Protocolo para QGIS*.
 
 ### Agradecimientos
 El documento fue redactado en julio de 2020, con colaboración de *Malena Libman* (Geochicas OSM) que señaló por dónde iba la solución: usar como mapa base a Argenmap v2, un gran trabajo elaborado por el Instituto Geográfico Nacional (IGN) de la República Argentina.
@@ -89,13 +89,13 @@ Por defecto, OSM representa los nombres en el lenguaje del país que considera l
 
 |*Relación 2185374 de OSM*|*Comentario*|
 |------|------|
-| ![](data/OSM_1.png){width=60%}|El nombre asignado a la relación 2185374 ya es indicativo del problema.|
-| ![](data/OSM_2.png){width=60%}|Algunas etiquetas. Adivinen qué significa FK.|
-| ![](data/OSM_3.png){width=60%}|OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es "Falkland Islands (Malvinas)" (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).|
-| ![](data/OSM_4.png){width=60%}|Esta etiqueta "name" es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.|
-| ![](data/OSM_5.png){width=60%}|Esta etiqueta "name:es" podría ser una solución parcial. Significa: "nombre en español". Vamos más adelante sobre ese punto.|
-| ![](data/OSM_6.png){width=60%}|De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: _"La política de OSM es que el 'name' (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como 'int_name'."_. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM --que reconoce que hay un territorio en disputa-- considera más conveniente usar el nombre en "name:es" y no (al menos) el nombre en "int_name" que es convención en Naciones Unidas?|
-| ![](data/OSM_7.png){width=60%}|Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los "territorios británicos de ultramar", que parecen ser [territorios ocupados y colonias desperdigados por todo el mundo](https://www.openstreetmap.org/relation/3969434).|
+| ![](data/OSM_1.png){width=80%}|El nombre asignado a la relación 2185374 ya es indicativo del problema.|
+| ![](data/OSM_2.png){width=80%}|Algunas etiquetas. Adivinen qué significa FK.|
+| ![](data/OSM_3.png){width=80%}|OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es "Falkland Islands (Malvinas)" (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).|
+| ![](data/OSM_4.png){width=80%}|Esta etiqueta "name" es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.|
+| ![](data/OSM_5.png){width=80%}|Esta etiqueta "name:es" podría ser una solución parcial. Significa: "nombre en español". Vamos más adelante sobre ese punto.|
+| ![](data/OSM_6.png){width=80%}|De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: _"La política de OSM es que el 'name' (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como 'int_name'."_. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM --que reconoce que hay un territorio en disputa-- considera más conveniente usar el nombre en "name:es" y no (al menos) el nombre en "int_name" que es convención en Naciones Unidas?|
+| ![](data/OSM_7.png){width=80%}|Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los "territorios británicos de ultramar", que parecen ser [territorios ocupados y colonias desperdigados por todo el mundo](https://www.openstreetmap.org/relation/3969434).|
 
 -------------
 
@@ -132,7 +132,7 @@ unzip(limite_ZEE, exdir = "data/")
 ```
 Se trata de dos capas con representación de tipo vectorial _shapefile_, una con polígonos y la otra con líneas. Ahora las cargaremos en R, como objeto espacial de tipo vectorial. Si no tienen instaladas las librerías a usar en este y otros códigos, recuerden instalarlas antes de cargarlas.
 
-```{r lectura_datos_espaciales}
+```{r lectura_datos_espaciales, cache=TRUE}
 library(sf)
 areasprotegidas <- st_read("data/area_protegida.shp", quiet=TRUE) 
 limite_ZEE <- st_read("data/linea_de_limite_070107.shp", quiet=TRUE)
@@ -152,6 +152,7 @@ mapa <- tm_shape(areasprotegidas) +
   tm_lines(col="violet")
 mapa
 ```
+
 En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, durante julio de 2020 pude observar dos representaciones: una con OSM (y el nombre "Falkland Islands") y otra con ESRI (sin nombre ni en las islas ni en ningún otro territorio; ojo: no podemos usar este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia).
 
 Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando _"addProviderTiles"_. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <https://leaflet-extras.github.io/leaflet-providers/preview/>.
@@ -170,7 +171,6 @@ mapa_base1 <-leaflet() %>%
   setView(-60,-50, zoom = 5) 
 mapa_base1
 ```
-
 
 Otro ejemplo, con el proveedor "Stamen Toner" (que al no tener mucho detalle puede ser apropiado para usar como mapa base en otras áreas del país):
 ```{r mapabase_StamenToner}
@@ -195,16 +195,17 @@ Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2
 Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector _%>%_ para agregar al objeto _mapa_base_IGN_ las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro _label_ permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor.
 
 ```{r mapafinal}
-mapa <-mapa_base_IGN %>%
+mapa_final <-mapa_base_IGN %>%
   addPolygons(data=areasprotegidas,
               col = "darkgreen",
               fillOpacity = 0.3,
               label=~htmlEscape(areasprotegidas$fna)) %>%
   addPolylines(data=limite_ZEE,
             col = "violet")
-mapa
+mapa_final
 ```
 
+<iframe seamless src="/static/leaflet_Malvinas/mapa_final.html" width="100%" height="500"></iframe>
 -------------
 
 ## Protocolo para QGIS 3.xx
@@ -232,33 +233,23 @@ En el panel "Navegador" (si no se ve, agregarlo: _Ver > Paneles > Navegador_), b
 
 El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <https://tile.openstreetmap.org/{z}/{x}/{y}.png>. El resto lo podemos dejar por defecto.
 
-<center>
-![](data/QGIS_1.png){width=50%}
-</center>
+![](data/QGIS_1.png){width=100%}
 
 Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:
 
-<center>
-![](data/QGIS_2.png){width=50%}
-</center>
+![](data/QGIS_2.png){width=100%}
 
 Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png>.
 
-<center>
-![](data/QGIS_3.png){width=50%}
-</center>
+![](data/QGIS_3.png){width=100%}
 
 Ahora sí obtenemos el mapa deseado:
 
-<center>
-![](data/QGIS_4.png){width=50%}
-</center>
+![](data/QGIS_4.png){width=100%}
+
 
 Dejo a disposición [el proyecto de este ejercicio tipo](https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true).
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:
 
-<center>
-![](data/QGIS_5.png){width=80%}
-</center>
-
+![](data/QGIS_5.png){width=100%}
 

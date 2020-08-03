@@ -163,7 +163,7 @@ limite_ZEE &lt;- st_read(&quot;data/linea_de_limite_070107.shp&quot;, quiet=TRUE
 <p>Vamos ahora a visualizar estas capas en un mapa, usando la librería <em>tmap</em> y el modo interactivo <em>view</em>. Primero configuramos la salida del mapa.</p>
 <pre class="r"><code>library(tmap)
 tmap_mode(&quot;view&quot;) </code></pre>
-<p>Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). Este mapa tarda en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura).</p>
+<p>Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura).</p>
 <pre class="r"><code>mapa &lt;- tm_shape(areasprotegidas) + 
   tm_polygons(col=&quot;green&quot;) +
   tm_shape(limite_ZEE) +

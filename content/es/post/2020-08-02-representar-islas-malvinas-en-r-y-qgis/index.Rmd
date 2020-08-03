@@ -146,7 +146,7 @@ library(tmap)
 tmap_mode("view") 
 ```
 
-Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). Este mapa tarda en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura).
+Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura).
 
 ```{r mapa_tmap, eval=F, echo=T}
 mapa <- tm_shape(areasprotegidas) + 

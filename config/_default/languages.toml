@@ -12,10 +12,10 @@
   languageCode = "es"
   contentDir = "content/es"
 
-#  title = "Natalia Morandeira"
-# [es.params]
-#    description = "Sitio web de Natalia Morandeira"
-#  [[es.menu.main]]
-#   name = "ES"
-#    url = "#about"
-#  weight = 1
+  title = "Natalia Morandeira"
+[es.params]
+   description = "Natalia Morandeira - Sitio web"
+ [[es.menu.main]]
+   name = "ES"
+   url = "#about"
+  weight = 1

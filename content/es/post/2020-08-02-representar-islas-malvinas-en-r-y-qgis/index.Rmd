@@ -22,7 +22,7 @@ categories:
   - R
   - QGIS
 image:
-  caption: '[Islas Malvinas en la representación de IGN](/img/img_Malvinas/featured.jpg)'
+  caption: '[Islas Malvinas en la representación de IGN](/img/featured_Malvinas.jpg)'
   focal_point: ''
 output:
   blogdown::html_page:
@@ -156,10 +156,11 @@ mapa <- tm_shape(areasprotegidas) +
 mapa
 ```
 
-El código genera un mapa interactivo que tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (los siguientes mapas son más rápidos). Por ese motivo dejo una captura de pantalla.
+El código genera un mapa interactivo que tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (pero pueden correrlo en sus computadoras, allí no demora). Por ese motivo dejo a continuación una captura de pantalla. Los siguientes mapas son más rápidos, así que podrán interactuar en los próximos ejemplos.
 
+![](/img/tmap_ESRI.png)
 
-En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, durante julio de 2020 pude observar dos representaciones: una con OSM (y el nombre "Falkland Islands") y otra con ESRI (sin nombre ni en las islas ni en ningún otro territorio; ojo: no podemos usar este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia).
+En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, con el selector de capas (arriba a la derecha, ver captura de pantalla), se puede elegir entre tres proveedores. Uno de estos proveedores, OSM, es libre pero tiene el nombre "Falkland Islands"; los restantes dos proveedores son de ESRI y tienen sólo algunas etiquetas y a algunas escalas. Ojo: no podemos usar los mapas base de ESRI este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia.
 
 Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando _"addProviderTiles"_. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <https://leaflet-extras.github.io/leaflet-providers/preview/>.
 Cargamos las dos librerías necesarias:
@@ -206,7 +207,7 @@ mapa_base_IGN
 
 Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2 de IGN resuelve el problema de representación de las Islas Malvinas. Y no sólo eso, también resuelve el nombre de la Provincia que las incluye y todas las toponimias oficiales de Argentina (ciudades, nombres de lagunas y ríos, montes, etc).
 
-Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector _%>%_ para agregar al objeto _mapa_base_IGN_ las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro _label_ permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor. Este mapa puede tardar en cargar, porque es muy pesada la capa de Áreas protegidas. ¡Pero vale la pena ver el producto final!
+Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector _%>%_ para agregar al objeto _mapa_base_IGN_ las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro _label_ permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor. Este mapa puede tardar en cargar, porque es muy pesada la capa de Áreas protegidas. ¡Pero vale la pena esperar para ver el producto final!
 
 ```{r mapafinal, eval=FALSE, echo=TRUE}
 mapa_final <-mapa_base_IGN %>%
@@ -252,8 +253,6 @@ El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombr
 
 ![](/img/QGIS_1.png){width=100%}
 
-{{< figure src="img/QGIS_1.png" alt="Conexión XYZ en QGIS">}}
-
 Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:
 
 ![](/img/QGIS_2.png){width=100%}
@@ -264,7 +263,7 @@ Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos 
 
 Ahora sí obtenemos el mapa deseado:
 
-![](data/QGIS_4.png){width=100%}
+![](/img/QGIS_4.png){width=100%}
 ¡Listo!
 
 Dejo a disposición [el proyecto de este ejercicio tipo](https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true).

@@ -94,31 +94,31 @@ En contraste con otros proveedores de datos geográficos, OSM es libre: podemos 
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="/img/img_Malvinas/OSM_1.png" style="width:80.0%" /></td>
+<td><img src="/img/OSM_1.png" style="width:80.0%" /></td>
 <td>El nombre asignado a la relación 2185374 ya es indicativo del problema.</td>
 </tr>
 <tr class="even">
-<td><img src="/img/img_Malvinas/OSM_2.png" style="width:80.0%" /></td>
+<td><img src="/img/OSM_2.png" style="width:80.0%" /></td>
 <td>Algunas etiquetas. Adivinen qué significa FK.</td>
 </tr>
 <tr class="odd">
-<td><img src="/img/img_Malvinas/OSM_3.png" style="width:80.0%" /></td>
+<td><img src="/img/OSM_3.png" style="width:80.0%" /></td>
 <td>OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es “Falkland Islands (Malvinas)” (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).</td>
 </tr>
 <tr class="even">
-<td><img src="/img/img_Malvinas/OSM_4.png" style="width:80.0%" /></td>
+<td><img src="/img_Malvinas/OSM_4.png" style="width:80.0%" /></td>
 <td>Esta etiqueta “name” es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.</td>
 </tr>
 <tr class="odd">
-<td><img src="/img/img_Malvinas/OSM_5.png" style="width:80.0%" /></td>
+<td><img src="/img_Malvinas/OSM_5.png" style="width:80.0%" /></td>
 <td>Esta etiqueta “name:es” podría ser una solución parcial. Significa: “nombre en español”. Vamos más adelante sobre ese punto.</td>
 </tr>
 <tr class="even">
-<td><img src="/img/img_Malvinas/OSM_6.png" style="width:80.0%" /></td>
+<td><img src="/img_Malvinas/OSM_6.png" style="width:80.0%" /></td>
 <td>De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: <em>“La política de OSM es que el ‘name’ (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como ‘int_name’.”</em>. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM –que reconoce que hay un territorio en disputa– considera más conveniente usar el nombre en “name:es” y no (al menos) el nombre en “int_name” que es convención en Naciones Unidas?</td>
 </tr>
 <tr class="odd">
-<td><img src="/img/img_Malvinas/OSM_7.png" style="width:80.0%" /></td>
+<td><img src="/img_Malvinas/OSM_7.png" style="width:80.0%" /></td>
 <td>Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los “territorios británicos de ultramar”, que parecen ser <a href="https://www.openstreetmap.org/relation/3969434">territorios ocupados y colonias desperdigados por todo el mundo</a>.</td>
 </tr>
 </tbody>
@@ -180,14 +180,14 @@ library(htmltools)</code></pre>
   addProviderTiles(&quot;OpenStreetMap.Mapnik&quot;)  %&gt;%
   setView(-60,-50, zoom = 5) 
 mapa_base1</code></pre>
-<iframe seamless src="/es/leaflet_Malvinas/mapa_base1.html" width="100%" height="500">
+<iframe seamless src="/leaflet_Malvinas/mapa_base1.html" width="100%" height="500">
 </iframe>
 <p>Otro ejemplo, con el proveedor “Stamen Toner” (que al no tener mucho detalle puede ser apropiado para usar como mapa base en otras áreas del país):</p>
 <pre class="r"><code>mapa_base2 &lt;-leaflet() %&gt;% 
   addProviderTiles(&quot;Stamen.Toner&quot;)  %&gt;%
   setView(-60,-50, zoom = 5) 
 mapa_base2</code></pre>
-<iframe seamless src="/es/leaflet_Malvinas/mapa_base2.html" width="100%" height="500">
+<iframe seamless src="/leaflet_Malvinas/mapa_base2.html" width="100%" height="500">
 </iframe>
 <p>El problema es que NINGÚN proveedor del extenso listado de proveedores que compartí antes dice “Islas Malvinas”. Entonces hay que buscar cómo incluir el Argenmap v2 del IGN, que tan bien soluciona nuestro problema de representación. Para cargar las teselas de IGN hay que usar el comando <em>addTiles</em> (en vez de <em>addProviderTiles</em>), así como conocer el link que nos da acceso a esas teselas. Este primer código crea un objeto que llamé <em>mapa_base_IGN</em>, es decir, el “Mapa base de IGN” en Leaflet.</p>
 <pre class="r"><code>mapa_base_IGN &lt;-leaflet() %&gt;% 
@@ -195,7 +195,7 @@ mapa_base2</code></pre>
            attribution = &quot;Argenmap v2 - Instituto Geográfico Nacional&quot;) %&gt;%
   setView(-60,-50, zoom = 5)
 mapa_base_IGN</code></pre>
-<iframe seamless src="/es/leaflet_Malvinas/mapa_base_IGN.html" width="100%" height="500">
+<iframe seamless src="/leaflet_Malvinas/mapa_base_IGN.html" width="100%" height="500">
 </iframe>
 <p>Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2 de IGN resuelve el problema de representación de las Islas Malvinas. Y no sólo eso, también resuelve el nombre de la Provincia que las incluye y todas las toponimias oficiales de Argentina (ciudades, nombres de lagunas y ríos, montes, etc).</p>
 <p>Ahora que tenemos el mapa base de IGN ya creado, vamos a crear el mapa final del ejercicio, usando el conector <em>%&gt;%</em> para agregar al objeto <em>mapa_base_IGN</em> las capas de polígonos y líneas. En la capa de polígonos de las áreas protegidas, la configuración del parámetro <em>label</em> permite agregar etiquetas sobre las áreas protegidas, que se visualizan al apoyar el cursor. Este mapa puede tardar en cargar, porque es muy pesada la capa de Áreas protegidas. ¡Pero vale la pena ver el producto final!</p>
@@ -207,7 +207,7 @@ mapa_base_IGN</code></pre>
   addPolylines(data=limite_ZEE,
             col = &quot;violet&quot;)
 mapa_final</code></pre>
-<iframe seamless src="/es/leaflet_Malvinas/mapa_final.html" width="100%" height="500">
+<iframe seamless src="/leaflet_Malvinas/mapa_final.html" width="100%" height="500">
 </iframe>
 <p>¡Listo!</p>
 <hr />
@@ -235,7 +235,8 @@ Los links de descarga de las <a href="https://www.ign.gob.ar/NuestrasActividades
 <p>Para cargar mapas bases en QGIS 3.xx, se utilizan <em>XYZ Tiles</em>. Para comparar, vamos a cargar dos mapas bases, el de OpenStreepMap y el de Argenmap v2 de IGN. Hay muchos mapas bases en formato XYZ, <a href="https://mappinggis.com/2018/03/como-anadir-mapas-base-en-qgis-3-0-openstreetmap-google-carto-stamen/">aquí</a> hay una guía muy útil.</p>
 <p>En el panel “Navegador” (si no se ve, agregarlo: <em>Ver &gt; Paneles &gt; Navegador</em>), buscar <em>XYZ Tiles</em>. Hacer clic derecho y luego clic en <em>“Conexión nueva”</em>.</p>
 <p>El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <a href="https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://tile.openstreetmap.org/{z}/{x}/{y}.png</a>. El resto lo podemos dejar por defecto.</p>
-<p><img src="/img/img_Malvinas/QGIS_1.png" style="width:100.0%" /></p>
+<p><img src="/img/QGIS_1.png" style="width:100.0%" /></p>
+<p>{{&lt; figure src=“/img/QGIS_1.png” alt=“Conexión XYZ en QGIS”&gt;}}</p>
 <p>Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:</p>
 <p><img src="/img/img_Malvinas/QGIS_2.png" style="width:100.0%" /></p>
 <p>Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <a href="http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/%7Bz%7D/%7Bx%7D/%7B-y%7D.png" class="uri">http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png</a>.</p>

@@ -90,13 +90,13 @@ Por defecto, OSM representa los nombres en el lenguaje del país que considera l
 
 |*Relación 2185374 de OSM*|*Comentario*|
 |------|------|
-| ![](/img/img_Malvinas/OSM_1.png){width=80%}|El nombre asignado a la relación 2185374 ya es indicativo del problema.|
-| ![](/img/img_Malvinas/OSM_2.png){width=80%}|Algunas etiquetas. Adivinen qué significa FK.|
-| ![](/img/img_Malvinas/OSM_3.png){width=80%}|OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es "Falkland Islands (Malvinas)" (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).|
-| ![](/img/img_Malvinas/OSM_4.png){width=80%}|Esta etiqueta "name" es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.|
-| ![](/img/img_Malvinas/OSM_5.png){width=80%}|Esta etiqueta "name:es" podría ser una solución parcial. Significa: "nombre en español". Vamos más adelante sobre ese punto.|
-| ![](/img/img_Malvinas/OSM_6.png){width=80%}|De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: _"La política de OSM es que el 'name' (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como 'int_name'."_. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM --que reconoce que hay un territorio en disputa-- considera más conveniente usar el nombre en "name:es" y no (al menos) el nombre en "int_name" que es convención en Naciones Unidas?|
-| ![](/img/img_Malvinas/OSM_7.png){width=80%}|Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los "territorios británicos de ultramar", que parecen ser [territorios ocupados y colonias desperdigados por todo el mundo](https://www.openstreetmap.org/relation/3969434).|
+| ![](/img/OSM_1.png){width=80%}|El nombre asignado a la relación 2185374 ya es indicativo del problema.|
+| ![](/img/OSM_2.png){width=80%}|Algunas etiquetas. Adivinen qué significa FK.|
+| ![](/img/OSM_3.png){width=80%}|OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es "Falkland Islands (Malvinas)" (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).|
+| ![](/img_Malvinas/OSM_4.png){width=80%}|Esta etiqueta "name" es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.|
+| ![](/img_Malvinas/OSM_5.png){width=80%}|Esta etiqueta "name:es" podría ser una solución parcial. Significa: "nombre en español". Vamos más adelante sobre ese punto.|
+| ![](/img_Malvinas/OSM_6.png){width=80%}|De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: _"La política de OSM es que el 'name' (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como 'int_name'."_. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM --que reconoce que hay un territorio en disputa-- considera más conveniente usar el nombre en "name:es" y no (al menos) el nombre en "int_name" que es convención en Naciones Unidas?|
+| ![](/img_Malvinas/OSM_7.png){width=80%}|Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los "territorios británicos de ultramar", que parecen ser [territorios ocupados y colonias desperdigados por todo el mundo](https://www.openstreetmap.org/relation/3969434).|
 
 -------------
 
@@ -178,7 +178,7 @@ mapa_base1 <-leaflet() %>%
 mapa_base1
 ```
 
-<iframe seamless src="/es/leaflet_Malvinas/mapa_base1.html" width="100%" height="500"></iframe>
+<iframe seamless src="/leaflet_Malvinas/mapa_base1.html" width="100%" height="500"></iframe>
 
 
 Otro ejemplo, con el proveedor "Stamen Toner" (que al no tener mucho detalle puede ser apropiado para usar como mapa base en otras áreas del país):
@@ -189,7 +189,7 @@ mapa_base2 <-leaflet() %>%
 mapa_base2
 ```
 
-<iframe seamless src="/es/leaflet_Malvinas/mapa_base2.html" width="100%" height="500"></iframe>
+<iframe seamless src="/leaflet_Malvinas/mapa_base2.html" width="100%" height="500"></iframe>
 
 El problema es que NINGÚN proveedor del extenso listado de proveedores que compartí antes dice "Islas Malvinas". Entonces hay que buscar cómo incluir el Argenmap v2 del IGN, que tan bien soluciona nuestro problema de representación. Para cargar las teselas de IGN hay que usar el comando _addTiles_ (en vez de _addProviderTiles_), así como conocer el link que nos da acceso a esas teselas. Este primer código crea un objeto que llamé _mapa_base_IGN_, es decir, el "Mapa base de IGN" en Leaflet.
 
@@ -201,7 +201,7 @@ mapa_base_IGN <-leaflet() %>%
 mapa_base_IGN
 ```
 
-<iframe seamless src="/es/leaflet_Malvinas/mapa_base_IGN.html" width="100%" height="500"></iframe>
+<iframe seamless src="/leaflet_Malvinas/mapa_base_IGN.html" width="100%" height="500"></iframe>
 
 
 Al hacer un recorrido en el mapa interactivo vemos que efectivamente Argenmap v2 de IGN resuelve el problema de representación de las Islas Malvinas. Y no sólo eso, también resuelve el nombre de la Provincia que las incluye y todas las toponimias oficiales de Argentina (ciudades, nombres de lagunas y ríos, montes, etc).
@@ -219,7 +219,7 @@ mapa_final <-mapa_base_IGN %>%
 mapa_final
 ```
 
-<iframe seamless src="/es/leaflet_Malvinas/mapa_final.html" width="100%" height="500"></iframe>
+<iframe seamless src="/leaflet_Malvinas/mapa_final.html" width="100%" height="500"></iframe>
 
 ¡Listo!
 
@@ -250,7 +250,9 @@ En el panel "Navegador" (si no se ve, agregarlo: _Ver > Paneles > Navegador_), b
 
 El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <https://tile.openstreetmap.org/{z}/{x}/{y}.png>. El resto lo podemos dejar por defecto.
 
-![](/img/img_Malvinas/QGIS_1.png){width=100%}
+![](/img/QGIS_1.png){width=100%}
+
+{{< figure src="/img/QGIS_1.png" alt="Conexión XYZ en QGIS">}}
 
 Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:
 

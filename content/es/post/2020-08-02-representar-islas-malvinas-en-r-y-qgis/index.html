@@ -22,7 +22,7 @@ categories:
   - R
   - QGIS
 image:
-  caption: '[Islas Malvinas en la representación de IGN](/img/featured_Malvinas.jpg)'
+  caption: '[Islas Malvinas en la representación de IGN](featured.jpg)'
   focal_point: ''
 output:
   blogdown::html_page:
@@ -106,7 +106,7 @@ En contraste con otros proveedores de datos geográficos, OSM es libre: podemos 
 <td>OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es “Falkland Islands (Malvinas)” (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).</td>
 </tr>
 <tr class="even">
-<td><img src="img_Malvinas/OSM_4.png" style="width:80.0%" /></td>
+<td><img src="/img_Malvinas/OSM_4.png" style="width:80.0%" /></td>
 <td>Esta etiqueta “name” es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.</td>
 </tr>
 <tr class="odd">
@@ -169,9 +169,9 @@ tmap_mode(&quot;view&quot;) </code></pre>
   tm_shape(limite_ZEE) +
   tm_lines(col=&quot;violet&quot;)
 mapa</code></pre>
-<p>El código genera un mapa interactivo que tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (pero pueden correrlo en sus computadoras, allí no demora). Por ese motivo dejo a continuación una captura de pantalla. Los siguientes mapas son más rápidos, así que podrán interactuar en los próximos ejemplos.</p>
+<p>El código genera un mapa interactivo que tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (pero pueden correrlo en sus computadoras, donde no demora). Por ese motivo dejo a continuación una captura de pantalla. Los mapas de los siguientes ejemplos son más rápidos, así que podrán interactuar.</p>
 <p><img src="/img/tmap_ESRI.png" /></p>
-<p>En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, con el selector de capas (arriba a la derecha, ver captura de pantalla), se puede elegir entre tres proveedores. Uno de estos proveedores, OSM, es libre pero tiene el nombre “Falkland Islands”; los restantes dos proveedores son de ESRI y tienen sólo algunas etiquetas y a algunas escalas. Ojo: no podemos usar los mapas base de ESRI este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia.</p>
+<p>En la parte de abajo a la derecha del mapa dice que se está usando el entorno Leaflet con un determinado proveedor de mapas. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, con el selector de capas (arriba a la derecha, ver captura de pantalla), se puede elegir entre tres proveedores. OSM es uno de estos proveedores: es libre pero tiene el nombre “Falkland Islands”. Los restantes dos proveedores son de ESRI y tienen sólo algunas etiquetas y a algunas escalas. Ojo: no podemos usar los mapas base de ESRI este mapa base en cualquier circunstancia porque no son libres, revisar los términos de uso de las licencias.</p>
 <p>Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando <em>“addProviderTiles”</em>. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>.
 Cargamos las dos librerías necesarias:</p>
 <pre class="r"><code>library(leaflet)

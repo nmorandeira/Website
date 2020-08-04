@@ -22,7 +22,7 @@ categories:
   - R
   - QGIS
 image:
-  caption: '[Islas Malvinas en la representación de IGN](/img/featured_Malvinas.jpg)'
+  caption: '[Islas Malvinas en la representación de IGN](featured.jpg)'
   focal_point: ''
 output:
   blogdown::html_page:
@@ -93,7 +93,7 @@ Por defecto, OSM representa los nombres en el lenguaje del país que considera l
 | ![](/img/OSM_1.png){width=80%}|El nombre asignado a la relación 2185374 ya es indicativo del problema.|
 | ![](/img/OSM_2.png){width=80%}|Algunas etiquetas. Adivinen qué significa FK.|
 | ![](/img/OSM_3.png){width=80%}|OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es "Falkland Islands (Malvinas)" (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).|
-| ![](img_Malvinas/OSM_4.png){width=80%}|Esta etiqueta "name" es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.|
+| ![](/img_Malvinas/OSM_4.png){width=80%}|Esta etiqueta "name" es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.|
 | ![](/img/OSM_5.png){width=80%}|Esta etiqueta "name:es" podría ser una solución parcial. Significa: "nombre en español". Vamos más adelante sobre ese punto.|
 | ![](/img/OSM_6.png){width=80%}|De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: _"La política de OSM es que el 'name' (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como 'int_name'."_. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM --que reconoce que hay un territorio en disputa-- considera más conveniente usar el nombre en "name:es" y no (al menos) el nombre en "int_name" que es convención en Naciones Unidas?|
 | ![](/img/OSM_7.png){width=80%}|Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los "territorios británicos de ultramar", que parecen ser [territorios ocupados y colonias desperdigados por todo el mundo](https://www.openstreetmap.org/relation/3969434).|
@@ -156,11 +156,11 @@ mapa <- tm_shape(areasprotegidas) +
 mapa
 ```
 
-El código genera un mapa interactivo que tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (pero pueden correrlo en sus computadoras, allí no demora). Por ese motivo dejo a continuación una captura de pantalla. Los siguientes mapas son más rápidos, así que podrán interactuar en los próximos ejemplos.
+El código genera un mapa interactivo que tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (pero pueden correrlo en sus computadoras, donde no demora). Por ese motivo dejo a continuación una captura de pantalla. Los mapas de los siguientes ejemplos son más rápidos, así que podrán interactuar.
 
 ![](/img/tmap_ESRI.png)
 
-En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, con el selector de capas (arriba a la derecha, ver captura de pantalla), se puede elegir entre tres proveedores. Uno de estos proveedores, OSM, es libre pero tiene el nombre "Falkland Islands"; los restantes dos proveedores son de ESRI y tienen sólo algunas etiquetas y a algunas escalas. Ojo: no podemos usar los mapas base de ESRI este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia.
+En la parte de abajo a la derecha del mapa dice que se está usando el entorno Leaflet con un determinado proveedor de mapas. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, con el selector de capas (arriba a la derecha, ver captura de pantalla), se puede elegir entre tres proveedores. OSM es uno de estos proveedores: es libre pero tiene el nombre "Falkland Islands". Los restantes dos proveedores son de ESRI y tienen sólo algunas etiquetas y a algunas escalas. Ojo: no podemos usar los mapas base de ESRI este mapa base en cualquier circunstancia porque no son libres, revisar los términos de uso de las licencias.
 
 Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando _"addProviderTiles"_. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <https://leaflet-extras.github.io/leaflet-providers/preview/>.
 Cargamos las dos librerías necesarias:

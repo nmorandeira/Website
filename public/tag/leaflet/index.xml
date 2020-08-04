@@ -151,14 +151,13 @@ limite_ZEE &amp;lt;- st_read(&amp;quot;data/linea_de_limite_070107.shp&amp;quot;
 &lt;p&gt;Vamos ahora a visualizar estas capas en un mapa, usando la librería &lt;em&gt;tmap&lt;/em&gt; y el modo interactivo &lt;em&gt;view&lt;/em&gt;. Primero configuramos la salida del mapa.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tmap)
 tmap_mode(&amp;quot;view&amp;quot;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura, los siguientes mapas son más rápidos).&lt;/p&gt;
+&lt;p&gt;Ahora elaboramos el mapa con tmap (una de las formas más usuales en R).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mapa &amp;lt;- tm_shape(areasprotegidas) + 
   tm_polygons(col=&amp;quot;green&amp;quot;) +
   tm_shape(limite_ZEE) +
   tm_lines(col=&amp;quot;violet&amp;quot;)
 mapa&lt;/code&gt;&lt;/pre&gt;
-&lt;iframe seamless src=&#34;/es/leaflet_Malvinas/mapa_tmap.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;
-&lt;/iframe&gt;
+&lt;p&gt;Este mapa interactivo tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (los siguientes mapas son más rápidos). Por ese motivo dejo una captura de pantalla.&lt;/p&gt;
 &lt;p&gt;En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, durante julio de 2020 pude observar dos representaciones: una con OSM (y el nombre “Falkland Islands”) y otra con ESRI (sin nombre ni en las islas ni en ningún otro territorio; ojo: no podemos usar este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia).&lt;/p&gt;
 &lt;p&gt;Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando &lt;em&gt;“addProviderTiles”&lt;/em&gt;. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: &lt;a href=&#34;https://leaflet-extras.github.io/leaflet-providers/preview/&#34; class=&#34;uri&#34;&gt;https://leaflet-extras.github.io/leaflet-providers/preview/&lt;/a&gt;.
 Cargamos las dos librerías necesarias:&lt;/p&gt;

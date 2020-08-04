@@ -796,14 +796,13 @@ limite_ZEE &lt;- st_read(&quot;data/linea_de_limite_070107.shp&quot;, quiet=TRUE
 <p>Vamos ahora a visualizar estas capas en un mapa, usando la librería <em>tmap</em> y el modo interactivo <em>view</em>. Primero configuramos la salida del mapa.</p>
 <pre class="r"><code>library(tmap)
 tmap_mode(&quot;view&quot;) </code></pre>
-<p>Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura, los siguientes mapas son más rápidos).</p>
+<p>Ahora elaboramos el mapa con tmap (una de las formas más usuales en R).</p>
 <pre class="r"><code>mapa &lt;- tm_shape(areasprotegidas) + 
   tm_polygons(col=&quot;green&quot;) +
   tm_shape(limite_ZEE) +
   tm_lines(col=&quot;violet&quot;)
 mapa</code></pre>
-<iframe seamless src="/es/leaflet_Malvinas/mapa_tmap.html" width="100%" height="500">
-</iframe>
+<p>Este mapa interactivo tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (los siguientes mapas son más rápidos). Por ese motivo dejo una captura de pantalla.</p>
 <p>En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, durante julio de 2020 pude observar dos representaciones: una con OSM (y el nombre “Falkland Islands”) y otra con ESRI (sin nombre ni en las islas ni en ningún otro territorio; ojo: no podemos usar este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia).</p>
 <p>Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando <em>“addProviderTiles”</em>. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>.
 Cargamos las dos librerías necesarias:</p>

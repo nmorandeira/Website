@@ -225,7 +225,7 @@ Los links de descarga de las <a href="https://www.ign.gob.ar/NuestrasActividades
 <li><a href="http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjphcmVhX3Byb3RlZ2lkYS56aXA%3D">Áreas protegidas</a> (polígonos)</li>
 <li><a href="http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjpsaW5lYV9kZV9saW1pdGVfMDcwMTA3LnppcA%3D%3D">Límite de la zona económica exclusiva</a> (líneas)</li>
 </ul>
-<p>Bajamos las capas y las descomprimimos. Luego, debemos agregarlas al panel Capas de QGIS con alguno de estos métodos:</p>
+<p>Bajamos las capas y las descomprimimos. Luego, debemos agregarlas al panel Capas de QGIS con alguno de estos métodos (a elección):</p>
 <ul>
 <li>Con el botón <em>“Añadir capa vectorial”</em>,</li>
 <li>Con el atajo de teclado <em>Ctrl+Shift+V</em>,</li>
@@ -237,7 +237,7 @@ Los links de descarga de las <a href="https://www.ign.gob.ar/NuestrasActividades
 <p>En el panel “Navegador” (si no se ve, agregarlo: <em>Ver &gt; Paneles &gt; Navegador</em>), buscar <em>XYZ Tiles</em>. Hacer clic derecho y luego clic en <em>“Conexión nueva”</em>.</p>
 <p>El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <a href="https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://tile.openstreetmap.org/{z}/{x}/{y}.png</a>. El resto lo podemos dejar por defecto.</p>
 <p><img src="/img/QGIS_1.png" style="width:100.0%" /></p>
-<p>Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:</p>
+<p>Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto, con un nombre incorrecto en las Islas Malvinas:</p>
 <p><img src="/img/QGIS_2.png" style="width:100.0%" /></p>
 <p>Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <a href="http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/%7Bz%7D/%7Bx%7D/%7B-y%7D.png" class="uri">http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png</a>.</p>
 <p><img src="/img/QGIS_3.png" style="width:100.0%" /></p>

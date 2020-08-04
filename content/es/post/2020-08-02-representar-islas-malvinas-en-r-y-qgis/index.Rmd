@@ -236,7 +236,7 @@ Los links de descarga de las [capas SIG de IGN](https://www.ign.gob.ar/NuestrasA
 * [Áreas protegidas](http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjphcmVhX3Byb3RlZ2lkYS56aXA%3D) (polígonos)
 * [Límite de la zona económica exclusiva](http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjpsaW5lYV9kZV9saW1pdGVfMDcwMTA3LnppcA%3D%3D) (líneas)
 
-Bajamos las capas y las descomprimimos. Luego, debemos agregarlas al panel Capas de QGIS con alguno de estos métodos:
+Bajamos las capas y las descomprimimos. Luego, debemos agregarlas al panel Capas de QGIS con alguno de estos métodos (a elección):
 
 * Con el botón _"Añadir capa vectorial"_, 
 * Con el atajo de teclado _Ctrl+Shift+V_, 
@@ -253,7 +253,7 @@ El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombr
 
 ![](/img/QGIS_1.png){width=100%}
 
-Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:
+Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto, con un nombre incorrecto en las Islas Malvinas:
 
 ![](/img/QGIS_2.png){width=100%}
 
@@ -270,4 +270,3 @@ Dejo a disposición [el proyecto de este ejercicio tipo](https://github.com/nmor
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:
 
 ![](/img/QGIS_5.png){width=100%}
-

@@ -22,7 +22,7 @@ categories:
   - R
   - QGIS
 image:
-  caption: '[Islas Malvinas en la representación de IGN](/img/img_Malvinas/featured.jpg)'
+  caption: '[Islas Malvinas en la representación de IGN](img/img_Malvinas/featured.jpg)'
   focal_point: ''
 output:
   blogdown::html_page:
@@ -90,13 +90,13 @@ Por defecto, OSM representa los nombres en el lenguaje del país que considera l
 
 |*Relación 2185374 de OSM*|*Comentario*|
 |------|------|
-| ![](/img/OSM_1.png){width=80%}|El nombre asignado a la relación 2185374 ya es indicativo del problema.|
-| ![](/img/OSM_2.png){width=80%}|Algunas etiquetas. Adivinen qué significa FK.|
-| ![](/img/OSM_3.png){width=80%}|OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es "Falkland Islands (Malvinas)" (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).|
-| ![](/img_Malvinas/OSM_4.png){width=80%}|Esta etiqueta "name" es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.|
-| ![](/img_Malvinas/OSM_5.png){width=80%}|Esta etiqueta "name:es" podría ser una solución parcial. Significa: "nombre en español". Vamos más adelante sobre ese punto.|
-| ![](/img_Malvinas/OSM_6.png){width=80%}|De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: _"La política de OSM es que el 'name' (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como 'int_name'."_. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM --que reconoce que hay un territorio en disputa-- considera más conveniente usar el nombre en "name:es" y no (al menos) el nombre en "int_name" que es convención en Naciones Unidas?|
-| ![](/img_Malvinas/OSM_7.png){width=80%}|Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los "territorios británicos de ultramar", que parecen ser [territorios ocupados y colonias desperdigados por todo el mundo](https://www.openstreetmap.org/relation/3969434).|
+| ![](img/OSM_1.png){width=80%}|El nombre asignado a la relación 2185374 ya es indicativo del problema.|
+| ![](img/OSM_2.png){width=80%}|Algunas etiquetas. Adivinen qué significa FK.|
+| ![](img/OSM_3.png){width=80%}|OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es "Falkland Islands (Malvinas)" (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).|
+| ![](img_Malvinas/OSM_4.png){width=80%}|Esta etiqueta "name" es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.|
+| ![](img/OSM_5.png){width=80%}|Esta etiqueta "name:es" podría ser una solución parcial. Significa: "nombre en español". Vamos más adelante sobre ese punto.|
+| ![](img/OSM_6.png){width=80%}|De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: _"La política de OSM es que el 'name' (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como 'int_name'."_. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM --que reconoce que hay un territorio en disputa-- considera más conveniente usar el nombre en "name:es" y no (al menos) el nombre en "int_name" que es convención en Naciones Unidas?|
+| ![](img/OSM_7.png){width=80%}|Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los "territorios británicos de ultramar", que parecen ser [territorios ocupados y colonias desperdigados por todo el mundo](https://www.openstreetmap.org/relation/3969434).|
 
 -------------
 
@@ -250,17 +250,17 @@ En el panel "Navegador" (si no se ve, agregarlo: _Ver > Paneles > Navegador_), b
 
 El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <https://tile.openstreetmap.org/{z}/{x}/{y}.png>. El resto lo podemos dejar por defecto.
 
-![](/img/QGIS_1.png){width=100%}
+![](img/QGIS_1.png){width=100%}
 
-{{< figure src="/img/QGIS_1.png" alt="Conexión XYZ en QGIS">}}
+{{< figure src="img/QGIS_1.png" alt="Conexión XYZ en QGIS">}}
 
 Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:
 
-![](/img/img_Malvinas/QGIS_2.png){width=100%}
+![](img/QGIS_2.png){width=100%}
 
 Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png>.
 
-![](/img/img_Malvinas/QGIS_3.png){width=100%}
+![](img/QGIS_3.png){width=100%}
 
 Ahora sí obtenemos el mapa deseado:
 
@@ -270,5 +270,5 @@ Ahora sí obtenemos el mapa deseado:
 Dejo a disposición [el proyecto de este ejercicio tipo](https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true).
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:
 
-![](/img/img_Malvinas/QGIS_5.png){width=100%}
+![](img/QGIS_5.png){width=100%}
 

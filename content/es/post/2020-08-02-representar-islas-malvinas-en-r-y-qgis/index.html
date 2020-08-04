@@ -22,7 +22,7 @@ categories:
   - R
   - QGIS
 image:
-  caption: '[Islas Malvinas en la representación de IGN](featured.jpg)'
+  caption: '[Islas Malvinas en la representación de IGN](/img/img_Malvinas/featured.jpg)'
   focal_point: ''
 output:
   blogdown::html_page:
@@ -94,31 +94,31 @@ En contraste con otros proveedores de datos geográficos, OSM es libre: podemos 
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="data/OSM_1.png" style="width:80.0%" /></td>
+<td><img src="/img/img_Malvinas/OSM_1.png" style="width:80.0%" /></td>
 <td>El nombre asignado a la relación 2185374 ya es indicativo del problema.</td>
 </tr>
 <tr class="even">
-<td><img src="data/OSM_2.png" style="width:80.0%" /></td>
+<td><img src="/img/img_Malvinas/OSM_2.png" style="width:80.0%" /></td>
 <td>Algunas etiquetas. Adivinen qué significa FK.</td>
 </tr>
 <tr class="odd">
-<td><img src="data/OSM_3.png" style="width:80.0%" /></td>
+<td><img src="/img/img_Malvinas/OSM_3.png" style="width:80.0%" /></td>
 <td>OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es “Falkland Islands (Malvinas)” (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).</td>
 </tr>
 <tr class="even">
-<td><img src="data/OSM_4.png" style="width:80.0%" /></td>
+<td><img src="/img/img_Malvinas/OSM_4.png" style="width:80.0%" /></td>
 <td>Esta etiqueta “name” es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.</td>
 </tr>
 <tr class="odd">
-<td><img src="data/OSM_5.png" style="width:80.0%" /></td>
+<td><img src="/img/img_Malvinas/OSM_5.png" style="width:80.0%" /></td>
 <td>Esta etiqueta “name:es” podría ser una solución parcial. Significa: “nombre en español”. Vamos más adelante sobre ese punto.</td>
 </tr>
 <tr class="even">
-<td><img src="data/OSM_6.png" style="width:80.0%" /></td>
+<td><img src="/img/img_Malvinas/OSM_6.png" style="width:80.0%" /></td>
 <td>De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: <em>“La política de OSM es que el ‘name’ (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como ‘int_name’.”</em>. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM –que reconoce que hay un territorio en disputa– considera más conveniente usar el nombre en “name:es” y no (al menos) el nombre en “int_name” que es convención en Naciones Unidas?</td>
 </tr>
 <tr class="odd">
-<td><img src="data/OSM_7.png" style="width:80.0%" /></td>
+<td><img src="/img/img_Malvinas/OSM_7.png" style="width:80.0%" /></td>
 <td>Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los “territorios británicos de ultramar”, que parecen ser <a href="https://www.openstreetmap.org/relation/3969434">territorios ocupados y colonias desperdigados por todo el mundo</a>.</td>
 </tr>
 </tbody>
@@ -163,14 +163,13 @@ limite_ZEE &lt;- st_read(&quot;data/linea_de_limite_070107.shp&quot;, quiet=TRUE
 <p>Vamos ahora a visualizar estas capas en un mapa, usando la librería <em>tmap</em> y el modo interactivo <em>view</em>. Primero configuramos la salida del mapa.</p>
 <pre class="r"><code>library(tmap)
 tmap_mode(&quot;view&quot;) </code></pre>
-<p>Ahora elaboramos el mapa con tmap (una de las formas más usuales en R). El mapa suele tardar en cargar en este sitio web, porque es muy pesada la capa de Áreas protegidas. Paciencia (o continuar lectura, los siguientes mapas son más rápidos).</p>
+<p>Ahora elaboramos el mapa con tmap (una de las formas más usuales en R).</p>
 <pre class="r"><code>mapa &lt;- tm_shape(areasprotegidas) + 
   tm_polygons(col=&quot;green&quot;) +
   tm_shape(limite_ZEE) +
   tm_lines(col=&quot;violet&quot;)
 mapa</code></pre>
-<iframe seamless src="/es/leaflet_Malvinas/mapa_tmap.html" width="100%" height="500">
-</iframe>
+<p>El código genera un mapa interactivo que tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (los siguientes mapas son más rápidos). Por ese motivo dejo una captura de pantalla.</p>
 <p>En la parte de abajo a la derecha del mapa dice que se está utilizando el entorno Leaflet e indica qué proveedor de mapas base se está usando. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, durante julio de 2020 pude observar dos representaciones: una con OSM (y el nombre “Falkland Islands”) y otra con ESRI (sin nombre ni en las islas ni en ningún otro territorio; ojo: no podemos usar este mapa base en cualquier circunstancia porque no es libre, ver los términos de uso de la licencia).</p>
 <p>Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando <em>“addProviderTiles”</em>. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>.
 Cargamos las dos librerías necesarias:</p>
@@ -236,17 +235,17 @@ Los links de descarga de las <a href="https://www.ign.gob.ar/NuestrasActividades
 <p>Para cargar mapas bases en QGIS 3.xx, se utilizan <em>XYZ Tiles</em>. Para comparar, vamos a cargar dos mapas bases, el de OpenStreepMap y el de Argenmap v2 de IGN. Hay muchos mapas bases en formato XYZ, <a href="https://mappinggis.com/2018/03/como-anadir-mapas-base-en-qgis-3-0-openstreetmap-google-carto-stamen/">aquí</a> hay una guía muy útil.</p>
 <p>En el panel “Navegador” (si no se ve, agregarlo: <em>Ver &gt; Paneles &gt; Navegador</em>), buscar <em>XYZ Tiles</em>. Hacer clic derecho y luego clic en <em>“Conexión nueva”</em>.</p>
 <p>El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <a href="https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://tile.openstreetmap.org/{z}/{x}/{y}.png</a>. El resto lo podemos dejar por defecto.</p>
-<p><img src="data/QGIS_1.png" style="width:100.0%" /></p>
+<p><img src="/img/img_Malvinas/QGIS_1.png" style="width:100.0%" /></p>
 <p>Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto:</p>
-<p><img src="data/QGIS_2.png" style="width:100.0%" /></p>
+<p><img src="/img/img_Malvinas/QGIS_2.png" style="width:100.0%" /></p>
 <p>Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <a href="http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/%7Bz%7D/%7Bx%7D/%7B-y%7D.png" class="uri">http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png</a>.</p>
-<p><img src="data/QGIS_3.png" style="width:100.0%" /></p>
+<p><img src="/img/img_Malvinas/QGIS_3.png" style="width:100.0%" /></p>
 <p>Ahora sí obtenemos el mapa deseado:</p>
 <p><img src="data/QGIS_4.png" style="width:100.0%" />
 ¡Listo!</p>
 <p>Dejo a disposición <a href="https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true">el proyecto de este ejercicio tipo</a>.
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:</p>
-<p><img src="data/QGIS_5.png" style="width:100.0%" /></p>
+<p><img src="/img/img_Malvinas/QGIS_5.png" style="width:100.0%" /></p>
 </div>
 </div>
 </div>

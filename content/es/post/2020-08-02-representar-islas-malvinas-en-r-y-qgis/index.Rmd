@@ -270,3 +270,9 @@ Dejo a disposición [el proyecto de este ejercicio tipo](https://github.com/nmor
 Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:
 
 ![](/img/QGIS_5.png){width=100%}
+
+
+## Cita sugerida del repositorio
+Morandeira, NS. 2020. Uso de cartografía oficial del Instituto Geográfico Nacional para representar a las Islas Malvinas en R y QGIS. v.1.0.0. DOI: 10.5281/zenodo.3972477  
+
+[![DOI](https://zenodo.org/badge/282126861.svg)](https://zenodo.org/badge/latestdoi/282126861)

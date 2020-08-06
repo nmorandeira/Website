@@ -27,10 +27,7 @@ theme = "hugo-academic"
 enableGitInfo = false
 
 ## Publication date
-[frontmatter]
-date = ["publishDate", ":filename", "date", ":fileModTime"]
-lastmod = ["lastmod", ":fileModTime", "date", "publishDate"]
-publishDate = ["publishDate", ":filename", "date", ":fileModTime"]
+
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "es"

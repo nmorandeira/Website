@@ -11,6 +11,7 @@ tags:
   
 categories:
   - Ficción
+  - Cuento
 
 image:
   caption: '[Haciendo qué](featured.jpg)'

@@ -1,22 +1,23 @@
 ---
-title: "Los viejos conocen la normativa"
+title: "Los viejos conocen la normativa (In Spanish)"
+subtitle: "_The old men know the regulations_"
 summary: "La vida es una catástrofe, no hay forma de saber lo que va a pasar un segundo después. Siempre puede haber un viejo que entre a la plaza justo a la hora del cierre, como ahora."
 author: "Natalia Morandeira"
 aliases: [viejos-conocen-normativa]
 date: '2020-08-16'
 tags:
-  - Ficción
-  - Cuento
-  - Audiocuento
-  - Espacio público
+  - Fiction
+  - Short story
+  - Audio story
+  - Public space
   
 categories:
-  - Ficción
-  - Cuento
-  - Audiocuento
-
+  - Fiction
+  - Short story
+  - Audio story
+  
 image:
-  caption: '[Ilustración: Véronique Pestoni (2009, Revista Hamartia)](featured.jpg)'
+  caption: '[Illustration: Véronique Pestoni (2009, Revista Hamartia)](featured.jpg)'
   focal_point: ''
 output:
   blogdown::html_page:
@@ -24,7 +25,7 @@ output:
     number_sections: false
 ---
 
-[_Para acceder al **Audiocuento**, click aquí_](http://www.audiocuento.com.ar/los-viejos-conocen-la-normativa/)
+[_To listen the **Audio Story** (in Spanish), click here_](http://www.audiocuento.com.ar/los-viejos-conocen-la-normativa/)
 
 &nbsp;
 
@@ -38,5 +39,5 @@ Me apoyo en el cartel y me saco la gorra. A esta plaza la cuidan Usted y yo, cui
 
 ![](/img/viejos-normativa_VeroniquePestoni_opcion2.jpg){width=100%}
 
-### Nota bibliográfica
-"Los viejos conocen la normativa" fue publicado en [Revista Hamartia](http://www.hamartia.com.ar) en junio de 2009, con las ilustraciones de *Véronique Pestoni* que se incluyen aquí. En 2019, el cuento fue seleccionado por concurso para integrar la plataforma de [Audiocuentos de la Nueva Narrativa Argentina](http://www.audiocuento.com.ar), donde está ilustrado por *Gabriela Salem* y narrado por *Hernán Domínguez Nimo*. 
+### Bibliographic note
+"Los viejos conocen la normativa" was published in [Revista Hamartia](http://www.hamartia.com.ar) in June 2009, accompanied by the illustrations of *Véronique Pestoni* here included. In 2019, the short story was selected in a writing contest to be part of the platform [Audiocuentos de la Nueva Narrativa Argentina](http://www.audiocuento.com.ar) (translated: "Audio Stories of the New Argentinean Narrative), where is illustrated by *Gabriela Salem* and narrated by *Hernán Domínguez Nimo*. 

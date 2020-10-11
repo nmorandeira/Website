@@ -40,6 +40,8 @@ install_theme("gcushen/hugo-academic", theme_example = TRUE, update_config = TRU
 # see this chapter https://bookdown.org/yihui/blogdown/configuration.html
 # or emulate the toml file of other user 
 
+blogdown::install_hugo(version = "v0.74.3", force = TRUE, extended = TRUE)
+
 #para ver y dejar de ver la web localmente
 blogdown::serve_site()
 blogdown::stop_server()

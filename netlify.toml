@@ -2,7 +2,7 @@
   #command = "hugo --gc --minify -b $URL --themesDir ../../"
   command = "hugo"
   base    = ""
-  publish = "public"
+  publish = "public""
 
 [build.environment]
   HUGO_THEME = "hugo-academic" #to solve error "module repo not found"

@@ -2,4 +2,4 @@
 ## English - Spanish site / 
 Blogdown + Hugo Academic Theme +  Github + Netlify
 
-Link: <https://nmorandeira.netlify.com/>
+Link: <https://nmorandeira.netlify.app/>

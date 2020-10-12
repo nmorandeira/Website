@@ -1,0 +1,75 @@
+---
+title: "Tell me who draw that favicon"
+subtitle: "How to change the favicon and a way to attribute authorship"
+summary: "A favicon is an icon, a simple image seen in web previews and navigator tabs. Here I show how to personalize the favicon of a website like this one (blogdown + RMarkdown + Hugo Academic) and how I cited the authorship of the image in the website footer. Extra: I show how to configure comments with utterances."
+author: "Natalia Morandeira"
+aliases: [add-favicon-authorship]
+date: '2020-10-12'
+tags:
+  - Website
+  - R
+  - favicon
+  - utterances
+  - Hugo
+  - blogdown
+  - Women in STEAM
+  
+categories:
+  - Post
+  - Tutorial
+  - R
+image:
+  caption: '[Portrait by Mailén García in Mujeres en STEAM](featured.jpg)'
+  focal_point: ''
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+---
+
+What is a **favicon**? It's an icon, a simple image seen in the web previews and navigator tabs. Here I show how to personalize the favicon of a website like this one, _i.e._ made with *R blogdown*, *RMarkdown* and *Hugo Academic* and how I cited the authorship of the image.
+
+A favicon can be a photo, but it's better to use a simplified drawing, a logo or maybe your favorite emoji. By default, the Hugo Academic favicon is:
+
+![](/img/post_favicon/favicon-hugo.png){width=10%}
+
+
+------------
+
+
+# The portrait of Mujeres en STEAM that became favicon
+## The origin of the drawing
+
+STEAM is an acronym that means: Science, Technology, Engineering, Art and Mathematics. I've learned this term in campaigns such as #MujeresEnSTEAM or #WomenInSTEM. In Argentina, [Mariana Silvestro](https://twitter.com/maruglobina) carries out a [beautiful project](https://medium.com/mujeresensteam), spreading that a lot of women are doing science! And also, the project features portraits by [Mailén García](https://www.instagram.com/mimi.ocean_/).
+
+In September 2020, Mariana interviewed me, and this is the short video trailer (in Spanish):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nhb86NvGFNM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The [full video-interview](https://www.youtube.com/watch?v=p5m-4s43-5c) is also available. 
+
+The fact that is related to this post is that Mujeres en STEAM includes a [written post, which is illustrated by Mailén García](https://medium.com/mujeresensteam/mujeres-en-steam-qui%C3%A9n-es-natalia-morandeira-c326be5d92ee). That is the portrait that today becomes a favicon! 
+
+I invite you to know more stories of scientists and tech women, and to spread them to those girls that hesitate to get into this beautiful research world (or program, or work in technology, or simply find and follow their vocation). You can visit [Mujeres en STEAM](https://medium.com/mujeresensteam) and also subscribe to the [Youtube channel](https://www.youtube.com/channel/UCuloI62_9TeZfRIu9jQ7i5A).
+ 
+## How to configure a favicon in Blogdown + Hugo
+
+First, you need a png image formatted in 512 x 512 pixels. You can get this image size as you wish, I used the web [favicon.io](https://favicon.io/). The resulting image has to be named _"icon.png"_.
+
+In recent Hugo versions (I use v.0.74.3), you just need to copy _"icon.png"_ into the path: _"assets/images/"_. Done.
+
+
+## How I chose to cite the favicon authorship
+
+To attribute the authorship of the drawing, I decided to include a text in the site footer:
+
+![](/img/post_favicon/footer.png){width=80%}
+
+To do this, I looked for the file _"site_footer.html"_ in the path _"themes/hugo-academic/layouts/partials/"_. I added the desired text after the Hugo Academic attribution. You can see my file [here](https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/partials/site_footer.html).
+
+-----------------
+# Extra. Do you have a comment? `r emojifont::emoji("blush")`
+## Leave me a message with utterances
+I attended the lecture-workshop [Bloguear con R Markdown](https://masalmon.eu/talks/2020-10-09-bloguear/) by _Maëlle Salmon_ in [LatinR 2020](https://latin-r.com/) and got enthusiastic about several things! For example, I learned that a post can be as brief as this one. I also learnt how to insert emojis `r emojifont::emoji("grin")` `r emojifont::emoji("rainbow")`. Also, how to configure the web so that github users can leave me comments. The comments are made through **utterances** (open source), which files a git _issue_ for each comment. Maëlle explains who to configure it [here](https://masalmon.eu/2019/10/02/disqus/) and the [official guide](https://utteranc.es/#configuration) is also very clear.
+
+I add that given a site with Hugo Academic theme, you can choose to use *utterances* in some of the web categories and not in others. For example, I added the comment form in the "Posts" but not in the "Fictions" (because I think that the potential readers of the fictions mostly don't use github). To configure utterances, I went to the path: _"/themes/hugo-academic/layouts"_ and created a folder called _"post"_. In this folder, I created a file _"single.html"_ that I copied from other Hugo layout and you can see [in my site repository](https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/post/single.html). You need to replace the code between `<script` and `</script>` for the code generated for your own web following the utterances guide.

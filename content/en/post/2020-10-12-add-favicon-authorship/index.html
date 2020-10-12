@@ -1,0 +1,68 @@
+---
+title: "Tell me who draw that favicon"
+subtitle: "How to change the favicon and a way to attribute authorship"
+summary: "A favicon is an icon, a simple image seen in web previews and navigator tabs. Here I show how to personalize the favicon of a website like this one (blogdown + RMarkdown + Hugo Academic) and how I cited the authorship of the image in the website footer. Extra: I show how to configure comments with utterances."
+author: "Natalia Morandeira"
+aliases: [add-favicon-authorship]
+date: '2020-10-12'
+tags:
+  - Website
+  - R
+  - favicon
+  - utterances
+  - Hugo
+  - blogdown
+  - Women in STEAM
+  
+categories:
+  - Post
+  - Tutorial
+  - R
+image:
+  caption: '[Portrait by Mailén García in Mujeres en STEAM](featured.jpg)'
+  focal_point: ''
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+---
+
+
+
+<p>What is a <strong>favicon</strong>? It’s an icon, a simple image seen in the web previews and navigator tabs. Here I show how to personalize the favicon of a website like this one, <em>i.e.</em> made with <em>R blogdown</em>, <em>RMarkdown</em> and <em>Hugo Academic</em> and how I cited the authorship of the image.</p>
+<p>A favicon can be a photo, but it’s better to use a simplified drawing, a logo or maybe your favorite emoji. By default, the Hugo Academic favicon is:</p>
+<p><img src="/img/post_favicon/favicon-hugo.png" style="width:10.0%" /></p>
+<hr />
+<div id="the-portrait-of-mujeres-en-steam-that-became-favicon" class="section level1">
+<h1>The portrait of Mujeres en STEAM that became favicon</h1>
+<div id="the-origin-of-the-drawing" class="section level2">
+<h2>The origin of the drawing</h2>
+<p>STEAM is an acronym that means: Science, Technology, Engineering, Art and Mathematics. I’ve learned this term in campaigns such as #MujeresEnSTEAM or #WomenInSTEM. In Argentina, <a href="https://twitter.com/maruglobina">Mariana Silvestro</a> carries out a <a href="https://medium.com/mujeresensteam">beautiful project</a>, spreading that a lot of women are doing science! And also, the project features portraits by <a href="https://www.instagram.com/mimi.ocean_/">Mailén García</a>.</p>
+<p>In September 2020, Mariana interviewed me, and this is the short video trailer (in Spanish):</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nhb86NvGFNM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>The <a href="https://www.youtube.com/watch?v=p5m-4s43-5c">full video-interview</a> is also available.</p>
+<p>The fact that is related to this post is that Mujeres en STEAM includes a <a href="https://medium.com/mujeresensteam/mujeres-en-steam-qui%C3%A9n-es-natalia-morandeira-c326be5d92ee">written post, which is illustrated by Mailén García</a>. That is the portrait that today becomes a favicon!</p>
+<p>I invite you to know more stories of scientists and tech women, and to spread them to those girls that hesitate to get into this beautiful research world (or program, or work in technology, or simply find and follow their vocation). You can visit <a href="https://medium.com/mujeresensteam">Mujeres en STEAM</a> and also subscribe to the <a href="https://www.youtube.com/channel/UCuloI62_9TeZfRIu9jQ7i5A">Youtube channel</a>.</p>
+</div>
+<div id="how-to-configure-a-favicon-in-blogdown-hugo" class="section level2">
+<h2>How to configure a favicon in Blogdown + Hugo</h2>
+<p>First, you need a png image formatted in 512 x 512 pixels. You can get this image size as you wish, I used the web <a href="https://favicon.io/">favicon.io</a>. The resulting image has to be named <em>“icon.png”</em>.</p>
+<p>In recent Hugo versions (I use v.0.74.3), you just need to copy <em>“icon.png”</em> into the path: <em>“assets/images/”</em>. Done.</p>
+</div>
+<div id="how-i-chose-to-cite-the-favicon-authorship" class="section level2">
+<h2>How I chose to cite the favicon authorship</h2>
+<p>To attribute the authorship of the drawing, I decided to include a text in the site footer:</p>
+<p><img src="/img/post_favicon/footer.png" style="width:80.0%" /></p>
+<p>To do this, I looked for the file <em>“site_footer.html”</em> in the path <em>“themes/hugo-academic/layouts/partials/”</em>. I added the desired text after the Hugo Academic attribution. You can see my file <a href="https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/partials/site_footer.html">here</a>.</p>
+<hr />
+</div>
+</div>
+<div id="extra.-do-you-have-a-comment" class="section level1">
+<h1>Extra. Do you have a comment? 😊</h1>
+<div id="leave-me-a-message-with-utterances" class="section level2">
+<h2>Leave me a message with utterances</h2>
+<p>I attended the lecture-workshop <a href="https://masalmon.eu/talks/2020-10-09-bloguear/">Bloguear con R Markdown</a> by <em>Maëlle Salmon</em> in <a href="https://latin-r.com/">LatinR 2020</a> and got enthusiastic about several things! For example, I learned that a post can be as brief as this one. I also learnt how to insert emojis 😁 🌈. Also, how to configure the web so that github users can leave me comments. The comments are made through <strong>utterances</strong> (open source), which files a git <em>issue</em> for each comment. Maëlle explains who to configure it <a href="https://masalmon.eu/2019/10/02/disqus/">here</a> and the <a href="https://utteranc.es/#configuration">official guide</a> is also very clear.</p>
+<p>I add that given a site with Hugo Academic theme, you can choose to use <em>utterances</em> in some of the web categories and not in others. For example, I added the comment form in the “Posts” but not in the “Fictions” (because I think that the potential readers of the fictions mostly don’t use github). To configure utterances, I went to the path: <em>“/themes/hugo-academic/layouts”</em> and created a folder called <em>“post”</em>. In this folder, I created a file <em>“single.html”</em> that I copied from other Hugo layout and you can see <a href="https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/post/single.html">in my site repository</a>. You need to replace the code between <code>&lt;script</code> and <code>&lt;/script&gt;</code> for the code generated for your own web following the utterances guide.</p>
+</div>
+</div>

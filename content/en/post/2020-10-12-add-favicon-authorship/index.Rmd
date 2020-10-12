@@ -40,7 +40,7 @@ A favicon can be a photo, but it's better to use a simplified drawing, a logo or
 # The portrait of Mujeres en STEAM that became favicon
 ## The origin of the drawing
 
-STEAM is an acronym that means: Science, Technology, Engineering, Art and Mathematics. I've learned this term in campaigns such as #MujeresEnSTEAM or #WomenInSTEM. In Argentina, [Mariana Silvestro](https://twitter.com/maruglobina) carries out a [beautiful project](https://medium.com/mujeresensteam), spreading that a lot of women are doing science! And also, the project eatures portraits by [Mailén García](https://www.instagram.com/mimi.ocean_/).
+STEAM is an acronym that means: Science, Technology, Engineering, Art and Mathematics. I've learned this term in campaigns such as #MujeresEnSTEAM or #WomenInSTEM. In Argentina, [Mariana Silvestro](https://twitter.com/maruglobina) carries out a [beautiful project](https://medium.com/mujeresensteam), spreading that a lot of women are doing science! And also, the project features portraits by [Mailén García](https://www.instagram.com/mimi.ocean_/).
 
 In September 2020, Mariana interviewed me, and this is the short video trailer (in Spanish):
 

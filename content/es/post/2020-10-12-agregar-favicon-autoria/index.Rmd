@@ -1,0 +1,74 @@
+---
+title: "Dime quién dibujó ese favicon"
+subtitle: "Cómo cambiar el favicon y una forma de citar la autoría"
+summary: "Un favicon es un ícono, una imagen simple que se ve en las previsualizaciones de la web y en las pestañas de los navegadores. Cuento cómo personalizar el favicon de una web de este estilo (blogdown + RMarkdown + Hugo Academic) y cómo cité la autoría de la imagen en el pie de la web. De yapa muestro cómo configurar comentarios con utterances."
+author: "Natalia Morandeira"
+aliases: [agregar-favicon-autoria]
+date: '2020-10-12'
+tags:
+  - Sitio web
+  - R
+  - favicon
+  - utterances
+  - Hugo
+  - blogdown
+  - Mujeres en STEAM
+  
+categories:
+  - Nota
+  - Tutorial
+  - R
+image:
+  caption: '[Retrato por hizo Mailén García en Mujeres en STEAM](featured.jpg)'
+  focal_point: ''
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+---
+
+¿Qué es un **favicon**? Es un ícono, una imagen simple, que se ve en las previsualizaciones de la web y en las pestañas de los navegadores. En este post cuento cómo personalizar el favicon de una web de este estilo, es decir, armada con *R blogdown*, *RMarkdown* y *Hugo Academic* y cómo se me ocurrió reconocer la autoría de la imagen.
+
+Un favicon podría ser una foto, pero es bueno que sea un dibujo simplificado, un logo o quizás tu emoji preferido. Por defecto, el favicon de Hugo Academic es este:
+
+![](img/post_favicon/favicon-hugo.png){width=10%}
+
+
+------------
+
+
+# El retrato de Mujeres en STEAM que se volvió favicon
+## El origen del dibujo
+
+STEAM es un acrónimo que conocí hace poco y significa: ciencia, tecnología, ingeniería, arte y matemáticas. Pero no lo conocí así aislado sino con campañas como #MujeresEnSTEAM o #WomenInSTEM. Acá en Argentina, [Mariana Silvestro](https://twitter.com/maruglobina) lleva adelante un [hermoso proyecto](https://medium.com/mujeresensteam), en el que difunde que ¡somos muchas las mujeres que hacemos ciencia! Y encima suma los bellos retratos de [Mailén García](https://www.instagram.com/mimi.ocean_/).
+
+En septiembre de 2020, Mariana me entrevistó y este es el video breve:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nhb86NvGFNM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+También se puede ver la [video-entrevista completa](https://www.youtube.com/watch?v=p5m-4s43-5c). 
+
+Lo que aquí viene al caso es que además hay una [nota escrita, que lleva el retrato-ilustración de Mailén García](https://medium.com/mujeresensteam/mujeres-en-steam-qui%C3%A9n-es-natalia-morandeira-c326be5d92ee). ¡Es ese retrato el que hoy se convierte en favicon! 
+
+Las/los invito a conocer más historias de mujeres científicas y tecnólogas y acercarlas a las pibas que dudan meterse en esto hermoso que es investigar (o programar, o trabajar en tecnología, o simplemente encontrar y seguir su vocación). Pueden visitar [Mujeres en STEAM](https://medium.com/mujeresensteam) y también suscribirse al [canal de Youtube](https://www.youtube.com/channel/UCuloI62_9TeZfRIu9jQ7i5A).
+
+
+## Cómo configurar un favicon en Blogdown + Hugo
+
+En primer lugar, hay que tener una imagen png en formato 512 x 512 píxeles. Se puede hacer como quieras: yo usé la web [favicon.io](https://favicon.io/) para convertir el dibujo de Mailén García a ese formato. La imagen resultante debe renombrarse _"icon.png"_.
+
+En las versiones recientes de Hugo (tengo v.0.74.3), basta copiar _"icon.png"_ al directorio: _"assets/images/"_. Listo.
+
+
+## Cómo elegí reconocer la autoría del Favicon
+
+Para reconocer la autoría del dibujo, decidí incluir un texto en el pie de página o "footer":
+
+Para hacer esto, busqué el archivo _"site_footer.html"_ en el directorio _"themes/hugo-academic/layouts/partials/"_. Agregué el texto deseado luego de la atribución de Hugo Academic. Pueden ver mi archivo [acá](https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/partials/site_footer.html).
+
+-----------------
+# Extra. ¿Querés hacer un comentario? `r emojifont::emoji("blush")`
+## Dejame un mensaje con utterances
+Vi la charla [Bloguear con R Markdown](https://masalmon.eu/talks/2020-10-09-bloguear/) de _Maëlle Salmon_ en [LatinR 2020](https://latin-r.com/) y me entusiasmé con varias cosas! Como por ejemplo aprendí a insertar emoticones `r emojifont::emoji("grin")` `r emojifont::emoji("rainbow")` y, un poco más serio, a configurar la web para que quienes usan gitbub pueden hacer comentarios en este post. Los comentarios se hacen a través de **utterances** (software libre), que realiza un _issue_ de git por cada comentario que dejen. Maëlle explica cómo configurarlo [aquí](https://masalmon.eu/2019/10/02/disqus/) y la [guía oficial](https://utteranc.es/#configuration) también es muy clara.
+
+Sólo agrego que en el caso de un sitio con plantilla Hugo Academic, es posible elegir que *utterances* esté en algunas de las categorías de la web y no en otras. Por ejemplo, en mi caso agregué el formulario de comentarios en los "Posts" pero no en las "Ficciones" (porque creo que el posible público que lee las ficciones mayormente no usa github). Para ello, fui al directorio: _"/themes/hugo-academic/layouts"_ y creé una carpeta llamada _"post"_. Dentro de esta carpeta creé un archivo _"single.html"_ que copié de otro layout de Hugo y si quieren pueden ver [en el repositorio de mi sitio](https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/post/single.html). Lo importante es reemplazar el código que está entre `<script` y `</script>` por aquel que generen para su propia web siguiendo el instructivo de utterances. 

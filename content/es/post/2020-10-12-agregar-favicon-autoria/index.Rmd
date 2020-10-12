@@ -31,7 +31,7 @@ output:
 
 Un favicon podría ser una foto, pero es bueno que sea un dibujo simplificado, un logo o quizás tu emoji preferido. Por defecto, el favicon de Hugo Academic es este:
 
-![](img/post_favicon/favicon-hugo.png){width=10%}
+![](/img/post_favicon/favicon-hugo.png){width=10%}
 
 
 ------------
@@ -64,11 +64,13 @@ En las versiones recientes de Hugo (tengo v.0.74.3), basta copiar _"icon.png"_ a
 
 Para reconocer la autoría del dibujo, decidí incluir un texto en el pie de página o "footer":
 
+![](/img/post_favicon/footer.png){width=10%}
+
 Para hacer esto, busqué el archivo _"site_footer.html"_ en el directorio _"themes/hugo-academic/layouts/partials/"_. Agregué el texto deseado luego de la atribución de Hugo Academic. Pueden ver mi archivo [acá](https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/partials/site_footer.html).
 
 -----------------
 # Extra. ¿Querés hacer un comentario? `r emojifont::emoji("blush")`
 ## Dejame un mensaje con utterances
-Vi la charla [Bloguear con R Markdown](https://masalmon.eu/talks/2020-10-09-bloguear/) de _Maëlle Salmon_ en [LatinR 2020](https://latin-r.com/) y me entusiasmé con varias cosas! Como por ejemplo aprendí a insertar emoticones `r emojifont::emoji("grin")` `r emojifont::emoji("rainbow")` y, un poco más serio, a configurar la web para que quienes usan gitbub pueden hacer comentarios en este post. Los comentarios se hacen a través de **utterances** (software libre), que realiza un _issue_ de git por cada comentario que dejen. Maëlle explica cómo configurarlo [aquí](https://masalmon.eu/2019/10/02/disqus/) y la [guía oficial](https://utteranc.es/#configuration) también es muy clara.
+Vi la charla [Bloguear con R Markdown](https://masalmon.eu/talks/2020-10-09-bloguear/) de _Maëlle Salmon_ en [LatinR 2020](https://latin-r.com/) y me entusiasmé con varias cosas! Como por ejemplo aprendí que un post puede ser un contenido breve como este. También aprendí a insertar emoticones `r emojifont::emoji("grin")` `r emojifont::emoji("rainbow")` y, un poco más serio, a configurar la web para que quienes usan gitbub pueden hacer comentarios. Los comentarios se hacen a través de **utterances** (software libre), que realiza un _issue_ de git por cada comentario que dejen. Maëlle explica cómo configurarlo [aquí](https://masalmon.eu/2019/10/02/disqus/) y la [guía oficial](https://utteranc.es/#configuration) también es muy clara.
 
 Sólo agrego que en el caso de un sitio con plantilla Hugo Academic, es posible elegir que *utterances* esté en algunas de las categorías de la web y no en otras. Por ejemplo, en mi caso agregué el formulario de comentarios en los "Posts" pero no en las "Ficciones" (porque creo que el posible público que lee las ficciones mayormente no usa github). Para ello, fui al directorio: _"/themes/hugo-academic/layouts"_ y creé una carpeta llamada _"post"_. Dentro de esta carpeta creé un archivo _"single.html"_ que copié de otro layout de Hugo y si quieren pueden ver [en el repositorio de mi sitio](https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/post/single.html). Lo importante es reemplazar el código que está entre `<script` y `</script>` por aquel que generen para su propia web siguiendo el instructivo de utterances. 

@@ -44,7 +44,9 @@ STEAM is an acronym that means: Science, Technology, Engineering, Art and Mathem
 
 In September 2020, Mariana interviewed me, and this is the short video trailer (in Spanish):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Nhb86NvGFNM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p> </p>
+<p style="position: relative; padding: 30px 0px 57% 0px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/Nhb86NvGFNM" width="100%" height="100%" frameborder="0" style="display: block; margin: 0px auto; position: absolute; top: 0; left: 0;"></iframe></p>
+<p> </p>
 
 The [full video-interview](https://www.youtube.com/watch?v=p5m-4s43-5c) is also available. 
 

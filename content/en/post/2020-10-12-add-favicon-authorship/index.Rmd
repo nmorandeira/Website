@@ -1,5 +1,5 @@
 ---
-title: "Tell me who draw that favicon"
+title: "Tell me who drew that favicon"
 subtitle: "How to change the favicon and a way to attribute authorship"
 summary: "A favicon is an icon, a simple image seen in web previews and navigator tabs. Here I show how to personalize the favicon of a website like this one (blogdown + RMarkdown + Hugo Academic) and how I cited the authorship of the image in the website footer. Extra: I show how to configure comments with utterances."
 author: "Natalia Morandeira"

@@ -64,7 +64,7 @@ En las versiones recientes de Hugo (tengo v.0.74.3), basta copiar _"icon.png"_ a
 
 Para reconocer la autoría del dibujo, decidí incluir un texto en el pie de página o "footer":
 
-![](/img/post_favicon/footer.png){width=10%}
+![](/img/post_favicon/footer.png){width=100%}
 
 Para hacer esto, busqué el archivo _"site_footer.html"_ en el directorio _"themes/hugo-academic/layouts/partials/"_. Agregué el texto deseado luego de la atribución de Hugo Academic. Pueden ver mi archivo [acá](https://github.com/nmorandeira/Website/blob/master/themes/hugo-academic/layouts/partials/site_footer.html).
 

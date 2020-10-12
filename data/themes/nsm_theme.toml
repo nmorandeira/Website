@@ -4,10 +4,10 @@ name = "Minimal"
 # Is theme light or dark?
 light = true
 
-# Primary
-primary = "#237678"
+# Primary - links
+primary = "#30a3a6"
 
-# Menu
+# Menu 
 menu_primary = "#ffff"
 menu_text = "#34495e"
 menu_text_active = "#3DBFC2"

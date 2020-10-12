@@ -44,7 +44,10 @@ STEAM es un acrónimo que conocí hace poco y significa: ciencia, tecnología, i
 
 En septiembre de 2020, Mariana me entrevistó y este es el video breve:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Nhb86NvGFNM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p> </p>
+<p style="position: relative; padding: 30px 0px 57% 0px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/Nhb86NvGFNM" width="100%" height="100%" frameborder="0" style="display: block; margin: 0px auto; position: absolute; top: 0; left: 0;"></iframe></p>
+<p> </p>
 
 También se puede ver la [video-entrevista completa](https://www.youtube.com/watch?v=p5m-4s43-5c). 
 

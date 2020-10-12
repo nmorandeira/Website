@@ -50,7 +50,7 @@ Este documento está dirigido a todas aquellas personas que quieran hacer mapas 
 
 A su vez, el documento está dirigido a quienes ya conozcan el mapa base Argenmap v2 del Instituto Geográfico Nacional y quieran promover su uso en R o QGIS.
 
-Si bien no proveo una solución explícita para Python ni para otros softwares/lenguajes libres^1^, invito a contribuir a quienes lo deseen: posiblemente algo de lo aquí documentado pueda ser de utilidad. Para páginas web en las que se use Leaflet, la solución documentada para R es válida. Por otro lado, en los softwares privativos de Sistemas de Información Geográfica muy probablemente podrá utilizarse la solución provista para QGIS, basada en XYZ tiles. El repositorio del proyecto en *Github* está en: <https://github.com/nmorandeira/IGN_Malvinas>.
+Si bien no proveo una solución explícita para Python ni para otros softwares/lenguajes libres^1^, invito a contribuir a quienes lo deseen: posiblemente algo de lo aquí documentado pueda ser de utilidad. Para páginas web en las que se use Leaflet, la solución documentada para R es adaptable. Por otro lado, en los softwares privativos de Sistemas de Información Geográfica muy probablemente podrá utilizarse la solución provista para QGIS, basada en XYZ tiles. El repositorio del proyecto en *Github* está en: <https://github.com/nmorandeira/IGN_Malvinas>.
 
 Este documento provee una discusión sobre los orígenes del problema de representación de las Islas Malvinas y algunas herramientas para resolverlo. Quienes sólo tengan interés en la solución práctica, pueden saltearse el próximo apartado sobre el origen del problema e ir a la sección *Protocolo para R* ó *Protocolo para QGIS*.
 
@@ -279,4 +279,4 @@ Una visualización general de la vista del proyecto y las capas XYZ en los panel
 ## Cita sugerida del repositorio
 Morandeira, NS. 2020. Uso de cartografía oficial del Instituto Geográfico Nacional para representar a las Islas Malvinas en R y QGIS. v.1.0.0. DOI: 10.5281/zenodo.3972477  
 
-[![DOI](https://zenodo.org/badge/282126861.svg)](https://zenodo.org/badge/latestdoi/282126861)
+[![DOI <](https://zenodo.org/badge/282126861.svg)](https://zenodo.org/badge/latestdoi/282126861)

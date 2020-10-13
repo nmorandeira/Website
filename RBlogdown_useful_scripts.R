@@ -52,6 +52,16 @@ blogdown::build_site()
 #para generar un nuevo post (primero parar el sitio)
 blogdown:::new_post_addin() #ojo, siempre crea un md
 
+#para importar biblio desde un .bib
+#Instalar por consola:
+pip3 install -U academic
+
+#Navegar a la carpeta del repo:
+academic import --bibtex /home/nmorandeira/Downloads/inventario.bib 
+
+#copiar estos archivos a las carpetas correspondientes de en/ y es/
+
+
 #Deploy on Netlify
 #https://alison.rbind.io/post/2019-02-19-hugo-netlify-toml/
 

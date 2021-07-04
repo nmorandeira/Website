@@ -1,8 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: Response of Multi-Incidence Angle Polarimetric RADARSAT-2 Data to Herbaceous
-  Vegetation Features in the Lower Paran á
+title: Response of multi-incidence angle polarimetric RADARSAT-2 data to herbaceous vegetation features in the Lower Paraná River floodplain, Argentina
 subtitle: ''
 summary: ''
 authors:
@@ -43,10 +42,10 @@ abstract: 'Wetland ecosystems play a key role in hydrological and biogeochemical
   phase difference (CPD). In the Lower Paraná River floodplain, a total of 11 full
   polarimetric RADARSAT-2 scenes from a wide range of incidence angles were acquired
   during a month. Flooded targets dominated by two herbaceous species were sampled:
-  Schoenoplectus californicus (four sites, Bulrush marshes) and Ludwigia peruviana
+  _Schoenoplectus californicus_ (four sites, Bulrush marshes) and _Ludwigia peruviana_
   (three sites, Broadleaf marshes). As a general trend, $σ$0HH was higher than $σ$0VV,
   especially at the steeper incidence angles. By modeling CPD with maximum likelihood
-  estimations, we found results consistent with double-bounce scatter in two Ludwigia
+  estimations, we found results consistent with double-bounce scatter in two _Ludwigia_
   plots, at certain scene incidence angles. Incidence angle accounted for most of
   the variation on $σ$0HH, whereas emergent green biomass was the main feature influencing
   $σ$0HV. Multivariate models explaining backscattering variation included the incidence

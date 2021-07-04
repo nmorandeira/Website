@@ -76,7 +76,7 @@ social:
 #- Visitors
 ---
 
-I'm a Doctor in Biological Sciences from the University of Buenos Aires (UBA), Argentina. My current position is as Adjunct Researcher from the National Scientific and Technical Research Council (CONICET), working at the University of San Martín (Institute of Research and Environmental Engineering, abbreviated 3iA-UNSAM). I'm currently teaching Ecology as an Adjunct Professor at 3iA-UNSAM. Between 2007 and 2020, I taught Landscape Ecology as a Teacher Assistant of Lab Assignments. 
+I'm a Doctor in Biological Sciences from the University of Buenos Aires (UBA), Argentina. My current position is as Adjunct Researcher from the National Scientific and Technical Research Council (CONICET), working at the University of San Martín (Institute of Research and Environmental Engineering, abbreviated 3iA-UNSAM). I'm currently teaching Ecology as an Adjunct Professor at 3iA-UNSAM. Between 2007 and 2020, I taught Landscape Ecology as Teacher Assistant of Lab Assignments. 
 
 My research focuses on landscape ecology and wetland plant ecology, aided by remote sensing and Geographic Information Systems tools. I prefer open-source software: Ubuntu OS, QGIS and R, among others. I use R for conducting ecological analyses, from data exploration and visualization to statistics. Most of my research activity is related to the Paraná River floodplain and the use of active microwave and optical remote sensing data; but I also conduct research in other wetlands and in urban areas. 
 Besides my academic activities, I'm a fiction writer! I write short stories, and love reading and discussing literature.

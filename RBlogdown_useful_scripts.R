@@ -24,6 +24,7 @@ tmap_save(mapa_guardar, "public/es/leaflet_Malvinas/mapa_tmap.html")
 
 
 ########
+#Para crear un sitio
 install.packages("devtools")
 install.packages("blogdown")
 
@@ -31,6 +32,8 @@ library(blogdown)
 
 blogdown::new_site() 
 install_theme("gcushen/hugo-academic", theme_example = TRUE, update_config = TRUE)
+
+blogdown::install_hugo(version = "v0.74.3", force = TRUE, extended = TRUE)
 
 # update project options
 # https://bookdown.org/yihui/blogdown/rstudio-ide.html#fig:project-options
@@ -40,20 +43,21 @@ install_theme("gcushen/hugo-academic", theme_example = TRUE, update_config = TRU
 # see this chapter https://bookdown.org/yihui/blogdown/configuration.html
 # or emulate the toml file of other user 
 
-blogdown::install_hugo(version = "v0.74.3", force = TRUE, extended = TRUE)
 
-#para ver y dejar de ver la web localmente
+# Build local
 blogdown::serve_site()
 blogdown::stop_server()
 
-#build site
+#############
+# Build site
 blogdown::build_site()
 #blogdown::build_site(build_rmd = TRUE)
+blogdown::hugo_build() #if Rmd files do not need to be recompiled.
 
-
-#para generar un nuevo post (primero parar el sitio)
+# Para generar un nuevo post (primero parar el sitio)
 blogdown:::new_post_addin() #ojo, siempre crea un md
 
+### Biblio ###########
 #para importar biblio desde un .bib
 #Instalar por consola:
 pip3 install -U academic
@@ -61,7 +65,7 @@ pip3 install -U academic
 #Navegar a la carpeta del repo:
 academic import --bibtex /home/nmorandeira/Downloads/inventario.bib 
 
-#copiar estos archivos a las carpetas correspondientes de en/ y es/
+# Copiar estos archivos a las carpetas correspondientes de en/ y es/
 
 
 #Deploy on Netlify

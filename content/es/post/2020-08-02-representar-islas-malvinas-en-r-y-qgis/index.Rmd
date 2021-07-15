@@ -54,7 +54,7 @@ Si bien no proveo una solución explícita para Python ni para otros softwares/l
 
 Este documento provee una discusión sobre los orígenes del problema de representación de las Islas Malvinas y algunas herramientas para resolverlo. Quienes sólo tengan interés en la solución práctica, pueden saltearse el próximo apartado sobre el origen del problema e ir a la sección *Protocolo para R* ó *Protocolo para QGIS*.
 
-**^1^ Actualización con aporte para HTML**: el 13 de agosto de 2020 [José Mourglia](https://github.com/jmourglia) aportó archivos tipo para para páginas web (HTML Leaflet + Java + CSS). El aporte puede consultarse en el [repositorio](https://github.com/nmorandeira/IGN_Malvinas) asociado.
+**^1^ Actualización con aporte para HTML**: el 13 de agosto de 2020 [José Mourglia](https://github.com/jmourglia) aportó archivos tipo para páginas web (HTML Leaflet + Java + CSS). El aporte puede consultarse en el [repositorio](https://github.com/nmorandeira/IGN_Malvinas) asociado.
 
 ### Agradecimientos
 El documento fue redactado en julio de 2020, con colaboración de *Malena Libman* (Geochicas OSM) que señaló por dónde iba la solución: usar como mapa base a Argenmap v2, un gran trabajo elaborado por el Instituto Geográfico Nacional (IGN) de la República Argentina.

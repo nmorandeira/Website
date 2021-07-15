@@ -48,6 +48,8 @@ blogdown::stop_server()
 
 #build site
 blogdown::build_site()
+#blogdown::build_site(build_rmd = TRUE)
+
 
 #para generar un nuevo post (primero parar el sitio)
 blogdown:::new_post_addin() #ojo, siempre crea un md

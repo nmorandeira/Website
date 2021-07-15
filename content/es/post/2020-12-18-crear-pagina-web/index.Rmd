@@ -60,7 +60,7 @@ El siguiente esquema intenta resumir los tres pasos más relevantes para la crea
 
 3. Diferentes opciones para publicar tu página web en internet y la elección del dominio.
 
-<img src="img/post_webHugo/esquema.png" width="100%" alt="Esquema conceptual. 1, Github: sale una flecha hacia "Nuevo repositorio". 2. RStudio: sale una flecha hacia los hex-stickers de blogdown y Hugo; estos hex-stickers están conectados con "Nuevo repositorio" con una flecha doble. Desde "Nuevo repositorio", salen dos flechas, una hacia 3. Netlify y otra hacia Githubpages; ambas posibilidades convergen hacia un website."/>
+<img src="img/post_webHugo/esquema.png" width="100%" alt="Esquema conceptual. 1, Github: sale una flecha hacia Nuevo repositorio. 2. RStudio: sale una flecha hacia los hex-stickers de blogdown y Hugo; estos hex-stickers están conectados con Nuevo repositorio con una flecha doble. Desde Nuevo repositorio, salen dos flechas, una hacia 3. Netlify y otra hacia Githubpages; ambas posibilidades convergen hacia un website."/>
 
 ## En GitHub: crear un repositorio público  
 

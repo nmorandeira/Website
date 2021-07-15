@@ -1,5 +1,6 @@
 ---
 title: "Creando una página web bilingüe en R"
+summary: "Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas: github, blogdown, Hugo y un servidor como Netlify o Github Pages. Antes de empezar, ¿por qué tener una página web personal?"
 authors: 
   - "Pamela Pairo"
   - "Natalia Morandeira"
@@ -30,9 +31,7 @@ output:
 knitr::opts_chunk$set(eval = FALSE, collapse = TRUE, comment = NA, tidy = FALSE)
 ```
 
-Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas: github, blogdown, Hugo y un servidor como Netlify o Github Pages. Antes de empezar, **¿por qué tener una página web personal?**
-
-Muchas personas hemos elegido tener nuestra página web personal como una forma de difundir quiénes somos, los proyectos en los que trabajamos, nuestros intereses, etc. Tener una página web personal nos conecta con el mundo y permite la recopilación y el intercambio de información entre pares. A continuación te comentamos otros beneficios de crear tu propia página personal:
+Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas. Antes de empezar, **¿por qué tener una página web personal?** Muchas personas hemos elegido tener nuestra página web personal como una forma de difundir quiénes somos, los proyectos en los que trabajamos, nuestros intereses, etc. Tener una página web personal nos conecta con el mundo y permite la recopilación y el intercambio de información entre pares. A continuación te comentamos otros beneficios de crear tu propia página personal:
 
 + **Otra forma de practicar nuestras habilidades de comunicación** 
 

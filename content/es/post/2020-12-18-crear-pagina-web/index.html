@@ -1,5 +1,6 @@
 ---
 title: "Creando una página web bilingüe en R"
+summary: "Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas: github, blogdown, Hugo y un servidor como Netlify o Github Pages. Antes de empezar, ¿por qué tener una página web personal?"
 authors: 
   - "Pamela Pairo"
   - "Natalia Morandeira"
@@ -28,8 +29,7 @@ output:
 
 
 
-<p>Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas: github, blogdown, Hugo y un servidor como Netlify o Github Pages. Antes de empezar, <strong>¿por qué tener una página web personal?</strong></p>
-<p>Muchas personas hemos elegido tener nuestra página web personal como una forma de difundir quiénes somos, los proyectos en los que trabajamos, nuestros intereses, etc. Tener una página web personal nos conecta con el mundo y permite la recopilación y el intercambio de información entre pares. A continuación te comentamos otros beneficios de crear tu propia página personal:</p>
+<p>Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas. Antes de empezar, <strong>¿por qué tener una página web personal?</strong> Muchas personas hemos elegido tener nuestra página web personal como una forma de difundir quiénes somos, los proyectos en los que trabajamos, nuestros intereses, etc. Tener una página web personal nos conecta con el mundo y permite la recopilación y el intercambio de información entre pares. A continuación te comentamos otros beneficios de crear tu propia página personal:</p>
 <ul>
 <li><strong>Otra forma de practicar nuestras habilidades de comunicación</strong></li>
 </ul>
@@ -97,7 +97,7 @@ blogdown::stop_server()# para dejar de visualizar el contenido generado
    ├── menus.toml     
    ├── params.toml    
    └── languages.toml
-📂── content
+📁── content
 📁── themes</code></pre>
 <p>En el archivo <em><strong>config.toml</strong></em> se encuentran los metadatos de nuestra página. Dentro de este archivo modificaremos el título de la página web y la URL.</p>
 <p>Dentro de la carpeta _<strong>config/<em>default</em></strong> se encuentran tres archivos.toml que definen la configuración de la página web.</p>
@@ -107,20 +107,20 @@ blogdown::stop_server()# para dejar de visualizar el contenido generado
 <li><p><em><strong>languages.toml</strong></em>: se define el o los idiomas del sitio web.</p></li>
 </ul>
 <p>En la carpeta <em>content</em> se localiza el contenido de nuesta página web en subcarpetas. Por ejemplo, si se quiere cambiar la información de la biografia, hay que seguir la siguiente ruta <em>content &gt; authors &gt; admin</em> y modificar el archivo <em>index.md</em>. Podremos cambiar la foto de la página reemplazando <em><strong>avatar.jpg</strong></em> por una foto nuestra.</p>
-<pre><code>📁── content
+<pre><code>📂── content
    ├── 📂authors     
    ├── 📁courses
    ├── 📁home
-   ├── 📂post
+   ├── 📁post
    ├── 📁project
-   └── 📂publication</code></pre>
+   └── 📁publication</code></pre>
 <p>Desde <strong><em>content/home</em></strong> se podrán activar y editar cada una de las opciones del menú de navegación (widgets) de la página web. Para que se visualice el widget, es necesario que aparezca <em>active= true</em></p>
 </div>
 <div id="configuración-de-la-página-web-bilingüe" class="section level2">
 <h2>Configuración de la página web bilingüe</h2>
 <p>Para configurar el sitio web en dos idiomas (español e inglés a modo de ejemplo) tenemos que crear dos subcarpetas llamadas <em>en</em> y <em>es</em> dentro de la carpeta <em>content</em>. Las nuevas subcarpetas deben tener cada una el contenido que había previamente en la carpeta <em>content</em>.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 <pre><code>📁── content
-   ├── 📁- es     &lt;- Español
+   ├── 📂- es     &lt;- Español
    ├── 📁- en     &lt;- Inglés
     </code></pre>
 <p>Luego, en el archivo <em><strong>languages.toml</strong></em> descomentar y agregar las siglas del segundo idioma e indicar la carpeta donde está su contenido.</p>

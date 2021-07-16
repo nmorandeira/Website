@@ -82,15 +82,52 @@ output:
 <p>Hay muchos proveedores de Leaflet (ver más adelante, <em>spoiler</em>: ninguno de los usualmente listados dice “Islas Malvinas”), pero voy a enfocarme en OSM porque es uno de los más utilizados, muchas veces se usa por defecto, y porque tiene varias ventajas frente a otros. En contraste con otros proveedores de datos geográficos, OSM es libre: podemos descargar la información, usar en nuestras publicaciones mapas con sus datos y también aportar mapeando (¡como hacen muchas personas en nuestro país!). Sin embargo, OSM es un proyecto global y no acompaña nuestro reclamo de ejercicio de soberanía sobre las islas.</p>
 <p>¿Cómo se ven las Islas Malvinas en los mapas de OSM (los que por defecto se suelen cargar en R - Leaflet y en QGIS)? <a href="https://www.openstreetmap.org/#map=7/-52.770/-66.176">Así</a>.</p>
 <p>Por defecto, OSM representa los nombres en el lenguaje del país que considera local (por ejemplo, si navegamos en el mapa de OSM podemos ver que los nombres de localidades de Brasil están en portugués y los nombres de localidades de China están en chino). En el caso de las Malvinas, al asignar las islas a los <em>“territorios británicos de ultramar”</em> las etiqueta con el nombre “Falkland Islands”. Aquí un detalle de la información asociada a la <a href="https://www.openstreetmap.org/relation/2185374"><em>Relación 2185374</em> de OSM</a>, correspondiente al territorio de las Islas Malvinas. Copio y comento las partes más relevantes a esta discusión:</p>
-<div class="line-block"><em>Relación 2185374 de OSM</em> | <em>Comentario</em> |</div>
-<p>|———————————|—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————|</p>
-<div class="line-block"><img src="/img/OSM_1.png" style="width:80.0%" /> | El nombre asignado a la relación 2185374 ya es indicativo del problema. |<br />
-<img src="/img/OSM_2.png" style="width:80.0%" /> | Algunas etiquetas. Adivinen qué significa FK. |<br />
-<img src="/img/OSM_3.png" style="width:80.0%" /> | OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es “Falkland Islands (Malvinas)” (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto). |<br />
-<img src="/img/OSM_4.png" style="width:80.0%" /> | Esta etiqueta “name” es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo. |<br />
-<img src="/img/OSM_5.png" style="width:80.0%" /> | Esta etiqueta “name:es” podría ser una solución parcial. Significa: “nombre en español”. Vamos más adelante sobre ese punto. |<br />
-<img src="/img/OSM_6.png" style="width:80.0%" /> | De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: <em>“La política de OSM es que el ‘name’ (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como ‘int_name’.”</em>. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de ejercicio de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM –que reconoce que hay un territorio en disputa– considera más conveniente usar el nombre en “name” y no (al menos) el nombre en “int_name” que es convención en Naciones Unidas? |<br />
-<img src="/img/OSM_7.png" style="width:80.0%" /> | Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los “territorios británicos de ultramar”, que parecen ser <a href="https://www.openstreetmap.org/relation/3969434">territorios ocupados y colonias desperdigados por todo el mundo</a>. |</div>
+<table>
+<colgroup>
+<col width="4%" />
+<col width="95%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><em>Relación 2185374 de OSM</em></th>
+<th><em>Comentario</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="/img/OSM_1.png" style="width:80.0%" /></td>
+<td>El nombre asignado a la relación 2185374 ya es indicativo del problema.</td>
+</tr>
+<tr class="even">
+<td><img src="/img/OSM_2.png" style="width:80.0%" /></td>
+<td>Algunas etiquetas. Adivinen qué significa FK.</td>
+</tr>
+<tr class="odd">
+<td><img src="/img/OSM_3.png" style="width:80.0%" /></td>
+<td>OSM dice que: la capital es Stanley (¿Puerto Argentino?), el idioma por defecto, según OSM, es inglés. ¿Son territorios disputados? Sí. Pero la bandera es de una jurisdicción supuestamente inglesa; y el nombre internacional es “Falkland Islands (Malvinas)” (según se señala más abajo, sería la convención de las Naciones Unidas, pero tampoco es la etiqueta que se muestra por defecto).</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><img src="/img/OSM_4.png" style="width:80.0%" /></td>
+<td>Esta etiqueta “name” es la más importante: es como por defecto se llama a las islas en todos los mapas que despleguemos. Acá está nuestro problema de mapeo.</td>
+</tr>
+<tr class="even">
+<td><img src="/img/OSM_5.png" style="width:80.0%" /></td>
+<td>Esta etiqueta “name:es” podría ser una solución parcial. Significa: “nombre en español”. Vamos más adelante sobre ese punto.</td>
+</tr>
+<tr class="odd">
+<td><img src="/img/OSM_6.png" style="width:80.0%" /></td>
+<td>De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: <em>“La política de OSM es que el ‘name’ (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como ‘int_name’.”</em>. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de ejercicio de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM –que reconoce que hay un territorio en disputa– considera más conveniente usar el nombre en “name” y no (al menos) el nombre en “int_name” que es convención en Naciones Unidas?</td>
+</tr>
+<tr class="even">
+<td><img src="/img/OSM_7.png" style="width:80.0%" /></td>
+<td>Más información sobre las fuentes de información asociadas al objeto. Muy curioso: el objeto es parte de los “territorios británicos de ultramar”, que parecen ser <a href="https://www.openstreetmap.org/relation/3969434">territorios ocupados y colonias desperdigados por todo el mundo</a>.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 </div>
 <div id="soluciones-parciales-al-problema-de-los-mapas-base" class="section level2">

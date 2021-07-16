@@ -22,11 +22,3 @@ options(
 # fix Hugo version
 options(blogdown.hugo.version = "0.74.3")
 
-# Alison Hill suggestions
-options(# other nice to haves!
-        blogdown.initial_files = FALSE,
-        # nice defaults!
-        blogdown.new_bundle = TRUE,
-        blogdown.warn.future = TRUE,
-        blogdown.draft.output = FALSE
-)

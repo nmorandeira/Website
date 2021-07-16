@@ -30,6 +30,7 @@ output:
     number_sections: false
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <hr />
@@ -78,15 +79,13 @@ output:
 <h2>El problema de los proveedores de mapas base</h2>
 <p>Al representar datos espaciales (de tipo vectorial o ráster) es necesario usar un “mapa base”, es decir, incluir información sobre la localización geográfica (recomiendo la <a href="https://t.co/LGXktkibl6?amp=1">sección 27.3. del libro SIG de Víctor Olaya</a>, en la que se abordan las diferencias entre cartografía temática y cartografía base). Podemos elaborar nuestro propio mapa base con información cartográfica básica: localidades, límites políticos, cursos de agua, etc. Sin embargo, en los últimos tiempos se utilizan mucho mapas base ya elaborados, que en principio no podemos modificar, aún cuando no siempre necesitamos –y muchas veces no es recomendable– tener mucho detalle.</p>
 <p>Tanto en QGIS como en R (en las representaciones con Leaflet), solemos usar como mapas base a las capas de <em>OpenStreetMap (OSM)</em> o de otros proveedores. En QGIS, lo hacemos a través de <em>XYZ tiles</em>; en R a través de los <em>proveedores de Leaflet</em>. Estos mapas base se proveen en “tiles” (traducido como <em>teselas</em>), es decir, imágenes que se despliegan de acuerdo a la escala o nivel de zoom. Las teselas están subidas a los servidores de los proveedores y en principio no podemos modificarlas: si nos gustan las usamos; si no, no.</p>
-<p>Hay muchos proveedores de Leaflet (ver más adelante, <em>spoiler</em>: ninguno de los usualmente listados dice “Islas Malvinas”), pero voy a enfocarme en OSM porque es uno de los más utilizados, muchas veces se usa por defecto, y porque tiene varias ventajas frente a otros.
-En contraste con otros proveedores de datos geográficos, OSM es libre: podemos descargar la información, usar en nuestras publicaciones mapas con sus datos y también aportar mapeando (¡como hacen muchas personas en nuestro país!). Sin embargo, OSM es un proyecto global y no acompaña nuestro reclamo de ejercicio de soberanía sobre las islas.</p>
-<p>¿Cómo se ven las Islas Malvinas en los mapas de OSM (los que por defecto se suelen cargar en R - Leaflet y en QGIS)?
-<a href="https://www.openstreetmap.org/#map=7/-52.770/-66.176">Así</a>.</p>
+<p>Hay muchos proveedores de Leaflet (ver más adelante, <em>spoiler</em>: ninguno de los usualmente listados dice “Islas Malvinas”), pero voy a enfocarme en OSM porque es uno de los más utilizados, muchas veces se usa por defecto, y porque tiene varias ventajas frente a otros. En contraste con otros proveedores de datos geográficos, OSM es libre: podemos descargar la información, usar en nuestras publicaciones mapas con sus datos y también aportar mapeando (¡como hacen muchas personas en nuestro país!). Sin embargo, OSM es un proyecto global y no acompaña nuestro reclamo de ejercicio de soberanía sobre las islas.</p>
+<p>¿Cómo se ven las Islas Malvinas en los mapas de OSM (los que por defecto se suelen cargar en R - Leaflet y en QGIS)? <a href="https://www.openstreetmap.org/#map=7/-52.770/-66.176">Así</a>.</p>
 <p>Por defecto, OSM representa los nombres en el lenguaje del país que considera local (por ejemplo, si navegamos en el mapa de OSM podemos ver que los nombres de localidades de Brasil están en portugués y los nombres de localidades de China están en chino). En el caso de las Malvinas, al asignar las islas a los <em>“territorios británicos de ultramar”</em> las etiqueta con el nombre “Falkland Islands”. Aquí un detalle de la información asociada a la <a href="https://www.openstreetmap.org/relation/2185374"><em>Relación 2185374</em> de OSM</a>, correspondiente al territorio de las Islas Malvinas. Copio y comento las partes más relevantes a esta discusión:</p>
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="3%" />
+<col width="96%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -117,7 +116,7 @@ En contraste con otros proveedores de datos geográficos, OSM es libre: podemos 
 </tr>
 <tr class="even">
 <td><img src="/img/OSM_6.png" style="width:80.0%" /></td>
-<td>De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: <em>“La política de OSM es que el ‘name’ (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como ‘int_name’.”</em>. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de ejercicio de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM –que reconoce que hay un territorio en disputa– considera más conveniente usar el nombre en “name:es” y no (al menos) el nombre en “int_name” que es convención en Naciones Unidas?</td>
+<td>De aquí me interesa destacar la nota, porque me fue señalada por parte de la comunidad de OSM. La traducción literal de la nota es: <em>“La política de OSM es que el ‘name’ (nombre) a ser utilizado es el hablado por los habitantes. Plural. Malvinas es el nombre en español, y es ingresado en name:es. La convención de las Naciones Unidas se muestra como ‘int_name’.”</em>. Sin embargo, esta aclaración desconoce al menos dos cuestiones: 1) Hay un tema de reclamo de ejercicio de soberanía, no de traducción: la única traducción de Islas Malvinas al inglés es Malvinas Islands; 2) El lenguaje oficial de Argentina es el castellano o español. Por otro lado, ¿por qué OSM –que reconoce que hay un territorio en disputa– considera más conveniente usar el nombre en “name” y no (al menos) el nombre en “int_name” que es convención en Naciones Unidas?</td>
 </tr>
 <tr class="odd">
 <td><img src="/img/OSM_7.png" style="width:80.0%" /></td>
@@ -174,8 +173,7 @@ mapa</code></pre>
 <p>El código genera un mapa interactivo que tarda mucho en desplegarse en este sitio web, porque es muy pesada la capa de áreas protegidas (pero pueden correrlo en sus computadoras, donde no demora). Por ese motivo dejo a continuación una captura de pantalla. Los mapas de los siguientes ejemplos son más rápidos, así que podrán interactuar.</p>
 <p><img src="/img/tmap_ESRI.png" /></p>
 <p>En la parte de abajo a la derecha del mapa dice que se está usando el entorno Leaflet con un determinado proveedor de mapas. Si bien el proveedor por defecto parece cambiar según la versión y/o el día, con el selector de capas (arriba a la derecha, ver captura de pantalla), se puede elegir entre tres proveedores. OSM es uno de estos proveedores: es libre pero tiene el nombre “Falkland Islands”. Los restantes dos proveedores son de ESRI y tienen sólo algunas etiquetas y a algunas escalas. Ojo: no podemos usar los mapas base de ESRI este mapa base en cualquier circunstancia porque no son libres, revisar los términos de uso de las licencias.</p>
-<p>Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando <em>“addProviderTiles”</em>. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>.
-Cargamos las dos librerías necesarias:</p>
+<p>Vamos a generar el mismo mapa pero con sintaxis de Leaflet (sin usar tmap), en donde podemos modificar el proveedor del mapa base. Hay muchos proveedores por defecto de mapas base, que se pueden cargar en Leaflet con el comando <em>“addProviderTiles”</em>. Aquí podemos ver un listado y una previsualización para la zona que querramos recorrer: <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>. Cargamos las dos librerías necesarias:</p>
 <pre class="r"><code>library(leaflet)
 library(htmltools)</code></pre>
 <p>Ejemplo con el mapa base de OpenStreetMap, que muchas veces sale por defecto al usar <em>tmap</em> y que es muy adecuado en otras zonas del país:</p>
@@ -221,8 +219,7 @@ mapa_final</code></pre>
 <div id="uso-de-un-mapa-base-de-argenmap-v2-ign-con-xyz-tiles" class="section level3">
 <h3>Uso de un mapa base de Argenmap v2 (IGN) con XYZ Tiles</h3>
 <p>Los ejemplos provistos a continuación son para la versión QGIS 3.14 (la última versión disponible en julio de 2020), pueden cambiar levemente en versiones anteriores 3.xx.</p>
-<p>En primer lugar, vamos a cargar las dos capas vectoriales de interés para el ejercicio tipo.
-Los links de descarga de las <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">capas SIG de IGN</a> son:</p>
+<p>En primer lugar, vamos a cargar las dos capas vectoriales de interés para el ejercicio tipo. Los links de descarga de las <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">capas SIG de IGN</a> son:</p>
 <ul>
 <li><a href="http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjphcmVhX3Byb3RlZ2lkYS56aXA%3D">Áreas protegidas</a> (polígonos)</li>
 <li><a href="http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjpsaW5lYV9kZV9saW1pdGVfMDcwMTA3LnppcA%3D%3D">Límite de la zona económica exclusiva</a> (líneas)</li>
@@ -237,17 +234,15 @@ Los links de descarga de las <a href="https://www.ign.gob.ar/NuestrasActividades
 <p>Luego podemos cambiar la simbología de las capas de acuerdo a nuestra preferencia.</p>
 <p>Para cargar mapas bases en QGIS 3.xx, se utilizan <em>XYZ Tiles</em>. Para comparar, vamos a cargar dos mapas bases, el de OpenStreepMap y el de Argenmap v2 de IGN. Hay muchos mapas bases en formato XYZ, <a href="https://mappinggis.com/2018/03/como-anadir-mapas-base-en-qgis-3-0-openstreetmap-google-carto-stamen/">aquí</a> hay una guía muy útil.</p>
 <p>En el panel “Navegador” (si no se ve, agregarlo: <em>Ver &gt; Paneles &gt; Navegador</em>), buscar <em>XYZ Tiles</em>. Hacer clic derecho y luego clic en <em>“Conexión nueva”</em>.</p>
-<p>El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <a href="https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://tile.openstreetmap.org/{z}/{x}/{y}.png</a>. El resto lo podemos dejar por defecto.</p>
+<p>El primer ejemplo es para OSM. En el nombre de la conexión, escribimos un nombre a elección. En la URL pegamos: <a href="https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png</a>. El resto lo podemos dejar por defecto.</p>
 <p><img src="/img/QGIS_1.png" style="width:100.0%" /></p>
 <p>Luego, haciendo doble click en la capa o arrastrándola desde el panel del Navegador al panel de Capas, podemos desplegar el mapa base de OSM. Para desplegar las capas en orden, es necesario mover el mapa base debajo de los archivos vectoriales. Obtendremos algo similar a esto, con un nombre incorrecto en las Islas Malvinas:</p>
 <p><img src="/img/QGIS_2.png" style="width:100.0%" /></p>
-<p>Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <a href="http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/%7Bz%7D/%7Bx%7D/%7B-y%7D.png" class="uri">http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png</a>.</p>
+<p>Para cargar el mapa base Argenmap v2 de IGN, volvemos a las XYZ tiles y creamos una nueva conexión. En este caso la URL es <a href="http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/%7Bz%7D/%7Bx%7D/%7B-y%7D.png">http://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG:3857@png/{z}/{x}/{-y}.png</a>.</p>
 <p><img src="/img/QGIS_3.png" style="width:100.0%" /></p>
 <p>Ahora sí obtenemos el mapa deseado:</p>
-<p><img src="/img/QGIS_4.png" style="width:100.0%" />
-¡Listo!</p>
-<p>Dejo a disposición <a href="https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true">el proyecto de este ejercicio tipo</a>.
-Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:</p>
+<p><img src="/img/QGIS_4.png" style="width:100.0%" /> ¡Listo!</p>
+<p>Dejo a disposición <a href="https://github.com/nmorandeira/IGN_Malvinas/blob/master/IGN_Malvinas.qgz?raw=true">el proyecto de este ejercicio tipo</a>. Una visualización general de la vista del proyecto y las capas XYZ en los paneles Navegador y Capas es:</p>
 <p><img src="/img/QGIS_5.png" style="width:100.0%" /></p>
 </div>
 </div>

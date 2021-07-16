@@ -1,6 +1,6 @@
 ---
 title: "Satélites de radar: qué ve RADARSAT-2 (Banda C) en humedales del Paraná"
-summary: "Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas: github, blogdown, Hugo y un servidor como Netlify o Github Pages. Antes de empezar, ¿por qué tener una página web personal?"
+summary: "Nos preguntamos cómo interactúa la señal de un sistema satelital de radar o de microondas activas full polarimétrico, RADARSAT-2, con la vegetación herbácea de la planicie de inundación del Paraná."
 authors: 
   - "Natalia Morandeira"
 date: "2021-07-16"

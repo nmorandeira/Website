@@ -1,0 +1,13 @@
+"file" "checksum"
+"content/" NA
+"content/en/fiction/2020-08-13-haciendo-que/index.Rmd" "22e9dc5ff2e0969656e2caf426121b66"
+"content/en/fiction/2020-08-16-viejos-normativa/index.Rmd" "58f6e2dc7b2758d34e3263b0495d3f58"
+"content/en/fiction/2021-07-17-agavni/index.Rmd" "a94025ae165999dd1852f3ca0ee8724c"
+"content/en/post/2020-09-05-represent-malvinas-islands-in-r-and-qgis/index.Rmd" "be4ef68423042818db0f2bc4fcf57e4d"
+"content/en/post/2020-10-12-add-favicon-authorship/index.Rmd" "4b03349d61549efd2b79cd5534409f00"
+"content/es/fiction/2020-08-13-haciendo-que/index.Rmd" "87a1e5af0bd63eb9b3af25d450000111"
+"content/es/fiction/2020-08-16-viejos-normativa/index.Rmd" "0347667ca9e28138af968ac9adf6732f"
+"content/es/fiction/2021-07-17-agavni/index.Rmd" "a0072199ba2cf646696887160c014813"
+"content/es/post/2020-08-02-representar-islas-malvinas-en-r-y-qgis/index.Rmd" "3e71104e0df26781b6b396353abe7c9e"
+"content/es/post/2020-10-12-agregar-favicon-autoria/index.Rmd" "65a93c7ecef0e4264af55a5a45b3a2cf"
+"content/es/post/2020-12-18-crear-pagina-web/index.Rmd" "62f4e1ed96bc4757ee759e7639f122a3"

@@ -51,7 +51,8 @@ blogdown::stop_server()
 #############
 # Build site
 blogdown::build_site()
-#blogdown::build_site(build_rmd = TRUE)
+blogdown::build_site(build_rmd = 'md5sum')
+
 blogdown::hugo_build() #if Rmd files do not need to be recompiled.
 
 # Para generar un nuevo post (primero parar el sitio)

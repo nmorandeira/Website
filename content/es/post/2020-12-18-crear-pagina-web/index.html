@@ -27,6 +27,7 @@ output:
     number_sections: false
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas. Antes de empezar, <strong>¿por qué tener una página web personal?</strong> Muchas personas hemos elegido tener nuestra página web personal como una forma de difundir quiénes somos, los proyectos en los que trabajamos, nuestros intereses, etc. Tener una página web personal nos conecta con el mundo y permite la recopilación y el intercambio de información entre pares. A continuación te comentamos otros beneficios de crear tu propia página personal:</p>
@@ -93,11 +94,11 @@ blogdown::stop_server()# para dejar de visualizar el contenido generado
 <p>Ya tenemos nuestra página web, ahora lo que queda es reemplazar la información de la página por la nuestra y organizarla según nuestros intereses. A medida que modifiquemos cada archivo vamos a poder visualizar automáticamente los cambios en el <em>Viewer</em> y o en el navegador.</p>
 <p>A continuación se muestra los principales archivos y carpetas que constituyen la página web.</p>
 <pre><code>├── config.toml       
-📁── config/default
+📂── config/default
    ├── menus.toml     
    ├── params.toml    
    └── languages.toml
-📁── content
+📂── content
 📁── themes</code></pre>
 <p>En el archivo <em><strong>config.toml</strong></em> se encuentran los metadatos de nuestra página. Dentro de este archivo modificaremos el título de la página web y la URL.</p>
 <p>Dentro de la carpeta _<strong>config/<em>default</em></strong> se encuentran tres archivos.toml que definen la configuración de la página web.</p>
@@ -111,9 +112,9 @@ blogdown::stop_server()# para dejar de visualizar el contenido generado
    ├── 📂authors     
    ├── 📁courses
    ├── 📁home
-   ├── 📂post
-   ├── 📁project
-   └── 📁publication</code></pre>
+   ├── 📁post
+   ├── 📂project
+   └── 📂publication</code></pre>
 <p>Desde <strong><em>content/home</em></strong> se podrán activar y editar cada una de las opciones del menú de navegación (widgets) de la página web. Para que se visualice el widget, es necesario que aparezca <em>active= true</em></p>
 </div>
 <div id="configuración-de-la-página-web-bilingüe" class="section level2">
@@ -181,7 +182,7 @@ Obtendrás algo similar a la siguiente figura pero autocompletado con tu informa
 <p><img src="/img/post_webHugo/netlify2.png" width="90%" alt="Se observa el Owner del repo: Pamela Pairo's team en la imagen; la branch to deploy = main; el Build command de Hugo; y qué directorio se publica (main)"/></p>
 <p>En opciones avanzadas (<em>Show advanced</em>) escribir la versión de Hugo que utilizaste para crear tu sitio web.</p>
 <p><img src="/img/post_webHugo/netlify3.png" width="90%" alt="En el ejemplo, la primera caja de Key dice HUGO_VERSION y la segunda caja Value dice 0.78.1"/></p>
-<p>Cliqueamos en <em>Deploy Site</em> y ¡¡¡listo!!! 🎈 Notaremos que <strong>Netlify</strong> asigna aleatoriamente el nombre de la página web. Para cambiarlo tendremos que ir a <em>Domain Settings &gt; Options &gt; Edit site name</em>
+<p>Cliqueamos en <em>Deploy Site</em> y ¡¡¡listo!!! 🥳 Notaremos que <strong>Netlify</strong> asigna aleatoriamente el nombre de la página web. Para cambiarlo tendremos que ir a <em>Domain Settings &gt; Options &gt; Edit site name</em>
 Podrás editar el contenido de tu página web sin la necesidad de repetir los pasos anteriores ya que <strong>Netlify</strong> al estar vinculado con GitHub lo actualizará automáticamente.</p>
 </div>
 <div id="utilizando-github-pages" class="section level2">

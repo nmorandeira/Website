@@ -18,6 +18,8 @@ categories:
   - Paper
   - Teledetección
   - Humedales
+  - Geo
+  
 image:
   caption: '[RADARSAT-2 en interacción con junco y verdolaga: flechas azules indican señal emitida; flechas rojas, señal retrodispersada. Esquematizo: dispersión de volumen y dispersión de doble rebote](featured.png)'
   focal_point: center

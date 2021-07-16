@@ -141,7 +141,7 @@ The items more relevant to our discussion are copied and commented below:
 
 ------------------------------------------------------------------------
 
-## Partial solutions to the basempa problem
+## Partial solutions to the basemap problem
 
 A partial solution would be to use the label *name:es* by default in our maps.
 This would imply using the Spanish labels not only for the Islas Malvinas but also for any location in the world, including Brazil and China (following our previous example).

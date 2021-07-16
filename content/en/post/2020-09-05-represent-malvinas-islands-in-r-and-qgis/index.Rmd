@@ -129,25 +129,27 @@ The Islas Malvinas are labeled "Falkland Islands" because they are assigned by O
 Here is the detail of the information associated to the [OSM Relation 2185374](https://www.openstreetmap.org/relation/2185374), corresponding to the Islas Malvinas territory.
 The items more relevant to our discussion are copied and commented below:
 
-| *OSM Relation 2185374*      | *Commment*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](/img/OSM_1.png){width=80%} | The name assigned to the relation 2185374 points the problem.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ![](/img/OSM_2.png){width=80%} | Some labels. Guess the meaning of FK.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ![](/img/OSM_3.png){width=80%} | OSM says: the capital is Stanley (¿Puerto Argentino?), the default language is English. Are these disputed territories? Yes. But the flag belongs to an English location; and the international name is "Falkland Islands (Malvinas)" (as pointed below, this would be the United Nations Convention, but it's not the default shown label).                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ![](/img/OSM_4.png){width=80%} | The "name" label is the most important:  this is how the islands are named by default in any map we render. Here is our mapping problem.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ![](/img/OSM_5.png){width=80%} | The "name:es" label might be a partial solution. It means: "name in Spanish". I'll comment on this below.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| *OSM Relation 2185374*         | *Commment*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![](/img/OSM_1.png){width=80%} | The name assigned to the relation 2185374 points the problem.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ![](/img/OSM_2.png){width=80%} | Some labels. Guess the meaning of FK.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ![](/img/OSM_3.png){width=80%} | OSM says: the capital is Stanley (¿Puerto Argentino?), the default language is English. Are these disputed territories? Yes. But the flag belongs to an English location; and the international name is "Falkland Islands (Malvinas)" (as pointed below, this would be the United Nations Convention, but it's not the default shown label).                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ![](/img/OSM_4.png){width=80%} | The "name" label is the most important: this is how the islands are named by default in any map we render. Here is our mapping problem.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ![](/img/OSM_5.png){width=80%} | The "name:es" label might be a partial solution. It means: "name in Spanish". I'll comment on this below.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ![](/img/OSM_6.png){width=80%} | In this screenshot, I'd like to highlight the note, because it was pointed to me by the OSM community. The note says: *"OSM policy is that the 'name' to be used is that spoken by the inhabitants. Plural. Malvinas is the Spanish name, and is entered in name:es. The UN convention is shown as 'int_name'."*. However, this note ignores at least two issues: 1) There is a sovereignty claim, not a translation conflict: the only possible translation of Islas Malvinas to English is Malvinas Islands; 2) The official language in Argentina is Spanish (castellano). Besides, why OSM --that recognizes there is a disputed territory-- consider more convenient to use "name" and not (at least) the "int_name" from the UN convention? |
-| ![](/img/OSM_7.png){width=80%} | More information on the information source associated to the object. A curious fact: the relation is part of the "British Overseas Territories", which seem to be [occupied territories and colonies all over the world](https://www.openstreetmap.org/relation/3969434).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ![](/img/OSM_7.png){width=80%} | More information on the information source associated to the object. A curious fact: the relation is part of the "British Overseas Territories", which seem to be [occupied territories and colonies all over the world](https://www.openstreetmap.org/relation/3969434).                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ------------------------------------------------------------------------
 
 ## Partial solutions to the basempa problem
 
-A partial solution would be to use the label *name:es* by default in our maps. This would imply using the Spanish labels not only for the Islas Malvinas but also for any location in the world, including Brazil and China (following our previous example).
+A partial solution would be to use the label *name:es* by default in our maps.
+This would imply using the Spanish labels not only for the Islas Malvinas but also for any location in the world, including Brazil and China (following our previous example).
 This doesn't solve the underlying problem of how OSM positions itself in the face of the conflict, but would be a partial solution.
 However, this is not easy for end users (to whom this document is intended for).
 
-An advantage of OSM being free and open-source is that data can be downloaded and re-loaded in other servers, as [*OSM-Argentina*](https://openstreetmap.org.ar/#6.11/-53.41/-63.924) has done. In this way, OSM Argentina could solve some of the problems (the label of the islands), but not others (city names and geographical accidents).
+An advantage of OSM being free and open-source is that data can be downloaded and re-loaded in other servers, as [*OSM-Argentina*](https://openstreetmap.org.ar/#6.11/-53.41/-63.924) has done.
+In this way, OSM Argentina could solve some of the problems (the label of the islands), but not others (city names and geographical accidents).
 
 On the other hand, the *Instituto Geográfico Nacional* (IGN) truly solves the issue: *Argenmap v2* correctly represents the official toponymy of the jurisdictions and geographical accidents in Argentina.
 [Here is documentation on the information displayed by Argenmap](https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion), it mainly *"uses the official data published by the Instituto Geográfico Nacional through its WMS service, at a 1:250,000 scale (i.e., from zoom level 12)"*.
@@ -167,7 +169,8 @@ Using Argenmap v2 from IGN is the best solution for our problem of representatio
 ## Case study exercise
 
 To practice visualizing geographic data with R and QGIS, I propose a *case study exercise*.
-The aim is to represent the natural protected areas in Argentina and the exclusive economic zone limites (both layers are available in IGN), with a accurate basemap. In particular, we aim to represent the Natural Protected area Banco Burwood II and its surroundings. 
+The aim is to represent the natural protected areas in Argentina and the exclusive economic zone limites (both layers are available in IGN), with a accurate basemap.
+In particular, we aim to represent the Natural Protected area Banco Burwood II and its surroundings.
 
 ------------------------------------------------------------------------
 
@@ -187,7 +190,9 @@ download.file("http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/downl
 unzip(limit_EEZ, exdir = "data/")
 ```
 
-These two layers are vectorial *shapefiles*, a polygon and a line layer. Now we read it in R, as spatial objects. Remember to install the packages used in the next code chunks. 
+These two layers are vectorial *shapefiles*, a polygon and a line layer.
+Now we read it in R, as spatial objects.
+Remember to install the packages used in the next code chunks.
 
 ```{r read_spatial_objects, eval=F, echo=T}
 library(sf)
@@ -213,14 +218,20 @@ map <- tm_shape(protectedareas) +
 map
 ```
 
-The code generates an interactive map. You can try it in your computer. Here I provide a screenshot. Next maps render more quickly, so you will be able to interact.
+The code generates an interactive map.
+You can try it in your computer.
+Here I provide a screenshot.
+Next maps render more quickly, so you will be able to interact.
 
 ![](/img/tmap_ESRI.png)
 
-In the bottom right, the information of the Leaflet provider is seen. The provider can be changed with the layer selector (up right button): we are able to choose between three providers. OSM is one of the providers, it's open-source but says "Falkland Islands".
-The other two options are ESRI providers, with few labels at particular scales. Be aware that ESRI basemaps are not open-source, check the license terms if you want to use an ESRI map in a publication or for commercial uses.
+In the bottom right, the information of the Leaflet provider is seen.
+The provider can be changed with the layer selector (up right button): we are able to choose between three providers.
+OSM is one of the providers, it's open-source but says "Falkland Islands".
+The other two options are ESRI providers, with few labels at particular scales.
+Be aware that ESRI basemaps are not open-source, check the license terms if you want to use an ESRI map in a publication or for commercial uses.
 
-Now we will generate the same map but using Leaflet syntaxis (instead of tmap), because we will be allowed to modify the basemap provider. 
+Now we will generate the same map but using Leaflet syntaxis (instead of tmap), because we will be allowed to modify the basemap provider.
 There are a lot of basemap providers, which can be added in Leaflet using the command *"addProviderTiles"*.
 Here is a list and previsualization of the available Leaflet providers: <https://leaflet-extras.github.io/leaflet-providers/preview/>.
 We load the two needed libraries:
@@ -256,7 +267,8 @@ basemap_2
 
 </iframe>
 
-The problem is that NONE of the providers in the extensive list would show "Islas Malvinas". So, we need to include Argenmap v2 from IGN!
+The problem is that NONE of the providers in the extensive list would show "Islas Malvinas".
+So, we need to include Argenmap v2 from IGN!
 To load the IGN tiles, we use *addTiles* (instead of *addProviderTiles*), and we need to know the link to those tiles.
 This chunk code creates an object called *basemap_IGN*.
 
@@ -272,11 +284,12 @@ basemap_IGN
 
 </iframe>
 
-Now we finally see how Argenmap v2 solves our problem of representation of the Islas Malvinas, as well as the name of the Province and of other toponymy issues. 
+Now we finally see how Argenmap v2 solves our problem of representation of the Islas Malvinas, as well as the name of the Province and of other toponymy issues.
 
 Having the *basemap_IGN*, we will add the vector layers using the pipe *%\>%*.
 In the natural protected polygon layer, the parameter *label* adds labels on each polygon, visualized with the cursor.
-This map may take time to load, because of the protected areas layers. But the final product worth the wait!
+This map may take time to load, because of the protected areas layers.
+But the final product worth the wait!
 
 ```{r finalmap, eval=FALSE, echo=TRUE}
 final_map <- basemap_IGN %>%
@@ -303,13 +316,13 @@ Ready!
 
 The following examples are for QGIS 3.14 version (the last version available in July 2020), and may slightly change in other 3.xx versions.
 
-In the first place, we will open the two vectorial layers used in the case study exercise. 
+In the first place, we will open the two vectorial layers used in the case study exercise.
 The download links of the [IGN SIG layers](https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG) are:
 
 -   [Natural protected areas](http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjphcmVhX3Byb3RlZ2lkYS56aXA%3D) (polygons)
 -   [Limit of the Exclusive economic zone](http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjpsaW5lYV9kZV9saW1pdGVfMDcwMTA3LnppcA%3D%3D) (lines)
 
-Download and unzip the layers. 
+Download and unzip the layers.
 Next, add them to the QGIS layer panel with any of these methods:
 
 -   With the button *"Add vector layer"*,
@@ -326,7 +339,9 @@ A lot of XYZ tiles basemaps are available, [here](https://mappinggis.com/2018/03
 Go to the "Navigator" panel (if you don't see it, add it: *View \> Panels \> Navigator*), search *XYZ Tiles*.
 Right click and next click *"New conexion"*.
 
-The first example is for OSM. Write a name or your choice for the conection name. For the URL, copy and paste: <https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png>.
+The first example is for OSM.
+Write a name or your choice for the conection name.
+For the URL, copy and paste: <https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png>.
 Leave the other options as default.
 
 ![](/img/QGIS_1.png){width=100%}

@@ -1,39 +1,4 @@
----
-title: "How to represent the Islas Malvinas in R and QGIS"
-subtitle: "A discussion on the Islas Malvinas in the OpenStreetMap basemap and tutorials to use the Argentinean official cartography of the Instituto Geográfico Nacional"
-summary: "The Malvinas are Argentineans. In digital maps, the Islas Malvinas are often mislabeled with an incorrect name, no consistent with our historical and current sovereignty claim. Some contributions to solving this."
-author: "Natalia Morandeira"
-aliases: [represent-Islas-Malvinas-R-QGIS]
-date: '2020-08-02'
-tags:
-  - Islas Malvinas
-  - Malvinas Islands
-  - Opinion
-  - Sovereignty
-  - R
-  - RSpatial
-  - QGIS
-  - Leaflet
-  - Instituto Geográfico Nacional
-  - OSM
-categories:
-  - Post
-  - Tutorial
-  - R
-  - QGIS
-image:
-  caption: '[Islas Malvinas in an official representation](featured.jpg)'
-  focal_point: ''
-output:
-  blogdown::html_page:
-    toc: false
-    number_sections: false
-editor_options: 
-  markdown: 
-    wrap: sentence
----
-
-<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+<script src="index_files/header-attrs-2.9/header-attrs.js"></script>
 
 
 <hr />
@@ -116,8 +81,8 @@ Here is the detail of the information associated to the <a href="https://www.ope
 The items more relevant to our discussion are copied and commented below:</p>
 <table>
 <colgroup>
-<col width="3%" />
-<col width="96%" />
+<col width="4%" />
+<col width="95%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -160,10 +125,12 @@ The items more relevant to our discussion are copied and commented below:</p>
 </div>
 <div id="partial-solutions-to-the-basempa-problem" class="section level2">
 <h2>Partial solutions to the basempa problem</h2>
-<p>A partial solution would be to use the label <em>name:es</em> by default in our maps. This would imply using the Spanish labels not only for the Islas Malvinas but also for any location in the world, including Brazil and China (following our previous example).
+<p>A partial solution would be to use the label <em>name:es</em> by default in our maps.
+This would imply using the Spanish labels not only for the Islas Malvinas but also for any location in the world, including Brazil and China (following our previous example).
 This doesn’t solve the underlying problem of how OSM positions itself in the face of the conflict, but would be a partial solution.
 However, this is not easy for end users (to whom this document is intended for).</p>
-<p>An advantage of OSM being free and open-source is that data can be downloaded and re-loaded in other servers, as <a href="https://openstreetmap.org.ar/#6.11/-53.41/-63.924"><em>OSM-Argentina</em></a> has done. In this way, OSM Argentina could solve some of the problems (the label of the islands), but not others (city names and geographical accidents).</p>
+<p>An advantage of OSM being free and open-source is that data can be downloaded and re-loaded in other servers, as <a href="https://openstreetmap.org.ar/#6.11/-53.41/-63.924"><em>OSM-Argentina</em></a> has done.
+In this way, OSM Argentina could solve some of the problems (the label of the islands), but not others (city names and geographical accidents).</p>
 <p>On the other hand, the <em>Instituto Geográfico Nacional</em> (IGN) truly solves the issue: <em>Argenmap v2</em> correctly represents the official toponymy of the jurisdictions and geographical accidents in Argentina.
 <a href="https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion">Here is documentation on the information displayed by Argenmap</a>, it mainly <em>“uses the official data published by the Instituto Geográfico Nacional through its WMS service, at a 1:250,000 scale (i.e., from zoom level 12)”</em>.
 Here you can see <a href="https://mapa.ign.gob.ar/">how are represented the Islas Malvinas</a>.
@@ -182,7 +149,8 @@ Detailed information on the <a href="https://www.ign.gob.ar/NuestrasActividades/
 <div id="case-study-exercise" class="section level2">
 <h2>Case study exercise</h2>
 <p>To practice visualizing geographic data with R and QGIS, I propose a <em>case study exercise</em>.
-The aim is to represent the natural protected areas in Argentina and the exclusive economic zone limites (both layers are available in IGN), with a accurate basemap. In particular, we aim to represent the Natural Protected area Banco Burwood II and its surroundings.</p>
+The aim is to represent the natural protected areas in Argentina and the exclusive economic zone limites (both layers are available in IGN), with a accurate basemap.
+In particular, we aim to represent the Natural Protected area Banco Burwood II and its surroundings.</p>
 <hr />
 </div>
 <div id="r-protocol" class="section level2">
@@ -197,7 +165,9 @@ unzip(protectedareas, exdir = &quot;data/&quot;)
 limit_EEZ &lt;- tempfile()
 download.file(&quot;http://ramsac.ign.gob.ar/operaciones_sig/shp_from_geoserver/download.php?f=c2hwOjpsaW5lYV9kZV9saW1pdGVfMDcwMTA3LnppcA%3D%3D&quot;,limite_ZEE, mode=&quot;w&quot;) 
 unzip(limit_EEZ, exdir = &quot;data/&quot;)</code></pre>
-<p>These two layers are vectorial <em>shapefiles</em>, a polygon and a line layer. Now we read it in R, as spatial objects. Remember to install the packages used in the next code chunks.</p>
+<p>These two layers are vectorial <em>shapefiles</em>, a polygon and a line layer.
+Now we read it in R, as spatial objects.
+Remember to install the packages used in the next code chunks.</p>
 <pre class="r"><code>library(sf)
 protectedareas &lt;- st_read(&quot;data/area_protegida.shp&quot;, quiet=TRUE) 
 limit_EEZ &lt;- st_read(&quot;data/linea_de_limite_070107.shp&quot;, quiet=TRUE)</code></pre>
@@ -211,10 +181,16 @@ tmap_mode(&quot;view&quot;) </code></pre>
   tm_shape(limit_EEZ) +
   tm_lines(col=&quot;violet&quot;)
 map</code></pre>
-<p>The code generates an interactive map. You can try it in your computer. Here I provide a screenshot. Next maps render more quickly, so you will be able to interact.</p>
+<p>The code generates an interactive map.
+You can try it in your computer.
+Here I provide a screenshot.
+Next maps render more quickly, so you will be able to interact.</p>
 <p><img src="/img/tmap_ESRI.png" /></p>
-<p>In the bottom right, the information of the Leaflet provider is seen. The provider can be changed with the layer selector (up right button): we are able to choose between three providers. OSM is one of the providers, it’s open-source but says “Falkland Islands”.
-The other two options are ESRI providers, with few labels at particular scales. Be aware that ESRI basemaps are not open-source, check the license terms if you want to use an ESRI map in a publication or for commercial uses.</p>
+<p>In the bottom right, the information of the Leaflet provider is seen.
+The provider can be changed with the layer selector (up right button): we are able to choose between three providers.
+OSM is one of the providers, it’s open-source but says “Falkland Islands”.
+The other two options are ESRI providers, with few labels at particular scales.
+Be aware that ESRI basemaps are not open-source, check the license terms if you want to use an ESRI map in a publication or for commercial uses.</p>
 <p>Now we will generate the same map but using Leaflet syntaxis (instead of tmap), because we will be allowed to modify the basemap provider.
 There are a lot of basemap providers, which can be added in Leaflet using the command <em>“addProviderTiles”</em>.
 Here is a list and previsualization of the available Leaflet providers: <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>.
@@ -235,7 +211,8 @@ basemap_1</code></pre>
 basemap_2</code></pre>
 <iframe seamless src="/leaflet_Malvinas/mapa_base2.html" width="100%" height="500">
 </iframe>
-<p>The problem is that NONE of the providers in the extensive list would show “Islas Malvinas”. So, we need to include Argenmap v2 from IGN!
+<p>The problem is that NONE of the providers in the extensive list would show “Islas Malvinas”.
+So, we need to include Argenmap v2 from IGN!
 To load the IGN tiles, we use <em>addTiles</em> (instead of <em>addProviderTiles</em>), and we need to know the link to those tiles.
 This chunk code creates an object called <em>basemap_IGN</em>.</p>
 <pre class="r"><code>basemap_IGN &lt;-leaflet() %&gt;% 
@@ -248,7 +225,8 @@ basemap_IGN</code></pre>
 <p>Now we finally see how Argenmap v2 solves our problem of representation of the Islas Malvinas, as well as the name of the Province and of other toponymy issues.</p>
 <p>Having the <em>basemap_IGN</em>, we will add the vector layers using the pipe <em>%&gt;%</em>.
 In the natural protected polygon layer, the parameter <em>label</em> adds labels on each polygon, visualized with the cursor.
-This map may take time to load, because of the protected areas layers. But the final product worth the wait!</p>
+This map may take time to load, because of the protected areas layers.
+But the final product worth the wait!</p>
 <pre class="r"><code>final_map &lt;- basemap_IGN %&gt;%
   addPolygons(data=protectedareas,
               col = &quot;darkgreen&quot;,
@@ -288,7 +266,9 @@ For comparison purposes, we’ll display two basemaps, OpenStreepMap and IGN Arg
 A lot of XYZ tiles basemaps are available, <a href="https://mappinggis.com/2018/03/como-anadir-mapas-base-en-qgis-3-0-openstreetmap-google-carto-stamen/">here</a> is a useful guide.</p>
 <p>Go to the “Navigator” panel (if you don’t see it, add it: <em>View &gt; Panels &gt; Navigator</em>), search <em>XYZ Tiles</em>.
 Right click and next click <em>“New conexion”</em>.</p>
-<p>The first example is for OSM. Write a name or your choice for the conection name. For the URL, copy and paste: <a href="https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png</a>.
+<p>The first example is for OSM.
+Write a name or your choice for the conection name.
+For the URL, copy and paste: <a href="https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png</a>.
 Leave the other options as default.</p>
 <p><img src="/img/QGIS_1.png" style="width:100.0%" /></p>
 <p>Next, we may display the OSM basemap by double-clicking the XYZ layer or drag-dropping it from the Navigator panel to the Layer panel.

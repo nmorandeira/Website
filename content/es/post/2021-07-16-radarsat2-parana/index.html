@@ -1,0 +1,56 @@
+---
+title: "Satélites de radar: qué ve RADARSAT-2 (Banda C) en humedales del Paraná"
+summary: "Esta nota sintetiza los principales pasos para crear una página web como esta: bilingüe y desarrollada desde R, utilizando herramientas gratuitas: github, blogdown, Hugo y un servidor como Netlify o Github Pages. Antes de empezar, ¿por qué tener una página web personal?"
+authors: 
+  - "Natalia Morandeira"
+date: "2021-07-16"
+aliases: [crear-pagina-web]
+tags:
+  - Paper
+  - Teledetección
+  - Satélites de radar
+  - Microondas activas
+  - RADARSAT
+  - Delta del Paraná
+  - Humedales
+
+categories:
+  - Paper
+  - Teledetección
+  - Humedales
+image:
+  caption: '[RADARSAT-2 en interacción con junco y verdolaga: flechas azules indican señal emitida; flechas rojas, señal retrodispersada. Esquematizo: dispersión de volumen y dispersión de doble rebote](featured.png)'
+  focal_point: center
+output:
+  blogdown::html_page:
+    toc: false
+    number_sections: false
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Mi línea de investigación involucra <strong>humedales y teledetección</strong>, incluyendo aplicaciones de imágenes satelitales. Aquí comparto los resultados de un trabajo que busca entender <strong>cómo interactúa la señal de un sistema satelital de radar o de microondas activas</strong>, RADARSAT-2 (que opera en la frecuencia conocida como Banda C) con la vegetación herbácea de la planicie de inundación del Paraná (Delta Medio). Una de las ventajas de los radares respecto a otros tipos de satélites es que la señal puede penetrar a través de la vegetación y detectar la presencia de agua. Así, el uso de datos satelitales de radar cobra relevancia para el monitoreo hidrológico y para evaluar el estado y dinámica de ecosistemas de humedal.</p>
+<p>Entonces estudiamos dos tipos de vegetación dominantes en el Delta Medio, los juncales de <em>Schoenoplectus californicus</em> y los verdolagales de <em>Ludwigia peruviana</em>, que estaban inundados al momento de ir al campo y cuando se adquirieron las imágenes satelitales de radar. Trabajamos con <strong>datos satelitales <em>SAR full polarimétricos</em></strong>, a grandes rasgos esto significa que tienen información extra respecto a otras imágenes satelitales (emiten y sensan la señal polarizada tanto horizontal como verticalmente). A modo de comparación, los datos de la misión argentina SAOCOM también son full polarimétricos, son similares a los de RADARSAT-2 pero operan en otra frecuencia, Banda L: por ser Banda L tienen mayor capacidad de penetración a través de la vegetación, en comparación con Banda C o X.</p>
+<p><strong>Nos preguntamos:</strong> ¿cómo afectan las características de la vegetación, tales como la biomasa, la densidad de tallos, la altura emergente, el diámetro de los tallos?; ¿qué pasa al cambiar el modo de observación de los sistemas de radar (escenas tomadas con distinto ángulo de incidencia)?; ¿hay evidencias de la presencia de agua a partir de analizar la información polarimétrica de las escenas (ajustamos modelos de la diferencia de fase HH-VV)?</p>
+<p>Para responder a estas preguntas, trabajé en colaboración con colegas del <em>Instituto de Astronomía y Física del Espacio, UBA-CONICET</em> (Matías Barber y Francisco Grings), de mi <em>Instituto de Investigación e Ingeniería Ambiental, UNSAM</em> (Patricia Kandus) y de dos instituciones de Canadá: <em>TerreVista Imaging</em> (Frank Ahern) y <em>Canada Centre for Mapping and Earth Observation - Natural Resources Canada</em> (Brian Brisco).</p>
+<div id="publicación" class="section level1">
+<h1>Publicación</h1>
+<p>En 2019, presenté resultados preliminares en <a href="https://www.asc-csa.gc.ca/eng/events/2019/asar-2019-workshop-on-synthetic-aperture-radar.asp">ASAR 2019: A workshop on Synthetic Aperture Radar (Canadian Space Agency)</a>, gracias al Programa de Movilidad para Docentes e Investigadores de la <a href="http://www.unsam.edu.ar/">Universidad Nacional de San Martín</a> que financió mi viaje.</p>
+<p>El trabajo fue publicado en 2021 en la revista científica <strong>Remote Sensing</strong> (editorial MDPI), de acceso abierto:
+<a href="https://www.mdpi.com/1166710">“Response of Multi-Incidence Angle Polarimetric RADARSAT-2 Data to Herbaceous Vegetation Features in the Lower Paraná River Floodplain, Argentina”</a> (en la siguiente sección incluyo traducción del título y resumen).</p>
+<p><a href="https://www.mdpi.com/1166710"><img src="/img/post_RS2/Morandeira2021_MDPI.png" alt="Captura de pantalla del pdf: título del artículo y autorías" /></a></p>
+<div id="resumen-del-artículo-en-castellano" class="section level2">
+<h2>Resumen del artículo, en castellano</h2>
+<p>El siguiente resumen no fue aceptado como material anexo (<em>Supplementary Material</em>) en la revista, pero es una traducción fiel del <em>Abstract</em> publicado en el artículo científico.</p>
+<p><strong><em>Respuesta de datos polarimétricos RADARSAT-2 de múltiples ángulos de incidencia a atributos de la vegetación herbácea en la planicie de inundación del Bajo Río Paraná, Argentina</em></strong></p>
+<p><strong>Resumen.</strong> Los ecosistemas de humedal juegan un rol clave en los ciclos hidrológicos y biogeoquímicos. En blancos de vegetación emergente, la ocurrencia de dispersión de doble rebote es indicativa de la presencia de agua y puede ser valiosa para el monitoreo hidrológico. La dispersión de doble rebote conllevaría un aumento de σ0HH en relación a σ0VV y una diferencia de fase de las co-polarizaciones (CPD) distinta de cero. En la planicie de inundación del Bajo Río Paraná, un total de 11 escenas full polarimétricas RADARSAT-2 de un rango variado de ángulos de incidencia fueron adquiridas durante un mes. Se muestrearon blancos inundados dominados por dos especies herbáceas: <em>Schoenoplectus californicus</em> (cuatro sitios, juncales) y <em>Ludwigia peruviana</em> (tres sitios, verdolagales). Como tendencia general, σ0HH fue mayor que σ0VV, especialmente en los ángulos de incidencia más verticales. Al modelar CPD con estimaciones de máxima verosimilitud, encontramos resultados consistentes con dispersión de doble-rebote en dos de los sitios de <em>Ludwigia</em>, para ángulos de incidencia de la señal específicos. La mayor parte de la variación de σ0HH fue explicada por el ángulo de incidencia de la señal, mientras que la biomasa verde emergente fue el principal atributo de la vegetación que influenció a σ0HV. Los modelos multivariados que explican la variación de la retrodispersión incluyen el ángulo de incidencia de la señal y al menos dos de las siguientes variables: altura emergente de la vegetación, diámetro de los tallos, número de tallos verdes, y biomasa verde emergente. Este estudio provee un ejemplo en el uso de la diferencia de fase CPD para evaluar la contribución de la dispersión de doble rebote y resalta la influencia de la biomasa de la vegetación en la respuesta del radar. Aún con la presencia de agua debajo de la vegetación, la contribución del mecanismo de doble rebote a la retrodispersión en Banda C depende de los ángulos de incidencia y puede ser despreciable en blancos densamente vegetados.</p>
+<p><strong>Palabras clave:</strong> microondas activas; Banda C; diferencias de fase de las co-polarizaciones; dispersión de doble rebote; marismas inundadas (bañados); ángulo de incidencia; macrófitas; Delta del Paraná; polarimetría; humedales.</p>
+</div>
+</div>
+<div id="mini-póster" class="section level1">
+<h1>Mini-póster</h1>
+<p>¡Comparto un mini-póster! Resume los principales resultados publicados en el artículo.</p>
+<p><img src="/img/post_RS2/mini_poster_ES_1.png" width="100%" alt="Resumen gráfico, primera parte. Ubicación del área de estudio: 11 escenas RADARSAT-2 fueron adquiridas durante febrero de 2018, ángulos de incidencia entre 20.7 y 47.4 grados. Se extrajeron valores de los píxeles y se obtuvieron mediciones a campo. Foto de las dos coberturas de vegetación y esquema de mecanismos de interacción dispersión en volumen y doble rebote: los juncales son cilindros, sólo tallos; mientras que las verdolagas son herbáceas latifoliadas; ambas coberturas tienen agua debajo. Preguntas de trabajo: se resumen en este post previamente"/></p>
+<p><img src="/img/post_RS2/mini_poster_ES_2.png" width="100%" alt="Resumen gráfico, segunda parte. Principales resultados. Se muestra la Figura 4-a del paper, con 7 gráficos de dispersión (retrodispersión HH versus ángulo de incidencia): la retrodispersión es mayor en HH que en VV y hay un efecto importante del ángulo de incidencia, especialmente en HH. Se resume el efecto de los atributos de la vegetación según los modelos multivariados (info similar al resumen). Diferencias de fase CPD, se muestra parte de la Figura 6 del paper: dos ejemplos en los que se vio CPD distinto de cero, por lo tanto consistente con dispersión de doble rebote"/></p>
+</div>

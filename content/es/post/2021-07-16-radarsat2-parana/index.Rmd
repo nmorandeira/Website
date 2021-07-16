@@ -4,7 +4,7 @@ summary: "Nos preguntamos cómo interactúa la señal de un sistema satelital de
 authors: 
   - "Natalia Morandeira"
 date: "2021-07-16"
-aliases: [crear-pagina-web]
+aliases: [radarsat2-parana]
 tags:
   - Paper
   - Teledetección

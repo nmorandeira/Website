@@ -59,15 +59,18 @@ blogdown::hugo_build() #if Rmd files do not need to be recompiled.
 blogdown:::new_post_addin() #ojo, siempre crea un md
 
 ### Biblio ###########
+#https://wowchemy.com/docs/content/publications/
+
 #para importar biblio desde un .bib
 #Instalar por consola:
 pip3 install -U academic
 
-#Navegar a la carpeta del repo:
+#Navegar a la carpeta del repo: /home/nmorandeira/Documents/RProjects/Website
 academic import --bibtex /home/nmorandeira/Downloads/inventario.bib 
 
 # Copiar estos archivos a las carpetas correspondientes de en/ y es/
-
+# /home/nmorandeira/Documents/RProjects/Website/content/es/publication 
+# /home/nmorandeira/Documents/RProjects/Website/content/en/publication 
 
 #Deploy on Netlify
 #https://alison.rbind.io/post/2019-02-19-hugo-netlify-toml/

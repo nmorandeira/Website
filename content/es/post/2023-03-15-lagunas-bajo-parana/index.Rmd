@@ -38,7 +38,11 @@ Las lagunas someras de la planicie del Bajo Paraná y su vegetación son dinámi
 
 
 # Publicaciones
+<<<<<<< HEAD
 [![Lagunas del Bajo Paraná en las portadas de las revistas](/img/post_lagunasBP/Gayol_portadas.png)]
+=======
+[![Lagunas del Bajo Paraná en las portadas de las revistas](/img/post_lagunasBP/Gayol_portadas.png)
+>>>>>>> parent of 44f9d85... last changed at Invalid date, pushed by nmorandeira
 
 La investigación que resumimos en este artículo es parte de la tesis doctoral de Maira Gayol, dirigida por Patricia Kandus y Natalia Morandeira. La tesis se titula "Aspectos funcionales de la vegetación de humedales de planicies de inundación. Uso de datos satelitales ópticos en lagunas del Bajo Paraná". Con este trabajo presentado en 2020, Maira obtuvo su título de Doctora en Ciencias Aplicadas y de la Ingeniería (Escuela de Ciencia y Tecnología, Universidad Nacional de San Martín, Argentina). 
 
@@ -52,8 +56,11 @@ El primer trabajo fue publicado en 2019 en la revista científica **Hydrobiologi
 El segundo trabajo fue publicado en 2022 en la revista científica **Freshwater Biology** (editorial Wiley):
 ["Distribution patterns of macrophytes in shallow lakes of the lower Paraná River floodplain: Associations with environmental conditions"](https://onlinelibrary.wiley.com/doi/abs/10.1111/fwb.13999).
 
+<<<<<<< HEAD
 [![Captura de pantalla del pdf: título del artículo de Hydrobiologia y autorías](/img/post_lagunasBP/Gayol2019_Hydrobiologia.png)](https://link.springer.com/article/10.1007/s10750-018-3847-x)
 
+=======
+>>>>>>> parent of 44f9d85... last changed at Invalid date, pushed by nmorandeira
 [![Captura de pantalla del pdf: título del artículo de Freshwater Biology y autorías](/img/post_lagunasBP/Gayol2022_FB.png)](https://onlinelibrary.wiley.com/doi/abs/10.1111/fwb.13999)
 
 ## Resumen de los artículos, en castellano

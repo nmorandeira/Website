@@ -48,7 +48,7 @@ Encontramos factores directos e indirectos que condicionan qué especies de plan
 Sin lugar a dudas, la conectividad entre lagunas y cursos de agua es un factor importante para entender qué efecto tienen los pulsos de inundación en la planicie del Paraná. Actualmente continuamos estudiando cómo varía la biodiversidad de la flora y fauna acuática, de acuerdo a la conectividad y a la variabilidad hidroclimática.
 
 # Publicaciones
-[![Lagunas del Bajo Paraná en las portadas de las revistas](/img/post_lagunasBP/Gayol_portadas.png)
+![Lagunas del Bajo Paraná en las portadas de las revistas](/img/post_lagunasBP/Gayol_portadas.png)
 
 La investigación que resumimos en este artículo es parte de la tesis doctoral de Maira Gayol, dirigida por Patricia Kandus y Natalia Morandeira. La tesis se titula "Aspectos funcionales de la vegetación de humedales de planicies de inundación. Uso de datos satelitales ópticos en lagunas del Bajo Paraná". Con este trabajo presentado en 2020, Maira obtuvo su título de Doctora en Ciencias Aplicadas y de la Ingeniería (Escuela de Ciencia y Tecnología, Universidad Nacional de San Martín, Argentina). 
 

@@ -32,7 +32,6 @@ library(blogdown)
 
 blogdown::new_site() 
 install_theme("gcushen/hugo-academic", theme_example = TRUE, update_config = TRUE)
-
 blogdown::install_hugo(version = "v0.74.3", force = TRUE, extended = TRUE)
 
 # update project options
@@ -65,7 +64,8 @@ blogdown:::new_post_addin() #ojo, siempre crea un md
 #Instalar por consola:
 pip3 install -U academic
 
-#Navegar a la carpeta del repo: /home/nmorandeira/Documents/RProjects/Website
+#da error, pero hay que correrlo en dos carpetas
+#Navegar a la carpeta del repo: /mnt/Data/RProjects/Website  y luego también en /mnt/Data/RProjects/Website/content/es
 academic import --bibtex /home/nmorandeira/Downloads/inventario.bib 
 
 # Copiar estos archivos a las carpetas correspondientes de en/ y es/
